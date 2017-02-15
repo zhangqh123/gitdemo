@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var arr1=[];
+        var arr2=[];
+        var arr3=[];
+        for(var k=0;k<10000;k++){
+            var num=parseInt(Math.random()*10);
+            arr1.push(num);
+            arr2.push(num);
+            arr3.push(num)
+        }
+        var oDate=new Date();
+        for(var i=1;i<arr1.length;i++){
+            for(var j=i;j>0;j--){
+                if(arr1[j]<arr1[j-1]){
+                    var temp;
+                    temp=arr1[j];
+                    arr1[j]=arr1[j-1];
+                    arr1[j-1]=temp;
+                }
+                else{
+                    break;
+                }
+
+            }
+
+        }
+
+
+        var oDate1=new Date();
+        arr2.sort(function(n1, n2){
+            return n1-n2;
+        })
+        var oDate2=new Date();
+        for(var i=arr3.length-1;i>0;i--){
+            for(var j=0;j<i;j++){
+                if(arr3[j]>arr3[j+1]){
+                    var temp=arr3[j];
+                    arr3[j]=arr3[j+1];
+                    arr3[j+1]=temp;
+                }
+            }
+        }
+        var oDate3=new Date();
+
+        document.write(arr1+"<br />");
+        document.write(arr2+"<br />");
+        document.write(arr3+"<br />");
+        document.write(oDate1-oDate+"<br />");
+        document.write(oDate2-oDate1+"<br />");
+        document.write(oDate3-oDate2+"<br />")
+
+    </script>
+
+
+
+
+
+</head>
+<body>
+
+</body>
+</html>

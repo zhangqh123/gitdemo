@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload=function(){
+            var person={
+                "name":"张启红",
+                "age":"25",
+                "street":"陕西",
+                "tel":"18709272412"
+            };
+            document.getElementById('name').innerHTML=person.name;
+            document.getElementById('age').innerHTML=person.age ;
+            document.getElementById('street').innerHTML=person.street;
+            document.getElementById('tel').innerHTML=person.tel;
+        }
+    </script>
+
+
+
+</head>
+<body>
+<h2>创建一个简历</h2>
+<p>
+    name:<span id="name"></span><br />
+    age:<span id="age"></span><br />
+    street:<span id="street"></span><br />
+    tel:<span id="tel"></span><br />
+</p>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+    window.onload = function(){
+    //使用apply()方法修改this指向
+    function sum(x, y) {
+    alert(this);
+    return x + y;//这里的this指的是callS对象方法
+    }
+    function callS() {
+    callS.callSum1(1, 2);
+    }
+    callS.callSum1 = function (x, y) {
+    alert(this);//这里的this是callS方法
+    var s = sum.apply(this,[2,3]);
+    	alert(s)
+    retu
+    callS();
+
+    }
+
+
+    </script>
+
+
+    </head>
+<body>
+
+</body>
+</html>

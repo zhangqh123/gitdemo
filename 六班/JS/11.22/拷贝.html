@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var json={"name":"liming","age":"18"};
+        var newJson={};
+        //将内部值进行复制
+        for(var x in json){  //浅拷贝
+            //将json中属性和值复制到newJson
+            newJson[x]=json[x]
+        }
+            newJson.name="zhang";
+        document.write(json.name)
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

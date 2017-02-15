@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+      .box{
+          width: 230px;
+          height: 310px;
+          margin: 100px auto;
+      }
+        #content-box {
+            width: 200px;
+            height: 308px;
+            overflow: hidden;
+            position: relative;
+            float: left;
+            border: 1px solid black;
+            border-radius: 3px;
+        }
+        #content {
+            width: 200px;
+            height: 433px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        #parent {
+            width: 20px;
+            height: 308px;
+            float: left;
+            background-color: #ccc;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        #box {
+            width: 20px;
+            height: 50px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: red;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div id="content-box">
+        <div id="content">
+            2016年，世界经济复苏依然缓慢且不均衡，国际贸易和投资疲弱，增长动力不足，受贸易保护主义抬头、
+            逆经济全球化趋势加剧、欧元区政治经济困局等影响，全球生产率降低、创新受阻，世界经济仍处于“低增长陷阱”。
+            在世界经济不景气的大背景下，中国经济可谓“风景这边独好”。2016年是我国全面建成小康社会决胜阶段的开局之年，
+            也是推进供给侧结构性改革的攻坚之年。在以习近平同志为核心的党中央坚强领导下，我们积极适应和引领经济发展新常态，
+            坚持全面深化改革，坚持创新驱动发展，加快经济发展方式转变和经济结构调整，经济运行保持在合理区间，
+            实现了“十三五”时期良好开局，经济发展呈现诸多亮点。
+        </div>
+    </div>
+    <div id="parent">
+        <div id="box"></div>
+    </div>
+</div>
+<script>
+    window.onload = function () {
+        var oContentBox = document.getElementById("content-box");
+        var oContent = document.getElementById("content");
+        var oParent = document.getElementById("parent");
+        var oBox = document.getElementById("box");
+
+        oBox.onmousedown = function (ev) {
+            var oEvent = event || ev;
+            var disy = oEvent.clientY - oBox.offsetTop;
+            document.onmousemove = function (ev) {
+                var oEvent = event || ev;
+                var  oTop = oEvent.clientY - disy;
+                var height = oParent.offsetHeight - oBox.offsetHeight;
+                if (oTop <= 0) {
+                    oTop = 0;
+                } else if (oTop >= height) {
+                    oTop = height;
+                }
+                oBox.style.top = oTop + "px";
+                var oHeight = oContentBox.offsetHeight - oContent.offsetHeight;
+                oContent.style.top = oTop / height * oHeight + "px";
+            };
+            document.onmouseup = function () {
+                document.onmousemove = "null";
+                document.onmouseup = "null";
+            };
+            return false
+        };
+           addEvent(window, "mousewheel", mousewheel);
+            function mousewheel(ev) {
+                var oEvent = window.event || ev;
+                if (oEvent.detail) {
+                    if (oEvent.detail > 0) {
+                        scrollDown()
+                    }
+                    else {
+                        scrollUp()
+                    }
+                }
+                else if (oEvent.wheelDelta) {
+                    if (oEvent.wheelDelta < 0) {
+                        scrollDown()
+                    }
+                    else {
+                        scrollUp()
+                    }
+                }
+            }
+            function scrollUp(ev) {
+                var oEvent = event || ev;
+                var disy = oEvent.clientY - oBox.offsetTop;
+                var oTop1 = oEvent.clientY - disy-5;
+                var height = oParent.offsetHeight - oBox.offsetHeight;
+                if (oTop1 <= 0) {
+                    oTop1 = 0;
+                    page=0;
+                }
+                oBox.style.top = oTop1 + "px";
+                var oHeight = oContentBox.offsetHeight - oContent.offsetHeight;
+                oContent.style.top = oTop1 / height * oHeight + "px";
+            }
+            function scrollDown(ev) {
+
+                var oEvent = event || ev;
+                var disy = oEvent.clientY - oBox.offsetTop;
+                var oTop2 = oEvent.clientY - disy+5;
+                var height = oParent.offsetHeight - oBox.offsetHeight;
+                if (oTop2 >= height) {
+                    oTop2 = height;
+                    page1=0
+                }
+                oBox.style.top = oTop2 + "px";
+                var oHeight = oContentBox.offsetHeight - oContent.offsetHeight;
+                oContent.style.top = oTop2 / height * oHeight + "px";
+            }
+            function addEvent(ele, type, listener) {
+                if (ele.addEventListener) {
+                    ele.addEventListener(type, listener)
+                }
+                else {
+                    ele.attachEvent("on" + type, listener)
+                }
+            }
+    };
+</script>
+</body>
+</html>

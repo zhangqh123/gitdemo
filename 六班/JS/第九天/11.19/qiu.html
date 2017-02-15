@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var s=0;
+        for(var x=1;x<=10;x++){
+        function f(x){
+              if(x==1||x==2){
+                  return 100;
+              }
+            return 1/2*f(x-1);
+
+        }
+        s+=f(x);
+        }
+        document.write(s)
+
+
+    </script>
+
+
+</head>
+<body>
+
+</body>
+</html>

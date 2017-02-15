@@ -1,0 +1,21 @@
+.toTop{
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    right: 30px;
+    bottom: 60px;
+    display: none;
+    border-radius: 50%;
+    z-index: 999;
+    border: 1px solid white;
+}
+.toTop img{
+    width: 100%;
+    border-radius: 50%;
+}
+.toTop_wz{
+    width: 10px;
+    position: fixed;
+    right: 110px;
+    bottom: 80px;
+}

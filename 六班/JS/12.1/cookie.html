@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function getCookByKey(key){
+            var arrCookie=document.cookie.split("; ");
+            for(var i=0;i<arrCookie.length;i++){
+                var cookieValue= arrCookie[i].split("=");
+                if(cookieValue[0]==key){
+                    return cookieValue[1];
+                }
+            }
+        }
+        function setCookie(key,value,expiresDays){
+            var oDate= new Date();
+            oDate.setDate(oDate.getDate()+expiresDays);
+            document.cookie=key+"="+value+";expires="+oDate;
+        }
+        function removeCookie(key){
+            setCookie(key,"",-1);
+        }
+        window.onload=function(){
+            var oUser=document.getElementById('username');
+            var oPass=document.getElementById('password');
+            var oRemember=document.getElementById('remember');
+            var oLogin=document.getElementById('login');
+            var user=getCookByKey("user");
+            var pass=getCookByKey("pass");
+            var checked=getCookByKey("rem");
+            //如果是记住密码状态
+            oUser.value=user;
+            if(oUser.value=="undefined"){
+                oUser.value=""
+            }
+
+            if(checked=="true"){
+                oPass.value=pass;
+                oRemember.checked=true;
+            }
+            else{
+                oPass.value="";
+            }
+            oLogin.onclick=function(){
+                var user=oUser.value;
+                var pass=oPass.value;
+                //user liming   pass  xiaoliming
+                //  账号密码正确
+                if(user=="liming"&&pass=="xiaoliming"){
+                    window.open("登录界面.html","_black");
+                    //如果   记住密码按钮被点中  保存
+                    //如果   记住密码按钮未被点中  删除密码
+                    if(oRemember.checked){
+                        setCookie("user",user,30);
+                        setCookie("pass",pass,30);
+                        setCookie("rem",oRemember.checked,30);
+                    }
+                    else{
+                        removeCookie("pass");
+
+                        setCookie("rem",oRemember.checked,30);
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+<body>
+<input type="text" id="username"><br />
+<input type="password" id="password"><input type="checkbox" id="remember"><br />
+<input type="button" value="登录" id="login">
+</body>
+</html>

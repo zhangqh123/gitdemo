@@ -1,0 +1,9 @@
+bootstrap
+特点：
+1.响应式布局
+   （1.）删格系统    12栏
+   下载bootstrap   （1.）官方下载
+                  （2.）window+r    打开cmd命令   npm install-g bootstrap（npm node.js命令
+                        前提是必须下载node install 下载命令  -g全局   bootstrap下载的文件）
+                        github
+            media    媒体设备查询

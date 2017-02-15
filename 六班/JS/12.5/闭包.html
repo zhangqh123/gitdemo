@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //全局变量
+        //局部变量
+
+        //不同    1.声明位置
+
+        //       2.作用范围
+        var a=1;
+        function f1(){
+            var b=2;
+            function f2(){
+                var c=3;
+                    function f3(){
+                        var d=4;
+                    }
+            }
+        }
+       function f1(){
+           var b=1;
+           var f=function(){
+               alert(1);
+           };
+           return f;
+       }
+        var f2=f1();
+        f2();
+
+
+        function f1(){
+            var b=1;
+            var f=function(){
+                alert(++b);
+            }
+            return f
+        }
+        var f2=f1();
+        f2();
+
+
+        function f1(){
+            var b=1;
+            var f=function(){
+                return ++b;
+            }
+            return f;
+        }
+        var f2=f1();
+        var a=f2();
+        alert(a);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

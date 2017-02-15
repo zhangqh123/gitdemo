@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.8.3.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+        .div1 {
+            width: 800px;
+            height: 50px;
+            position: relative;
+            margin: 40px auto;
+            /*overflow: hidden;*/
+        }
+        .div1 ul li {
+            height: 50px;
+            font-size: 30px;
+            line-height: 50px;
+            text-align: center;
+            padding: 0px 20px;
+            float: left;
+            list-style: none;
+            background: yellow;
+            cursor: pointer;
+        }
+        .div2 {
+            width: 40px;
+            height: 5px;
+            background: red;
+            bottom: 0px;
+            position: absolute;
+            margin-left: 20px;
+        }
+        .div1 ul {
+            position: absolute;
+        }
+    </style>
+    <script>
+        $(function () {
+            var firstWid = $(".div1 li:first").width();
+            $(".div2").css("width", firstWid)
+            $(".div1 li").hover(function () {
+                        var width = $(this).width();
+                        var left = $(this).position().left;
+                        console.log(width);
+                        console.log(left);
+                        $(".move").stop().animate({"left": left, "width": width},"fast");
+                    },
+                    function () {
+                        var cWid = $(".click").width();
+                        var cLeft = $(".click").position().left;
+
+                        $(".move").stop().animate({"left": cLeft, "width": cWid},"fast");
+                    }
+            );
+            $(".div1 li").click(function(){
+
+                var width = $(this).width();
+                var left = $(this).position().left;
+                $(".click").css({"left":left,"width":width})
+            });
+        })
+    </script>
+</head>
+<body>
+<div class="div1">
+    <ul>
+        <li>早间新闻</li>
+        <li>体育</li>
+        <li>互联网</li>
+        <li>新闻直播间</li>
+        <li>焦点访谈</li>
+        <div class="div2 move"></div>
+        <div class="div2 click"></div>
+    </ul>
+
+</div>
+</body>
+</html>
+

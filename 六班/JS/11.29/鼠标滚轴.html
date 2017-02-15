@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //        window.onmousewheel=function(){
+        //            alert(1)
+        //        }
+        //事件绑定
+        //chrome  IE
+        addEvent(window, "mousewheel", mousewheel);
+        //  ff
+        addEvent(window, "DOMMouseScroll", mousewheel);
+        //滚珠事件函数
+        function mousewheel(ev) {
+            var oEvent = window.event || ev;
+
+            //火狐浏览器  使用detail属性判断方向  当detail>0 向下滚动   <0  向上滚动
+            // IE chrome  使用wheelDelta属性判断方向  当wheelDelta<0 向下滚动   >0  向上滚动
+            if (oEvent.detail) {
+                if (oEvent.detail > 0) {
+                    scrollDown();
+                    //向下
+                }
+                else {
+                    scrollUp();
+                    //向上
+                }
+            }
+            else if (oEvent.wheelDelta) {
+                if (oEvent.wheelDelta < 0) {
+                    scrollDown();
+                    //向下
+                }
+                else {
+                    scrollUp();
+                    //向上
+                }
+            }
+        }
+        function scrollUp() {
+            alert("scrollUp")
+        }
+        function scrollDown() {
+            alert("scrolldown")
+        }
+
+        function addEvent(ele, type, listener) {   //click
+            if (ele.addEventListener) {
+                ele.addEventListener(type, listener)
+            }
+            else {                                      //onclick
+                ele.attachEvent("on" + type, listener)
+            }
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

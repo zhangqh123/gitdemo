@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.8.3.min.js"></script>
+    <script>
+        //window.onload
+        /*$(function(){
+
+        })*/
+/*
+        $(document).ready(function(){
+            alert(1)
+        })*/
+       $(function(){
+          // $('li').css('backgroundColor','red');
+          // $('.a').css('backgroundColor','blue');
+//           $('p').css({
+//               "width":"100px",
+//               "height":"100px",
+//               "backgroundColor":"red"
+//           });
+           $(".a p").css("fontFamily","楷体");
+           $("li:odd").css('backgroundColor','blue')
+       })
+
+
+    </script>
+</head>
+<body>
+<div>
+    <ul>
+        <li class="a">
+            <p>这是一个a下面的p</p>
+        </li>
+        <li></li>
+        <li class="a"></li>
+        <li></li>
+    </ul>
+    <a href=""></a>
+    <p>qweqweqwe</p>
+</div>
+</body>
+</html>

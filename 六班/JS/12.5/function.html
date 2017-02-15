@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+//        var sum=new Function("a","b","return a+b");
+//
+//        alert(sum(1,2))
+
+
+    var Person=function(name,age,sex){
+        this.name=name;
+        this.age=age;
+        this.sex=sex;
+    };
+     Person.prototype.showName=function(){alert(this.name)};
+     Person.prototype.showAge=function(){alert(this.age)};
+     Person.prototype.showSex=function(){alert(this.sex)};
+    //var P1=new Person("li","18","man");
+     //P1.showName();
+         //1.将person中的属性继承；
+     var Worker=function(name,age,sex,job){
+         Person.apply(this,arguments);
+         this.job=job;
+     };
+        //将person中的方法继承
+//        for(var x in Person.prototype){
+//            Worker.prototype[x]=Person.prototype[x];
+//        }
+      Worker.prototype=new Person();
+       Worker.prototype.showJob=function(){alert(this.job)};
+       // var w1=new Worker("li","18","man","coder");
+       // w1.showAge();
+        var Teacher=function(name,age,sex,job,className){
+            Worker.apply(this,arguments);
+            this.className=className;
+        };
+        /* for(var x in Person.prototype){
+             Teacher.prototype[x]=Person.prototype[x];
+         }*/
+        Teacher.prototype=new Worker();
+         Teacher.prototype.showClassName=function(){alert(this.className)};
+      var w2=new Teacher("li","18","man","coder","match");
+        w2.showJob();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

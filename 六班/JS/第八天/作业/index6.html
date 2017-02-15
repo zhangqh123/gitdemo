@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+     var num=parseInt(prompt("请输入一个数字"));
+      var length = 0;
+      var renum=0;
+      while(num > 0){
+          var gw =num%10;
+          num = parseInt(num/10);
+          length++;
+          renum = renum * 10 + gw;
+      }
+      document.write(length+"<br />");
+     document.write(renum);
+
+
+    </script>
+
+
+
+
+
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+         input{
+             margin-top: 20px;
+         }
+        #sum,#cheng,#chu,#jian{
+            width: 40px;
+            height: 40px;
+            margin-left: 20px;
+        }
+        #input1,#input2{
+            height: 30px;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var oInput1=document.getElementById('input1');
+            var oInput2=document.getElementById('input2');
+            var oSum=document.getElementById('sum');
+            var oJian=document.getElementById('jian');
+            var oCheng=document.getElementById('cheng');
+            var oChu=document.getElementById('chu');
+            oSum.onclick=function(){
+                var n1=Number(oInput1.value);
+                var n2=Number(oInput2.value);
+                var result=n1+n2;
+                if(isNaN(result)){
+                    alert("输入错误")
+                }
+                else{
+                alert(result)
+                }
+            };
+            oJian.onclick=function(){
+                var n1=parseFloat(oInput1.value);
+                var n2=parseFloat(oInput2.value);
+                var result=n1-n2;
+                if(isNaN(result)){
+                    alert("输入错误")
+                }
+                else{
+                    alert(result)
+                }
+            };
+            oCheng.onclick=function(){
+                var n1=parseFloat(oInput1.value);
+                var n2=parseFloat(oInput2.value);
+                var result=n1*n2;
+                if(isNaN(result)){
+                    alert("输入错误")
+                }
+                else{
+                    alert(result)
+                }
+            };
+            oChu.onclick=function(){
+                var n1=parseFloat(oInput1.value);
+                var n2=parseFloat(oInput2.value);
+                if(n2=="0")
+                        alert("除数不能为0");
+                var result=n1/n2;
+                if(isNaN(result)){
+                    alert("输入错误")
+                }
+                else{
+                    alert(result)
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<input id="input1" type="text">
+<input id="input2" type="text"><br>
+<input id="sum" type="button" value="加">
+<input id="jian" type="button" value="减">
+<input id="cheng" type="button" value="乘">
+<input id="chu" type="button" value="除">
+</body>
+</html>

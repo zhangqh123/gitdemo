@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var num=90;
+        var nums=[];
+        var result=num+" = ";
+        while(num>1){
+            for(var i=2;i<=num;i++){
+                if(num%i==0){
+                    num/=i;
+                    nums.push(i);
+                    break;
+                }
+            }
+        }
+        result+=nums.join(" &times; ");
+        document.write(result)
+
+
+
+    </script>
+
+
+
+
+
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,421 @@
+.daohang{
+    width: 1170px;
+    height: 105px;
+    margin: 0 auto;
+    position: relative;
+}
+.daohang .lt{
+    float: left;
+}
+.daohang .lt .tu1{
+    width: 95px;
+    height: 20px;
+    padding-top: 20px;
+}
+.daohang .lt ul{
+    margin-top: 30px;
+}
+em{
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background: url(../img/sprite-main.png) no-repeat;
+    vertical-align: middle;
+    background-position: -72px -700px;
+}
+.daohang .lt .ss{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+.daohang .lt .tu2{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    margin-right: -5px;
+}
+.daohang .lt li{
+    float: left;
+    height: 30px;
+    margin-right: 25px;
+    font-size: 12px;
+    cursor: pointer;
+
+}
+.daohang .lt a{
+    text-decoration: none;
+    color: black;
+}
+.daohang .lt a:hover{
+    color: red;
+}
+.daohang .rt{
+    width: 120px;
+    height: 33px;
+    float: right;
+    padding-top: 15px;
+}
+.daohang .lt .div1{
+    width: 200px;
+    height: 205px;
+    background-color: white;
+    position: absolute;
+    left: 66px;
+    top: 100px;
+    display: none;
+    z-index: 1;
+}
+.daohang .lt .li1:hover .div1{
+    display: block;
+}
+.daohang .lt ol{
+    height: 40px;
+    border-top: 1px solid #d0d3d4;
+    line-height: 40px;
+    padding-left: 8px;
+}
+.daohang .lt ol:hover{
+    color: red;
+}
+.daohang .lt .div2{
+    width: 200px;
+    height: 250px;
+    background-color: white;
+    position: absolute;
+    left: 173px;
+    top: 100px;
+    display: none;
+    z-index: 1;
+}
+.daohang .lt .li2:hover .div2{
+    display: block;
+}
+.daohang .lt .div3{
+    width: 200px;
+    height: 170px;
+    background-color: white;
+    position: absolute;
+    left: 247px;
+    top: 100px;
+    display: none;
+    z-index: 1;
+}
+.daohang .lt .li3:hover .div3{
+    display: block;
+}
+.daohang .lt .div4{
+    width: 200px;
+    height: 370px;
+    background-color: white;
+    position: absolute;
+    left: 318px;
+    top: 100px;
+    display: none;
+    z-index: 1;
+}
+.daohang .lt .li4:hover .div4{
+    display: block;
+}
+.banner{
+    width: 100%;
+    height: 410px;
+    position: relative;
+
+}
+.banner img{
+    position: absolute;
+}
+.banner .yuan{
+    position: absolute;
+    left: 50%;
+    margin-left:-140px ;
+    bottom: 20px;
+    z-index: 2;
+}
+.banner .yuan span{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    margin-right: 10px;
+    border: 1px solid white;
+}
+.span1{
+    background-color: white;
+}
+.banner em{
+    width: 30px;
+    height: 30px;
+    background: url(../img/sprite-main.png) no-repeat;
+}
+.banner .ol1{
+    background-position: -237px -281px;
+    z-index: 10;
+    position: absolute;
+    right: 0;
+    top:50%;
+    margin-top: -15px;
+
+}
+.banner .ol2{
+    background-position: -275px -281px;
+    z-index: 10;
+    position: absolute;
+    right: 0;
+    top:50%;
+    margin-top: -15px;
+    display: none;
+}
+.banner .ol3{
+    background-position:-237px -320px ;
+    position: absolute;
+    left: 0;
+    top:50%;
+    margin-top: -15px;
+}
+.banner .ol4{
+    background-position:-275px -320px ;
+    position: absolute;
+    left: 0;
+    top:50%;
+    margin-top: -15px;
+    display: none;
+}
+.car{
+    width: 780px;
+    height: 310px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding-top: 47px;
+    font-weight: bold;
+}
+.car .lt{
+     float: left;
+ }
+.car .rt{
+    float: left;
+    width: 250px;
+    height: 120px;
+    margin: 25px 0 0 50px;
+    position: relative;
+}
+.car .rt img{
+   position: absolute;
+}
+.car select{
+    width: 355px;
+    height: 47px;
+    margin-top: 15px;
+}
+.car .wz{
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin: 12px 0 0 234px;
+    cursor: pointer;
+}
+.car .wz:hover{
+    background-color: grey;
+}
+.picture{
+    width: 1180px;
+    height: 570px;
+    margin: 0 auto;
+    position: relative;
+}
+.picture .lt{
+    width: 354px;
+    height: 570px;
+    float: left;
+}
+.picture  p{
+    color: white;
+    position: absolute;
+    top:20px;
+    left: 30px ;
+    cursor: pointer;
+}
+.picture .rt .p1{
+    position: absolute;
+    top:20px;
+    left: 440px;
+}
+.picture .rt .p2{
+    position: absolute;
+    top:20px;
+    left: 850px;
+    color: black;
+}
+.picture .rt .p3{
+    position: absolute;
+    top:325px;
+    left: 440px;
+}
+.picture .rt .p4{
+    position: absolute;
+    top:325px;
+    left: 850px;
+}
+.picture p:hover{
+    color: #d0d3d4;
+}
+.picture .p2:hover{
+    color: red;
+}
+.picture .rt{
+    float: left;
+    width: 825px;
+}
+.picture .rt .tu1{
+    width: 356px;
+    height: 256px;
+    float: left;
+    margin-left: 56px;
+}
+.picture .rt .tu1 img{
+    height: 256px;
+}
+.picture .rt .tu2{
+    margin-bottom: 48px;
+}
+.foot {
+    width: 100%;
+    height: 870px;
+    margin-top: 100px;
+    background-color: #e7e9ea;
+}
+.foot .foot-top{
+    width: 1180px;
+    height: 280px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding-top: 35px;
+}
+.foot .wz{
+    float: left;
+    width: 200px;
+    margin-right: 95px;
+}
+.foot .wz em{
+    background: url(../img/arrows.png) no-repeat;
+    width: 6px;
+    height: 10px;
+    background-position: -3px -349px;
+    margin-right: 5px;
+}
+.foot .foot-butt{
+    width: 1180px;
+    height: 440px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding-top: 35px;
+    border-bottom: 1px solid #d0d3d4;
+}
+.foot  li{
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.foot li:hover{
+    color: red;
+}
+.foot .foot-last{
+    width: 1180px;
+    margin: 0 auto;
+}
+.foot .foot1{
+    width: 90px;
+    margin: 30px  28px 0 28px;
+    float: left;
+    font-size: 12px;
+  text-align: center;
+}
+.foot .foot-last .tupian{
+    width: 45px;
+    height: 45px;
+    margin-bottom: 20px;
+    margin-left: 22px;
+}
+.foot .foot-last p{
+    border-left: 1px solid #d0d3d4 ;
+    height: 35px;
+    float: left;
+    margin-top: 50px;
+}
+.over-1{
+    width: 100%;
+    height: 180px;
+    background-color: #434c53;
+}
+.over-2{
+    width: 1180px;
+    height: 110px;
+    border-bottom: 1px solid #363d42;
+    margin: 0 auto;
+    color: white;
+    font-size: 12px;
+}
+.over-2 span {
+    margin-right: 20px;
+    cursor: pointer;
+}
+.over-2 span:hover{
+    color: #d0d3d4;
+}
+.over-3{
+    height: 70px;
+    line-height: 70px;
+    color: #d0d3d4;
+    font-size: 12px;
+    margin: 0 auto;
+    width: 1180px;
+}
+.over-2 .lt{
+    float: left;
+    height: 110px;
+    line-height: 110px;
+    margin-right: 400px;
+}
+.over-2 .tu1{
+    width: 30px;
+    height: 30px;
+    float: left;
+    margin: 40px 10px 0 0;
+    background-color: black;
+}
+.banner .kl1{
+    position: relative;
+}
+.banner .kl1 .kl2{
+    width: 150px;
+    height: 40px;
+    background-color: black;
+    position: absolute;
+    top:50px;
+    left: 80px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 40px;
+}
+.banner .kl1 .kl3{
+    width: 150px;
+    height: 40px;
+    background-color: black;
+    position: absolute;
+    top:50px;
+    right: 80px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 40px;
+}
+.foot .foot1:hover{
+    color: red;
+}

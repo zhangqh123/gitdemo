@@ -1,0 +1,11 @@
+块标签    header  footer   nav  hgroup   section  article  aside   figure  figcaption
+         details    summary   dialog
+
+行标签    time   mark  address    progress  max  value
+
+
+
+解决低版本浏览器兼容问题
+
+   1.document.creatElement("header")
+   2.引入html5shiv.js

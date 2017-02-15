@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+
+        // reg  匹配a这个字符
+      /*  var reg=/a/;
+       // var reg=new RegExp("a");
+        //true  表示字符串中含有a这个元素    区分大小写
+   var str="qyeuighjasgdui"
+        var result=reg.test(str) ; //测试字符串
+         document.write(result)
+        */
+
+
+
+        //正则表达式匹配一个数字    g 全局匹配
+        var reg=/\d/g;    //数字 \d       字母  [a-z]        \d+ 多个数字
+        var str="jsjk123aa781972819312";
+//       var arr= str.match(reg);
+//        document.write(arr)
+
+        /*str.replace(reg,"A");
+        document.write(str.replace(reg,"A"))*/
+
+
+        var result=str.search(reg);
+        document.write(result)
+
+      /* var arr=str.split(reg);
+        document.write(arr)*/
+
+    </script>
+
+
+
+
+
+</head>
+<body>
+
+</body>
+</html>

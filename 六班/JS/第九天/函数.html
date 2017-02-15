@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //定义    function fi(){}
+              //var  fi=function(){}
+
+        //return （1.返回结果  2.提前结束函数）
+        //        1.结果就等于返回值；
+        //        2.如果没有return,  结果 undefined
+        //        3.如果有return,但没有值 ，结果undefined
+
+
+        function sum(){
+            var s=0;
+            for(var i=0;i<arguments.length;i++){
+                s+=Number(arguments[i]);
+
+            }
+            return s;
+        }
+        s=sum(1,2,34,5,6,67,"343",435,45,43)
+        alert(s)
+    </script>
+</head>
+<body>
+
+</body>
+</html>

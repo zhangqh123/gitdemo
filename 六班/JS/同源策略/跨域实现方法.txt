@@ -1,0 +1,7 @@
+1.jsonp
+
+2.代理
+
+3.XMLHttpRequest  level2
+
+

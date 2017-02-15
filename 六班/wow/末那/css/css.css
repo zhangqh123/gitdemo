@@ -1,0 +1,465 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "微软雅黑";
+}
+.nav{
+    color: transparent;
+    position: fixed;
+    border-bottom: 1px solid #eeeeee;
+    z-index: 111111;
+    width: 100%;
+    background: #0b0c11;
+}
+.nav ul li{
+    color: #8a8a8a;
+    line-height: 60px;
+    padding-top: 5px;
+    margin-left: 30px;
+    cursor: pointer;
+    position: relative;
+}
+.nav ul li:hover{
+    color:red ;
+}
+.nav ul li:hover dl{
+    display: block;
+}
+.nav ul li dl{
+    border-top: 2px solid red;
+    display: none;
+    width: 210px;
+    height: 102px;
+    background: #222222;
+    position: absolute;
+    color: #cdcccc;
+    left: -80px;
+}
+.nav ul li .dl1{
+    height: 153px;
+}
+.nav ul li dl dd{
+    width: 210px;
+    margin: auto;
+    line-height: 50px;
+    height: 50px;
+    border-bottom: 1px solid #eeeeee;
+    box-sizing: border-box;
+    padding: 0 20px 0 20px ;
+}
+.nav ul li dl dd:hover{
+    color: white;
+    padding-left: 30px;
+}
+.nav ul li dl dd:hover span{
+    display: block;
+}
+.nav ul li dl dd span{
+    float: right;
+    display: none;
+}
+.nav img{
+    width: 45px;
+    height: 45px;
+    margin: 10px 40px 0 40px;
+}
+.carousel{
+   padding-top: 26px;
+    position: relative;
+}
+.prev1,.next1{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: white;
+    position: absolute;
+    z-index: 20;
+    top: 250px;
+    background: black;
+    border-radius: 50%;
+}
+.prev1{
+    left: 30%;
+}
+.next1{
+    right: 30%;
+}
+.prev1:hover,.next1:hover{
+    background: red;
+}
+.serve_box{
+    width: 100%;
+    height: 400px;
+    background: #19191a;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 40px;
+}
+.serve{
+    width: 1200px;
+    margin: 0 auto;
+}
+.serve h2{
+    color: white;
+    margin-bottom: 20px;
+}
+.serve .content_box{
+    width: 1140px;
+    height: 200px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+}
+.serve .content_box .content{
+    width: 380px;
+  float: left;
+}
+.serve .content_big{
+    width: 1520px;
+  position: absolute;
+    left: 0;
+}
+.serve .content_box .content h5:hover{
+    color: red;
+}
+.serve .prev9,.next9{
+    font-size: 30px;
+    float: left;
+    color: whitesmoke;
+   margin-top: 90px;
+}
+.down{
+    width: 100%;
+    height: 750px;
+    background: url(../image/1439888965539.jpg) no-repeat center center;
+    background-size: 100%;
+    z-index: 1;
+    position: absolute;
+}
+.aboutUs_box{
+    width: 100%;
+    height: 750px;
+    box-sizing: border-box;
+    padding-top: 40px;
+    position: absolute;
+    z-index: 2;
+}
+.aboutUs_box h2{
+    color: white;
+}
+.aboutUs_box p{
+    margin-top: 40px;
+}
+ .more{
+    width: 300px;
+    height: 50px;
+    border-radius: 50px;
+    border:1px solid #eeeeee;
+    margin: 60px auto;
+    line-height: 50px;
+    color: red;
+    font-size: 20px;
+}
+.tu{
+    width: 100%;
+}
+.aboutUs_box img{
+    width: 100%;
+}
+.product_box{
+    width: 100%;
+    height: 900px;
+    box-sizing: border-box;
+    padding-top: 40px;
+    background: #131313;
+}
+.product_box h2{
+    color: white;
+}
+.product_box ul{
+    margin: 30px 0 30px 0;
+}
+.product_box ul li{
+    border: 1px solid #333333;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+.product_box ul li:hover{
+    color: white;
+    background:red ;
+}
+.picture_box{
+    width: 100%;
+}
+.picture{
+    width: 330px;
+    height: 212px;
+    float: left;
+    margin: 7px 7px 0 0;
+    overflow: hidden;
+    position: relative;
+}
+.yinying{
+    width: 330px;
+    height: 212px;
+    position: absolute;
+    opacity: 0.3;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: grey;
+    display: none;
+}
+.picture p{
+    color: red;
+    position: absolute;
+    top: 49%;
+    left: 42%;
+    display: none;
+}
+.picture:hover .yinying{
+    display: block;
+}
+.picture:hover p{
+    display: block;
+}
+.picture img{
+    width: 100%;
+}
+.picture:hover img{
+    transform: scale(1.2);
+    transition: 1s;
+}
+.view_more_box{
+    width: 100%;
+    height: 760px;
+    background: #131313;
+}
+.view_more{
+    width: 100%;
+    height: 150px;
+    font-size: 22px;
+    line-height: 150px;
+    cursor: pointer;
+}
+.view_more:hover{
+    background-color:#dd1a1e;
+    color: white;
+}
+.view_more:hover span{
+    margin-left:-40px;
+}
+.view_more_box .tu2{
+    width: 100%;
+    height:700px ;
+    background:url(../image/1439824792276.jpg) no-repeat center;
+    box-sizing: border-box;
+    padding-top: 60px;
+    position: absolute;
+    z-index: 1;
+}
+.view_more_box .up{
+    width: 100%;
+    height: 700px;
+    position: absolute;
+    z-index: 2;
+    box-sizing: border-box;
+    padding-top: 60px;
+}
+.view_more_box .up div{
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.view_more_box .up img{
+    width: 100%;
+}
+.view_more_box .up h2{
+    color: white;
+}
+.view_more_box .up h6 {
+    color: #8f8f8f;
+}
+.view_more_box .up p{
+    width: 700px;
+    color: #8f8f8f;
+    font-size: 12px;
+    margin:60px auto;
+}
+.news_box{
+    width: 100%;
+    height: 1200px;
+    background: #131313;
+    box-sizing:border-box;
+    padding-top: 160px;
+}
+.news_box h2{
+    color: white;
+}
+.news_box h4{
+    margin-bottom: 60px;
+}
+.news_box .news_one{
+    width: 100%;
+    height: 150px;
+}
+.news_box .news_one .lt{
+    width: 180px ;
+    float: left;
+    margin:20px 50px 0 300px;
+}
+.news_box .news_one .lt p:first-child{
+    color: red;
+    font-size: 70px;
+}
+.news_box .news_one .lt p:last-child{
+    color: white;
+    font-size: 14px;
+    float: right;
+    margin-top: -32px;
+}
+.news_box .news_one .ct{
+    width: 450px;
+    float: left;
+    text-align: left;
+    color: #feeeee;
+}
+.news_box .news_one .ct p:first-child{
+    font-size: 16px;
+    margin-top: 38px;
+}
+.news_box .news_one .ct p:last-child{
+    font-size: 12px;
+}
+.news_box .news_one .rt {
+    float: right;
+    height: 150px;
+    margin-right: 300px;
+    line-height: 150px;
+    font-size: 30px;
+    color: white;
+    display: none;
+}
+.news_box .news_one:hover{
+    background: red;
+}
+.news_box .news_one:hover .lt p{
+    color: white;
+}
+.news_box .news_one:hover .rt{
+    display: block;
+    transition: 1s;
+    margin-right: 280px;
+}
+.news_box .news_one:hover .lt{
+    margin-left: 240px;
+    transition: 1s;
+}
+.map{
+    width: 100%;
+    height: 500px;
+    background: url(../image/1438618614879.jpg) no-repeat center;
+    position: absolute;
+    z-index: 1;
+}
+.contact_box{
+    width: 100%;
+    height: 500px;
+    padding-top: 60px;
+    position: absolute;
+    z-index: 2;
+}
+.contact_box h2{
+    color: white;
+}
+.contact_box .contact{
+    width:1000px ;
+    margin: 40px auto;
+    text-align: left;
+    color: #9b9391;
+}
+.contact_box .contact .lt{
+    width: 500px;
+    float: left;
+}
+.contact_box .contact .rt{
+    width: 400px;
+    float: right;
+}
+.contact_box .contact .lt h5{
+    margin-bottom: 24px;
+}
+.contact_box .contact .lt p{
+    font-size: 12px;
+}
+.contact_box .contact .lt i{
+    display: block;
+    float: left;
+    margin-left: 8px;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 50%;
+    background: #2e2f2e;
+    cursor: pointer;
+    color: white;
+}
+.contact_box .contact .lt i:hover{
+    background: #5c5c5c;
+}
+.contact_box .contact .rt input{
+    border-radius: 0;
+    outline: none;
+    background: black;
+    border: 1px solid #2f2e2f;
+    margin-bottom: 10px;
+}
+.contact_box .contact .rt textarea{
+    background: black;
+    height: 80px;
+    border: 1px solid #2f2e2f;
+    border-radius: 0;
+    margin-bottom: 10px;
+}
+.foot{
+   width: 100%;
+    height: 200px;
+    background: #131212;
+}
+.foot img{
+    float: left;
+}
+.prev8,.next8{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: white;
+    position: absolute;
+    z-index: 20;
+    top: 30px;
+    background: black;
+    border-radius: 50%;
+}
+.prev8{
+    left: 30%;
+}
+.next8{
+    right: 30%;
+}
+.foot .item{
+    width: 970px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.prev8:hover,.next8:hover{
+    background: red;
+}

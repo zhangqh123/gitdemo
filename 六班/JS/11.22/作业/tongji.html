@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        input {
+            border: 1px solid #a9a9a9;
+            height: 34px;
+            line-height: 34px;
+            width: 550px;
+            margin: 20px 20px 0 0;
+            padding-left: 5px;
+            float: left;
+        }
+
+        #myDiv {
+            background: #3498db;
+            color: #fff;
+            font-size: 14px;
+            text-align: center;
+            width: 100px;
+            line-height: 34px;
+            border: none 0;
+            cursor: pointer;
+            margin: 20px 20px 0 40px;
+            float: left;
+        }
+
+    </style>
+    <script>
+        window.onload = function () {
+            var oContent=document.getElementById('json1');
+            var oBtn = document.getElementById('myDiv');
+            oBtn.onclick = function () {
+
+                var jstr = oContent.innerHTML;
+                var json = eval("(" + jstr + ")");
+                var arr = json.place;
+                var newJson={};
+                for (var i = 0; i < arr.length; i++) {
+                   var image= arr[i].imageSrc;
+                    var indexPoint=image.lastIndexOf('.')+1;
+                    var type=image.substring(indexPoint);
+                    if(newJson[type]){
+                        newJson[type]++;
+                    }
+                    else{
+                        newJson[type]=1;
+                    }
+
+                }
+                for(var x in newJson){
+                    document.write(""+x+":"+newJson[x]+"<br />")
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="json1">
+    {
+    "country":"china", "place":[
+    {"name": "beijing", "imageSrc": "beijing.jpg"},
+    {"name": "helan", "imageSrc": "helan.jpg"},
+    {"name": "sicuan", "imageSrc": "sicuan.png"},
+    {"name": "hebei", "imageSrc": "hebei.gif"},
+    {"name": "chengdu", "imageSrc": "chengdu.jpg"},
+    {"name": "xiamen", "imageSrc": "beijing.jpg"},
+    {"name": "jilin", "imageSrc": "jilin.png"},
+    {"name": "taiwan", "imageSrc": "taiwan.JPEG"},
+    {"name": "qinhai", "imageSrc": "qinhai.jpg"},
+    {"name": "gansu", "imageSrc": "gansu.png"},
+    {"name": "xian", "imageSrc": "xian.jpg"},
+    {"name": "emei", "imageSrc": "emei.png"},
+    {"name": "fujian", "imageSrc": "fujian.gif"},
+    {"name": "lijiang", "imageSrc": "lijiang.jpg"},
+    {"name": "dali", "imageSrc": "dali.tif"},
+    {"name": "xiamen", "imageSrc": "beijing.jpg"},
+    {"name": "jilin", "imageSrc": "jilin.png"},
+    {"name": "taiwan", "imageSrc": "taiwan.JPEG"},
+    {"name": "qinhai", "imageSrc": "qinhai.jpg"},
+    {"name": "gansu", "imageSrc": "gansu.png"},
+    {"name": "xian", "imageSrc": "xian.jpg"},
+    {"name": "emei", "imageSrc": "emei.png"},
+    {"name": "fujian", "imageSrc": "fujian.gif"},
+    {"name": "lijiang", "imageSrc": "lijiang.jpg"},
+    {"name": "dali", "imageSrc": "dali.tif"},
+    {"name": "helan", "imageSrc": "helan.jpg"},
+    {"name": "sicuan", "imageSrc": "sicuan.png"},
+    {"name": "hebei", "imageSrc": "hebei.gif"},
+    {"name": "chengdu", "imageSrc": "chengdu.jpg"},
+    {"name": "xiamen", "imageSrc": "beijing.jpg"},
+    {"name": "jilin", "imageSrc": "jilin.png"},
+    {"name": "taiwan", "imageSrc": "taiwan.JPEG"},
+    {"name": "qinhai", "imageSrc": "qinhai.jpg"},
+    {"name": "gansu", "imageSrc": "gansu.png"},
+    {"name": "xian", "imageSrc": "xian.jpg"},
+    {"name": "emei", "imageSrc": "emei.png"},
+    {"name": "fujian", "imageSrc": "fujian.gif"},
+    {"name": "lijiang", "imageSrc": "lijiang.jpg"},
+    {"name": "dali", "imageSrc": "dali.tif"},
+    {"name": "xiamen", "imageSrc": "beijing.jpg"},
+    {"name": "jilin", "imageSrc": "jilin.png"},
+    {"name": "taiwan", "imageSrc": "taiwan.JPEG"},
+    {"name": "qinhai", "imageSrc": "qinhai.jpg"},
+    {"name": "gansu", "imageSrc": "gansu.png"},
+    {"name": "xian", "imageSrc": "xian.jpg"},
+    {"name": "emei", "imageSrc": "emei.png"},
+    {"name": "fujian", "imageSrc": "fujian.gif"},
+    {"name": "lijiang", "imageSrc": "lijiang.jpg"},
+    {"name": "dali", "imageSrc": "dali.tif"},
+    {"name": "dali", "imageSrc": "dali.tif"},
+    {"name": "dali", "imageSrc": "dali.tifasda"}]
+    }
+</div>
+<div id="myDiv">点击一下</div>
+</body>
+</html>

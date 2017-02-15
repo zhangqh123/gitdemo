@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+        }
+        body{
+            background: black;
+        }
+        #c1{
+            background: white;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var oC=document.getElementById("c1");
+            var oGc=oC.getContext("2d");
+            var deg=0;
+
+            setInterval(function(){
+
+                deg++;
+                oGc.beginPath();
+                oGc.lineWidth=1;
+                oGc.clearRect(0,0,oGc.canvas.width,oGc.canvas.height);
+                for(var i=0;i<=30;i++){
+                    oGc.moveTo(200,200);
+                    oGc.arc(200,200,150,(12*i+deg)*Math.PI/180,(12*(i+1)+deg)*Math.PI/180);
+                    oGc.stroke();
+                }
+                oGc.beginPath();
+                oGc.lineWidth=1;
+                oGc.fillStyle="white";
+                oGc.arc(200,200,120,0,360*Math.PI/180);
+                oGc.fill();
+                oGc.stroke();
+                oGc.beginPath();
+                oGc.lineJoin="round"
+                oGc.lineWidth=10;
+                oGc.moveTo(150,400);
+                oGc.lineTo(200,200);
+                oGc.lineTo(250,400);
+                oGc.stroke();
+                oGc.beginPath();
+                oGc.lineWidth=10;
+                oGc.moveTo(50,400);
+                oGc.lineTo(200,200);
+                oGc.lineTo(350,400);
+                oGc.stroke();
+            },10);
+        }
+    </script>
+</head>
+<body>
+<canvas id="c1" width="1000px" height="650px"></canvas>
+</body>
+</html>

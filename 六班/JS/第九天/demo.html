@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        div{
+            width: 200px;
+            height: 100px;
+            background-color: blue;
+        }
+    </style>
+
+    <script>
+
+        window.onload = function(){
+
+            var oDiv = document.getElementById("div1");
+            var oBtn = document.getElementById("btn1");
+            oBtn.onclick = function(){
+//                style
+                // Cannot read property 'height' of undefined(…)
+//               alert(oDiv.style.backgroundColor)
+//                alert(oDiv.currentStyle.height);  //currentStyle 当前显示的样式
+//                currentStyle  IE
+                //: 属性“getComputedStyle”的值为 null、未定义或不是 Function 对象
+//               getComputedStyle   获取 计算过后的样式
+//                alert(getComputedStyle(oDiv).height);
+
+                //兼容性
+
+                //  if  else
+                // 如果oDiv .currentStyle  存在
+//
+//                if(oDiv.currentStyle){
+//                    alert(oDiv.currentStyle[attr])
+//                }else{
+//                    alert(getComputedStyle(oDiv).height);
+//                }
+
+               alert(getStyle(oDiv,"fontSize"));
+
+
+
+            }
+        }
+
+        function getStyle(ele,attr){
+            if(ele.currentStyle){
+                return ele.currentStyle[attr]
+            }else{
+                return getComputedStyle(ele)[attr];
+            }
+        }
+    </script>
+
+</head>
+<body>
+<input type="button" value="按钮" id="btn1">
+<div id="div1"></div>
+</body>
+</html>

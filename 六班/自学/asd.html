@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        li:nth-child(1){
+            background: red;
+        }
+    </style>
+    <script src="../JQ/jquery-1.8.3.min.js"></script>
+
+    <script>
+        $(function(){
+            $("#list li:nth-child(0)").hide()
+//            $("#list li:only-child").hide()
+//            $("#list li:last-child").hide()
+        })
+
+    </script>
+</head>
+<body>
+<ul id="list">
+    <li>苹果iphone 2s</li>
+    <li>苹果iphone 3s</li>
+    <li>苹果iphone 4s</li>
+    <li>苹果iphone 4s</li>
+    <li>苹果iphone 4s</li>
+
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,497 @@
+*{
+    margin: 0;padding: 0;
+}
+.head-box{
+    width: 100%;
+    height: 153px;
+    background-color: #eaeaea;
+}
+.head{
+    width: 962px;
+    height: 90px;
+    margin: 0 auto;
+}
+i{
+    display: block;
+    background: url(../img/sprites.jpg) no-repeat;
+}
+.logo{
+    padding-top: 20px;
+    float: left;
+    cursor: pointer;
+}
+.head .logo .picture1{
+    width: 238px;
+    height: 56px;
+    background-position: -126px -171px;
+    vertical-align: middle;
+}
+.head .right{
+    float: right;
+}
+.head .up{
+    text-align: right;
+    padding-top: 10px;
+    font-size: 12px;
+    margin-bottom: 25px;
+    color: grey;
+}
+.head .picture2{
+    width: 83px;
+    height: 15px;
+    float: left;
+    cursor: pointer;
+}
+.head .picture3{
+    width: 18px;
+    height: 18px;
+    background-position: -342px -80px;
+    float: left;
+    margin: -3px 0 0 8px;
+    cursor: pointer;
+}
+.head .picture4{
+    width: 57px;
+    height: 15px;
+    background-position: -236px 0;
+    float: left;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.head .right .span1{
+   cursor: pointer;
+    margin-right: 10px;
+}
+.head .right .span2{
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.head .right .span1:hover{
+  color: orange;
+}
+.head .right .span2:hover{
+    color: orange;
+}
+.head .picture2:hover{
+    background-position: 0 -15px;
+}
+.head .picture3:hover{
+    background-position: -342px -99px;
+}
+.head .picture4:hover{
+    background-position: -236px -15px;
+}
+.main-box{
+    width: 100%;
+}
+.main{
+    width: 100%;
+    height: 215px;
+    background: url(../img/colorBelt1.jpg) repeat-x;
+
+}
+.main .div1{
+    width: 962px;
+    height: 215px;
+    margin: 0 auto;
+    position: relative;
+}
+.banner-box{
+    margin: 0 auto;
+    width: 962px;
+    height: 275px;
+    position: absolute;
+    top: -60px;
+}
+.banner-box .banner{
+    width: 720px;
+    height: 275px;
+    float: left;
+    position: relative;
+}
+.banner-box .banner img{
+    position: absolute;
+    width: 720px;
+    height: 275px;
+}
+.banner-box .banner .div2{
+    position: absolute;
+    right: 30px;
+    bottom:30px;
+}
+.new{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: grey;
+    margin-left: 10px;
+    float: left;
+}
+.new1{
+    background-color: red;
+}
+.now{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: red;
+    margin-left: 10px;
+    float: left;
+}
+.banner-box .banner span:hover{
+    background: red;
+}
+.banner-box .right{
+    width: 242px;
+    height: 265px;
+    background-color: white;
+    float: left;
+    position: relative;
+}
+.banner-box .right .up{
+    width: 192px;
+    height: 43px;
+    box-sizing: border-box;
+    padding-top: 10px;
+    border-bottom: 1px solid skyblue;
+    margin-left: 25px;
+}
+.banner-box .right .picture1{
+    width: 44px;
+    height: 25px;
+    background-position: -305px 0;
+    float: left;
+    cursor: pointer;
+}
+.banner-box .right .picture2{
+    width: 60px;
+    height: 12px;
+    background-position: -350px -12px;
+    float: left;
+    margin: 13px 0 0 88px;
+    cursor: pointer;
+}
+.banner-box .right .picture2:hover{
+    background-position: -350px 0;
+}
+.banner-box .right ul{
+    margin-top: 10px;
+}
+.banner-box .right li{
+    width: 192px;
+    height: 27px;
+    font-size: 12px;
+    border-bottom: 1px dotted grey;
+    margin-left: 25px;
+    list-style: none;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    line-height: 27px;
+}
+.banner-box .right li i{
+    width: 4px;
+    height: 4px;
+    background-position: -293px -14px;
+    vertical-align: middle;
+    position: absolute;
+    top:10px
+}
+.banner-box .right .picture3{
+    width: 192px;
+    height: 68px;
+    background-position: -200px -260px;
+    margin-left: 25px;
+}
+.banner-box .right .li1{
+    border-bottom: none;
+}
+.main-box .main_1{
+    width: 100%;
+    height: 190px;
+    background-color: #eaeaea;
+    box-sizing: border-box;
+    padding-top: 18px;
+}
+.main-box .main_1 .change1{
+    width: 962px;
+    height: 170px;
+    margin: 0 auto;
+    border: 1px solid #ccd5f1;
+}
+.main-box .main_1 .left{
+    float: left;
+    width: 213px;
+    height: 170px;
+    background-color: #f4f4f4;
+}
+.main-box .main_1 li{
+    list-style: none;
+    width: 213px;
+    height: 34px;
+    text-indent: 40px;
+    line-height: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.main-box .main_1 .right{
+    float: left;
+    height: 170px;
+    position: relative;
+}
+.main-box .main_1 .right img{
+    position: absolute;
+    height: 170px;
+    width: 749px;
+}
+.main-box .main_2{
+    width: 962px;
+    height: 583px;
+    margin: 25px auto;
+    border-bottom: 1px solid steelblue;
+}
+.main-box .main_2 .left{
+    width: 220px;
+    height: 532px;
+    float: left;
+
+}
+.main-box .main_2 .right{
+    width: 724px;
+    height: 532px;
+    float: left;
+    margin-left: 15px;
+    border: 1px solid #bbb;
+}
+.main-box .main_2 .left .li2{
+    list-style: none;
+    width: 218px;
+    height: 60px;
+    border: 1px solid #bbb;
+    border-top:none;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-left: 25px;
+}
+.main-box .main_2 .left .li1{
+    height: 47px;
+    border: 1px solid #bbb;
+    background-color: #f1f1f1;
+    line-height: 47px;
+    font-weight: bold;
+    text-indent: -105px;
+    list-style: none;
+    width: 218px;
+    text-align: center;
+    box-sizing: border-box;
+    padding-left: 25px;
+}
+.main-box .main_2 .left i{
+    margin-top: 20px;
+}
+.main-box .main_2 .left .picture1{
+    width: 218px;
+    height: 33px;
+    background-position: -124px -228px;
+    border: 1px solid #bbb;
+}
+.main-box .main_2 .left .picture2{
+    width: 218px;
+    height: 33px;
+    background-position: -190px -328px;
+    border: 1px solid #bbb;
+}
+.main-box .main_2 .left .picture3{
+    width: 218px;
+    height: 33px;
+    background-position:  0 -80px;
+    border: 1px solid #bbb;
+}
+.main-box .main_2 .left .picture4{
+    width: 218px;
+    height: 60px;
+    background-position:  0 -110px;
+    border: 1px solid #bbb;
+}
+.main-box .right .div1{
+    width: 724px;
+    height: 45px;
+    background-color:#f1f1f1 ;
+    border-bottom: 1px solid #bbb;
+    line-height: 45px;
+    font-weight: bold;
+
+}
+.main-box .main_2 .div1 p{
+    float: left;
+    margin-left: 23px;
+}
+.main-box .main_2 .div1 i{
+    width: 80px;
+    height: 23px;
+    background-position: -140px -30px;
+    float: right;
+   margin: 10px 15px 0 0;
+    cursor: pointer;
+}
+.main-box .main_2 .div1 i:hover{
+    background-position: -57px -30px;
+}
+.main-box .main_2 .right .div2{
+    width: 724px;
+    height: 45px;
+    background: #f7f7f7;
+    border-bottom: 1px solid #bbb;
+
+}
+.main-box .main_2 .right .div2 li{
+    list-style: none;
+    height: 45px;
+    line-height: 45px;
+    color: royalblue;
+    font-weight: bold;
+    float: left;
+    font-size: 12px;
+    margin: 0 46px 0 25px;
+}
+.main-box .main_2 .right .div2 .mm1{
+    margin-right: -10px;
+}
+li{
+    list-style: none;
+    cursor: pointer;
+}
+.main-box .main_2 .right .div3 .m1{
+    width: 120px;
+    height: 410px;
+    float: left;
+    border-left: 1px solid #bbb;
+    font-size: 12px;
+    color: darkslategray;
+    font-family: "微软雅黑";
+    box-sizing: border-box;
+    padding-left: 25px;
+}
+.main-box .main_2 .right .div3 .m1 li{
+    margin-top: 15px;
+}
+.main-box .main_2 .right .div3 .m1 li:hover{
+    color: #aaa;
+}
+.main-box .main_2 .right .div3 .m2 {
+    border: none;
+}
+.main-box .main_2 .right .div4{
+    clear: both;
+    width: 724px;
+    height: 33px;
+    border-top: 1px solid #bbb;
+}
+.foot-box{
+    width: 100%;
+    height: 62px;
+}
+.foot{
+    width: 962px;
+    height: 62px;
+    margin: 0 auto;
+    font-size: 12px;
+    color: #aaa;
+    text-align: center;
+}
+.main-box .main_2 .right .div3 .picture1{
+    width: 12px;
+    height: 12px;
+    background-position: -203px -60px;
+    float: right;
+    vertical-align: middle;
+    margin: 2px 18px 0 0;
+}
+.main-box .main_2 .right .div3 .picture2{
+    width: 12px;
+    height: 12px;
+    background-position: -94px -60px;
+    float: right;
+    vertical-align: middle;
+    margin: 2px 20px 0 0;
+}
+.main-box .main_2 .right .div3 .picture3{
+    width: 12px;
+    height: 12px;
+    background-position: -396px -60px;
+    float: right;
+    vertical-align: middle;
+    margin: 2px 20px 0 0;
+}
+.main-box .main_2 .div4{
+    font-size: 12px;
+    box-sizing: border-box;
+    padding:7px 0 0 450px;
+}
+.main-box .main_2 .right .div4 .picture1{
+    width: 12px;
+    height: 12px;
+    background-position: -203px -60px;
+    float: left;
+    vertical-align: middle;
+
+}
+.main-box .main_2 .right .div4 .picture2{
+    width: 12px;
+    height: 12px;
+    background-position: -94px -60px;
+    float: left;
+    vertical-align: middle;
+
+}
+.main-box .main_2 .right .div4 .picture3{
+    width: 12px;
+    height: 12px;
+    background-position: -396px -60px;
+    float: left;
+    vertical-align: middle;
+
+}
+.main-box .main_2 .div4 span{
+    display: block;
+    float: left;
+    margin-left: -15px;
+    margin-right: 20px;
+}
+.main-box .main_2 .left .l1{
+    float: left;
+}
+.main-box .main_2 .left .l2{
+   font-size: 12px;
+    float: left;
+   text-align: left;
+    margin-left: 10px;
+    line-height: 17px;
+}
+.main-box .main_2 .left .span2{
+    color: blue;
+}
+#li1:hover{
+    background-color: red;
+    color: white;
+}
+#li2:hover{
+    background-color: yellow;
+    color: white;
+}
+#li3:hover{
+    background-color: green;
+    color: white;
+}
+#li4:hover{
+    background-color: blue;
+    color: white;
+}
+#li5:hover{
+    background-color: orangered;
+    color: white;
+}

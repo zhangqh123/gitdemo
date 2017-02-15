@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        //匿名函数
+
+//        var f1=function(){
+//          alert(1)
+//        };
+        //1.   声明变量保存函数
+//        (function(){
+//            alert(1)
+//        })();  //函数自执行
+        //通过函数自执行的形式，解决函数命名冲突的问题
+
+
+        //全局变量容易被污染，尽量少用全局变量    使用局部变量
+       window.onload=function(){
+
+           (function(){
+               var oBtn=document.getElementById('btn1');
+               oBtn.onclick=function(){
+                   alert(1);
+               }
+           })();
+           (function(){
+               var oBtn=document.getElementById('btn2');
+               oBtn.onclick=function(){
+                   alert(2);
+               }
+           })()
+       }
+
+    </script>
+</head>
+<body>
+<input type="button" id="btn1" value="按钮1">
+<input type="button" id="btn2" value="按钮2">
+</body>
+</html>

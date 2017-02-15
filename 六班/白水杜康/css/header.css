@@ -1,0 +1,91 @@
+.top_box {
+    width: 100%;
+    height: 45px;
+    background: #45535f
+}
+body{
+    background: white;
+}
+.top {
+    width: 1100px;
+    height: 45px;
+    margin: 0 auto;
+    line-height: 45px;
+    color: white
+}
+.top_left {
+    float: left
+}
+.top_right {
+    float: right;
+    margin-right: 10px
+}
+.top_right li {
+    float: left;
+    cursor: pointer;
+    padding-left: 17px;
+    width: 55px;
+    height: 45px
+}
+
+.top_right li:hover {
+    color: red
+}
+.top_right .li1 {
+    background: url(../images/home.gif) no-repeat left 15px
+}
+.top_right .li2 {
+    background: url(../images/shoucang.gif) no-repeat left 15px;
+}
+.top_right .li3 {
+    background: url(../images/women.gif) no-repeat left 15px;
+}
+.top_right .li4 {
+    background: url(../images/ditu.gif) no-repeat left 15px;
+}
+.content{
+    width: 1100px;
+    height: 104px;
+    margin:0 auto;
+    clear: both;
+}
+.content_left{
+    padding-top: 11px;
+    width:0;
+    float: left;
+    overflow: hidden;
+}
+.content_right{
+    float: right;
+    margin-right: 10px;
+}
+.bottom_box{
+    width: 100%;
+    height: 69px;
+    background: #a70526;
+    border-bottom: 2px solid #730400;
+    line-height: 69px;
+    text-align: center;
+    font-size: 16px;
+}
+.bottom_box li a{
+    display: inline-block;
+    color: white;
+    width: 137.5px;
+    height: 69px;
+}
+.bottom_box li:hover{
+    background:#720000;
+}
+.bottom{
+    width: 1100px;
+    height: 69px;
+    margin: 0 auto;
+    background: url(../images/top_x.gif)no-repeat 1097px 0;
+}
+.bottom_box li{
+    float: left;
+    width: 137.5px;
+    background: url(../images/top_x.gif)no-repeat;
+    cursor: pointer;
+}

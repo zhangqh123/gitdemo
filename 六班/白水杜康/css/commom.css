@@ -1,0 +1,28 @@
+*{
+    margin:0;
+    padding:0;
+}
+img{
+    border:none ;
+}
+a{
+    text-decoration:none;
+    cursor:pointer;
+}
+ul li{
+    list-style:none;
+}
+body{
+    font-family:"微软雅黑";
+    font-size:12px;
+}
+.main_right_bottom_jilu{
+    width: 100px;
+    height: 30px;
+    border: 1px solid #ccc;
+    line-height: 30px;
+    text-align: center;
+    float: right;
+    text-indent: 0;
+    clear: both;
+}

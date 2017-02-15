@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width:200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+
+    </style>
+    <script>
+//        function func(data){
+//            alert(data)
+//        }
+        function jsonp(url){
+            var oScr=document.createElement("script");
+            oScr.src=url;
+            document.head.appendChild(oScr);
+        }
+          function func(data){
+              var oDiv=document.getElementById("div1");
+              oDiv.innerHTML=data;
+              document.head.removeChild(document.head.lastChild)
+          }
+        window.onload=function(){
+            var oDiv=document.getElementById("div1");
+            var oBtn=document.getElementById("btn");
+            oBtn.onclick=function(){
+                jsonp("http://localhost/ajax17/links/link.php?callback=func")
+            }
+
+
+
+        }
+    </script>
+    <!--<script src="http://localhost/ajax17/links/link.php?callback=func"></script>-->
+</head>
+<body>
+<div id="div1"></div>
+<input type="button" value="isonp获取" id="btn">
+</body>
+</html>

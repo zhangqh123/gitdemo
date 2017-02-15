@@ -1,0 +1,90 @@
+*{
+    margin:0;
+    padding:0;
+}
+img{
+    border:none 0;
+}
+a{
+    text-decoration:none;
+    cursor:pointer;
+}
+ul li{
+    list-style:none;
+}
+body{
+    font-family:STKaiti, KaiTi_GB2312, "楷体", "宋体", Arial, Helvetica, sans-serif;
+    font-size:15px;
+    background:#f1f2f6;
+}
+.fixed-box{
+    width: 87px;
+    height: 300px;
+    position: fixed;
+    top: 250px;
+    right: 0;
+    z-index: 30;
+    display: none;
+}
+.scrollTop-box{
+    margin: 0 0 20px 0;
+    width: 50px;
+    height: 50px;
+    background: url(../images/scroll_top_bg.png) no-repeat;
+}
+.scrollTop-box:hover{
+    background: url(../images/scroll_top_bg.png) 0 -50px;
+    transition: all 0.2s;
+}
+@keyframes my-animation{
+
+    0%{
+        transform: scale(1.2,0.8);
+    }
+    10%{
+        transform: scale(1.1,0.9);
+    }
+    20%{
+        transform: scale(1.0,1.0);
+    }
+    30%{
+        transform: scale(0.9,1.1);
+    }
+    40%{
+        transform: scale(0.8,1.2);
+    }
+    50%{
+        transform: scale(0.9,1.1);
+    }
+    60%{
+        transform: scale(1,1);
+    }
+    70%{
+        transform: scale(1.1,0.9);
+    }
+    80%{
+        transform: scale(1.2,0.8);
+    }
+    90%{
+        transform: scale(1.1,0.9);
+    }
+    100%{
+        transform: scale(1.0,1.0);
+    }
+}
+.fixed_contactus{
+    margin-right: 20px;
+    float: right;
+    width: 87px;
+    height: 87px;
+    background: url(../images/fixed_contactus.png)no-repeat -148px 0;
+}
+.fixed_contactus:hover{
+    width: 235px;
+    background: url(../images/fixed_contactus.png)no-repeat  ;
+    animation: my-animation 0.5s linear;
+    -moz-animation: my-animation 0.5s linear;
+    -o-animation: my-animation 0.5s linear;
+    -webkit-animation: my-animation 0.5s linear;
+    transition:all 0.5s 0.5s ;
+}

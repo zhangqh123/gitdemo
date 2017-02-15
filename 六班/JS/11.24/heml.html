@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload=function(){
+            var oIn=document.getElementById('input1');
+            var oBtn=document.getElementById('btn');
+            var oUl=document.getElementById('ul1');
+            oBtn.onclick=function(){
+                //拿到input内容
+                var con=oIn.value;
+                //创建一个li标签
+                var oLi=document.createElement('li');
+                //将li标签放到ul中
+                //oUl.appendChild(oLi);
+//                oUl.insertBefore(oLi,oUl.firstChild);
+                oUl.insertBefore(oLi,oUl.children[1]);
+                //将li内部html设置成输入框输入内容
+                oLi.innerHTML=con;
+                //oLi.innerText=con;
+                //oLi.outerHTML=con;
+            }
+        }
+    </script>
+</head>
+<body>
+<input type="text" id="input1">
+<input type="button" id="btn">
+<ul id="ul1">
+
+
+
+</ul>
+</body>
+</html>

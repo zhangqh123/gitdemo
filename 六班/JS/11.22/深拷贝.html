@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var json={"name":"li",
+                  "age":"18",
+                   "friend":{
+                       "name":"zhang",
+                       "age":"18",
+                       "friend":{
+                           "name":"zhang",
+                           "age":"18",
+                           "friend":{
+                               "name":"zhang",
+                               "age":"18",
+                               "friend":{
+                                   "name":"zhang",
+                                   "age":"18"
+                               }
+                           }
+                       }
+                   }
+
+        };
+        var result=copyJson(json);  //深拷贝
+        result.friend.friend.friend.age="25";
+        document.write(JSON.stringify(result));
+          function copyJson(json){
+            var newJson={};
+              for(var x in json){
+                  if(typeof json[x]=="object"){
+                      newJson[x]=copyJson(json[x])
+                  }
+                  else{
+                      newJson[x]=json[x]
+                  }
+              }
+            return newJson
+        }
+    </script>
+
+
+
+</head>
+<body>
+
+</body>
+</html>

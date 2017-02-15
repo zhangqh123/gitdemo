@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        li {
+            list-style: none;
+            float: left;
+            width: 70px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var oLi = document.getElementsByTagName('li');
+            var i = 0;
+            for (i = 0; i < oLi.length; i++) {
+                oLi[i].onclick = function () {
+                    var k = 0;
+                    for (k = 0; k < oLi.length; k++) {
+                        oLi[k].style.backgroundColor = "white"
+                    }
+                    this.style.backgroundColor = "#e1e1e1"
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <ul>
+        <li>我的关注</li>
+        <li>推荐</li>
+        <li>导航</li>
+        <li>视频</li>
+        <li>购物</li>
+    </ul>
+
+</body>
+</html>

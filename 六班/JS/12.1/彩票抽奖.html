@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            height: 30px;
+        }
+    </style>
+    <script>
+
+        window.onload=function(){
+            var oRandom=document.getElementById('random');
+            var oForward=document.getElementById('forward');
+            var oBack=document.getElementById('back');
+            var oDiv=document.getElementsByTagName('div')[0];
+            var oIn=document.getElementById('input');
+            //json
+            var allrandball={};
+            oRandom.onclick=function(){
+                var arr=[];
+                for(var i=1;i<=35;i++){
+                    arr.push(i);
+                }
+                var newArr=[];
+                for(var j=0;j<7;j++)
+                {
+                    var num=parseInt(Math.random()*arr.length);
+                    newArr.push(arr.splice(num,1))
+                }
+                 oDiv.innerHTML=newArr;
+                //更改网址
+                var ran=Math.random();
+                allrandball[ran]=newArr;
+                location.hash=ran;
+
+
+            };
+              window.onhashchange=function(){
+
+                  //hash
+                  //json  hash  arr
+                  var hash=location.hash.substring(1);
+                  if(allrandball[hash]){
+                      oDiv.innerHTML=allrandball[hash];
+                  }
+                  else {
+                      oDiv.innerHTML="";
+                  }
+              };
+            var n=0;
+            oForward.onclick=function(){
+                history.forward();
+                m=0;
+
+                    n++;
+
+                oIn.value="前进了:"+n+"次"
+            };
+            var m=0;
+           oBack.onclick=function(){
+                history.back();
+                n=0;
+               if(oDiv.innerHTML!=""){
+                   m++;
+               }
+                oIn.value="后退了:"+m+"次"
+            }
+
+        }
+
+
+
+
+    </script>
+</head>
+<body>
+<input type="button" id="random" value="随机抽奖">
+<input type="button" id="forward" value="前进页">
+<input type="button" id="back" value="后退页">
+<div></div>
+<input type="text" id="input">
+</body>
+</html>

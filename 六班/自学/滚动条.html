@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #parent{
+            width: 800px;
+            height: 20px;
+            background-color: #cccccc;
+            border-radius: 10px;
+            position:relative;
+            margin: 50px auto;
+        }
+        #box{
+            position: absolute;
+            width: 150px;
+            height: 20px;
+            border-radius: 10px;
+            left: 0;
+            top: 0;
+            background-color: red;
+            cursor: pointer;
+        }
+        #cont{
+            width: 400px;
+            height: 400px;
+            background-color: yellow;
+            opacity:0;
+            filter:alpha(opacity=0);
+        }
+        /*filter    透明度兼容IE    值是0-100*/
+        /*opacity    透明度        值是0-1*/
+    </style>
+</head>
+<body>
+<div id="parent">
+    <div id="box"></div>
+</div>
+<div id="cont"></div>
+<script>
+    window.onload=function(){
+
+        var oParent=document.getElementById("parent");
+        var oBox=document.getElementById("box");
+        oBox.onmousedown=function(ev){
+            var oEvent=event||ev;
+            //求出oBox的偏移值；
+            //var current=oBox.offsetLeft;
+            //求出鼠标当前位置；
+            //var x=oEvent.clientX;
+            var disX=oEvent.clientX-oBox.offsetLeft;
+            document.onmousemove=function(ev){
+                var oEvent=event||ev;
+                //求出移动的left值
+                var oLeft=oEvent.clientX-disX;
+                var width=oParent.offsetWidth-oBox.offsetWidth;
+                if(oLeft>width){
+                    oLeft=width;
+                }
+                else if(oLeft<0){
+                    oLeft=0;
+                }
+                oBox.style.left=oLeft+"px"
+            };
+            document.onmouseup=function(){
+                document.onmousemove="undifind";
+                document.onmouseup="undifind"
+            };
+            return false;
+        };
+    }
+</script>
+
+</body>
+</html>

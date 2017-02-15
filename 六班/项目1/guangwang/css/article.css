@@ -1,0 +1,154 @@
+.map-buttom{
+    width: 100%;
+    height: 33px;
+    background: url(../images/map_bottomimg.png)no-repeat center white;
+}
+.article_box{
+    width: 1100px;
+    box-sizing: border-box;
+    padding:70px 160px 0 160px;
+    margin: 0 auto;
+    background: white;
+    position: relative;
+    overflow: hidden;
+}
+.company-wz{
+    width: 220px;
+    height: 82px;
+    margin-left: 280px;
+    text-align: center;
+}
+.company-wz p:first-child{
+    font-size: 44px;
+    color: #28285c;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+.company-wz p:last-child{
+    font-size: 14px;
+    color: #312e43;
+    letter-spacing: 5px;
+}
+.company-point{
+    width: 45px;
+    margin: -5px 0 0 370px;
+}
+.company-pen{
+    width: 780px;
+    height: 60px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 10px ;
+}
+.works-xiaoniaozhangxue{
+    font-size: 28px;
+    font-weight: bold;
+    float: left;
+}
+.company-pen-line{
+    float: left;
+    margin-top: 18px;
+    width: 729px;
+    height: 2px;
+    background: url(../images/pen_line_long.png)no-repeat;
+
+}
+.works-pen {
+    width: 61px;
+    height: 58px;
+    background: url(../images/pen.png)no-repeat;
+    position: absolute;
+    right: 10px;
+}
+.article-picture{
+    margin: 50px 0 20px 0;
+}
+.article_iflike{
+    position: relative;
+    width:73px;
+    float: left;
+    height: 73px;
+    margin: 85px 0 250px  350px;
+    background: url(../images/article_iflike.png)no-repeat ;
+}
+.article_iflike-1{
+    position: absolute;
+    top:-80px;
+    left: 60px;
+   width: 0px;
+    height: 35px;
+    float: left;
+    margin: 100px 0 0 30px;
+    text-align: center;
+    line-height: 35px;
+    color: white;
+    background: url(../images/article_iflike_nomberbg.png)no-repeat ;
+    overflow: hidden;
+}
+.article_iflike:hover .article_iflike-1{
+   width:135px;
+    transition:all 0.5s 0.5s;
+}
+.article_iflike:hover{
+    animation: my-animation 0.5s linear;
+    -moz-animation: my-animation 0.5s linear;
+    -o-animation: my-animation 0.5s linear;
+    -webkit-animation: my-animation 0.5s linear;
+}
+@keyframes my-animation{
+
+    0%{
+        transform: scale(1.2,0.8);
+    }
+    10%{
+        transform: scale(1.1,0.9);
+    }
+    20%{
+        transform: scale(1.0,1.0);
+    }
+    30%{
+        transform: scale(0.9,1.1);
+    }
+    40%{
+        transform: scale(0.8,1.2);
+    }
+    50%{
+        transform: scale(0.9,1.1);
+    }
+    60%{
+        transform: scale(1,1);
+    }
+    70%{
+        transform: scale(1.1,0.9);
+    }
+    80%{
+        transform: scale(1.2,0.8);
+    }
+    90%{
+        transform: scale(1.1,0.9);
+    }
+    100%{
+        transform: scale(1.0,1.0);
+    }
+}
+.article-move{
+    width: 100px;
+    height: 70px;
+    text-align: center;
+    line-height: 70px;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    position: absolute;
+    top:10px;
+    left: 340px;
+    z-index: 5;
+    opacity: 0;
+    background: #ccc;
+    border-radius: 5px;
+}
+.article-move-box{
+    clear: both;
+    position: relative;
+    height: 353px;
+    overflow: hidden;
+}

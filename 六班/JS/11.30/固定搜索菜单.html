@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+      .header{
+          background: royalblue;
+          height: 150px;
+      }
+      .search{
+          height: 150px;
+          width: 100%;
+          background: red;
+      }
+        .search_warp{
+            width: 100%;
+            height: 150px;
+        }
+      ul{
+          height: 1000px;
+      }
+      .fixed-box{
+            position: fixed;
+            top:0;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var oSearch=document.getElementById('search');
+            var sTop=oSearch.offsetTop;
+            window.onscroll=function(){
+                //1.获取滚动条高度
+             var  scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+                if(scrollTop>sTop){
+                    oSearch.classList.add("fixed-box")
+                }
+               else{
+                    oSearch.classList.remove("fixed-box")
+                }
+
+        }
+
+
+        }
+    </script>
+</head>
+<body>
+<div class="header"></div>
+<div class="search_warp">
+<div class="search" id="search"></div>
+</div>
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+    <li>10</li>
+</ul>
+</body>
+</html>

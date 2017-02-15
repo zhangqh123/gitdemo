@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var a=0;
+        var b=0;
+        var c=0;
+        var d=0;
+        var e=0;
+
+        for(var i=0;i<10;i++){
+            var score=parseInt(prompt("请输入成绩"));
+            if(score>=90){
+                a++;
+                document.write(score+"优秀"+"<br />")
+            }
+            else  if(score>=80){
+                b++;
+                document.write(score+"良好"+"<br />")
+            }
+            else if(score>=70){
+                c++;
+                document.write(score+"中等"+"<br />")
+            }
+            else if(score>=60){
+                d++;
+                document.write(score+"及格"+"<br />")
+            }
+            else{
+                e++;
+                document.write(score+"不及格"+"<br />")
+            }
+        }
+           document.write("优秀："+a+"<br />");
+        document.write("良好："+b+"<br />");
+        document.write("中等："+c+"<br />");
+        document.write("及格："+d+"<br />");
+        document.write("不及格："+e);
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

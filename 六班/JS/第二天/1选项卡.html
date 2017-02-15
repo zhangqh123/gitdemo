@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 200px;
+            height: 150px;
+            border: 1px solid black;
+            display: none;
+        }
+        input{
+            outline: none;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var arrInput = document.getElementsByTagName('input');
+            var arrdiv=document.getElementsByTagName('div');
+//            找到所有的input按钮
+//            为每个按钮添加索引   绑定索引
+//            循环所有的按钮标签
+//            为每个按钮标签绑定索引
+//            为每个按钮标签设置事件
+//                  将所有的按钮包括div的样式清空
+//                    设置发生事件的按钮  对应的样式
+
+            var i = 0;
+            for (i = 0; i < arrInput.length; i++) {
+                arrInput[i].index=i;
+                arrInput[i].onclick = function () {
+                    var k=0;
+                    for(k=0;k<arrInput.length;k++){
+                       arrInput[k].style.backgroundColor="#E1E1E1"
+                    }
+                    this.style.backgroundColor="red";
+                    var j=0;
+                    for(j=0;j<arrdiv.length;j++){
+                        arrdiv[j].style.display="none"
+                    }
+                    arrdiv[this.index].style.display="block"
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<input type="button" value="按钮1">
+<input type="button" value="按钮2">
+<input type="button" value="按钮3">
+<div>
+    这是第一个按钮
+</div>
+<div>
+    这是第二个按钮
+</div>
+<div>
+    这是第三个按钮
+</div>
+</body>
+</html>

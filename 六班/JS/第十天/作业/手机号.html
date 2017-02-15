@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var tel=prompt("请输入手机号");
+        var first=tel.charAt(0);
+        var second=tel.charAt(1);
+        if(tel.length!=11){
+            document.write("不是手机号")
+        }
+        else if(first!=1){
+            document.write("不是手机号")
+        }
+        else if(second!=3&&second!=5&&second!=7&&second!=8){
+            document.write("不是手机号")
+        }
+       else{
+            document.write("是手机号")
+        }
+
+
+
+    </script>
+
+
+</head>
+<body>
+
+</body>
+</html>

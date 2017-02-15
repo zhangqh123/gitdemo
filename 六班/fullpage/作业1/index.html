@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/css.css">
+    <script>
+        window.onload=function(){
+            var oC=document.getElementById("c1");
+            var oGc=oC.getContext("2d");
+            oGc.fillStyle="green";
+            oGc.beginPath();
+            oGc.moveTo(250,50);
+            oGc.lineTo(200,75);
+            oGc.lineTo(225,75);
+            oGc.lineTo(150,100);
+            oGc.lineTo(225,100);
+            oGc.lineTo(100,125);
+            oGc.lineTo(225,125);
+            oGc.lineTo(50,150);
+            oGc.lineTo(225,150);
+            oGc.lineTo(0,175);
+            oGc.lineTo(500,175);
+            oGc.lineTo(275,150);
+            oGc.lineTo(450,150);
+            oGc.lineTo(275,125);
+            oGc.lineTo(400,125);
+            oGc.lineTo(275,100);
+            oGc.lineTo(350,100);
+            oGc.lineTo(275,75);
+            oGc.lineTo(300,75);
+            oGc.lineTo(250,50);
+            oGc.fill();
+            oGc.beginPath();
+            oGc.moveTo(225,175);
+            oGc.lineTo(275,175);
+            oGc.lineTo(275,325);
+            oGc.lineTo(225,325);
+            oGc.lineTo(225,175);
+            oGc.fill();
+        }
+    </script>
+</head>
+<body>
+<canvas id="c1" width="500px" height="325px"></canvas>
+<!--导航开始-->
+<div class="nav_box">
+    <div class="nav">
+        <div class="logo">Legend!</div>
+        <ul>
+            <li>Portfolio</li>
+            <li>Services</li>
+            <li>News</li>
+            <li>Team</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+</div>
+<div class="picture">
+    <div class="picture_box">
+        <div class="picture_one"><span>Legend!</span> We make web a beautiful place</div>
+        <div class="picture_two">Signup for our Newsletter to be updated</div>
+        <div class="picture_three">
+            <input type="text" value="you@yourmail.com" class="input1">
+            <input type="button" value="Notify me">
+        </div>
+    </div>
+</div>
+<div class="main_box">
+    <div class="main">
+      <div class="blog">Our Blog</div>
+        <div class="main_picture_box">
+            <div class="main_picture"><img src="images/blog_img-01.jpg" alt=""></div>
+            <p>Lorem Ipsum is simple dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry 's standard dummy text ever since the 1500s. ...
+            </p>
+        </div>
+        <div class="main_picture_box">
+            <div class="main_picture"><img src="images/blog_img-02.jpg" alt=""></div>
+            <p>Lorem Ipsum is simple dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry 's standard dummy text ever since the 1500s. ...
+            </p> </div>
+        <div class="main_picture_box">
+            <div class="main_picture"><img src="images/blog_img-03.jpg" alt=""></div>
+            <p>Lorem Ipsum is simple dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry 's standard dummy text ever since the 1500s. ...
+            </p></div>
+    </div>
+</div>
+<div class="footer_box">
+    <div class="footer">
+       <p>Contact Us Now</p>
+        <input type="text" value="Your Name">
+        <input type="text" value="Your Email">
+        <input type="text" value="Your Company">
+        <input type="text" value="Your Website">
+        <input type="text" class="input2">
+        <button>Send message</button>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        document.onkeydown=function(ev){
+            var oEvent=window.event||ev;
+
+            //   ctrl + enter
+            //oEvent.altKey
+            //oEvent.ctrlKey
+            //oEvent.shiftKey
+            if(oEvent.keyCode==13&&oEvent.ctrlKey){
+                console.log("ctrl 回车被按下")
+            }
+
+        }
+
+
+
+
+    </script>
+
+
+</head>
+<body>
+
+</body>
+</html>

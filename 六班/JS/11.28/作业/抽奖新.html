@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #btn1,#btn2 {
+            width: 60px;
+            height: 30px;
+            border: none;
+            border-radius: 3px;
+            background-color: blue;
+            color: white;
+            margin-right: 20px;
+            float: left;
+            text-align: center;
+            line-height: 30px;
+            cursor: pointer;
+        }
+        .div1 {
+            width: 200px;
+            height: 100px;
+            margin: 140px auto 20px auto;
+        }
+
+        ul {
+            width: 200px;
+            height: 30px;
+            text-align: center;
+        }
+
+        li {
+            list-style: none;
+            position: absolute;
+            display: none;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var oBtn1 = document.getElementById('btn1');
+            var oBtn2 = document.getElementById('btn2');
+            var arrLi = document.getElementsByTagName('li');
+
+
+            for (var i = 0; i < arrLi.length; i++) {
+                arrLi[i].indenx = i;
+                n = this.index;
+                var n = 0;
+                var circulation = function () {
+                    n++;
+                    if (n >= arrLi.length) {
+                        n = 0;
+                    }
+                    for (var j = 0; j < arrLi.length; j++) {
+                        arrLi[j].style.display = "none"
+                    }
+                    arrLi[n].style.display = "block";
+                }
+            }
+            var timer=0;
+            document.onkeypress = function (ev) {
+                var oEvent = window.event || ev;
+                if (oEvent.keyCode == 13) {
+                    if (timer == 0) {
+                        timer = setInterval(circulation, 50);
+                    }
+                    else {
+                        clearInterval(timer);
+                        timer = 0;
+                    }
+                }
+            }
+            oBtn1.onclick = function () {
+                if (timer == 0) {
+                    timer = setInterval(circulation, 50);
+                }
+            };
+            oBtn2.onclick = function () {
+                clearInterval(timer);
+                timer = 0;
+            }
+
+
+        }
+    </script>
+</head>
+<body>
+<div class="div1">
+    <ul>
+        <li>很遗憾</li>
+        <li>iPhone7</li>
+        <li>差一点</li>
+        <li>与大奖擦肩而过</li>
+        <li>很遗憾</li>
+        <li>5角</li>
+        <li>很遗憾</li>
+        <li>iPad</li>
+        <li>很遗憾</li>
+        <li>差一点</li>
+
+    </ul>
+    <div id="btn1">开始</div>
+    <div id="btn2">结束</div>
+</div>
+</body>
+</html>

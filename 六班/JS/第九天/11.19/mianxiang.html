@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function Person(name,attack,hurt){
+            this.name=name;
+            this.attack=attack;
+            this.hurt=hurt;
+        }
+         Person.prototype.showMes=function(per){
+             document.write(this.name+"对"+per.name+"释放了"+this.attack+"的攻击"+per.name+"受到了"+per.hurt+"点伤害")
+        };
+        var p1=new Person("艾希","50","0");
+        var p2=new Person("德玛","0","50");
+        p1.showMes(p2);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

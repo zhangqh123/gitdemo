@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: black;
+        }
+
+        #c1 {
+            background: white;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var oC = document.getElementById("c1");
+            var oGc = oC.getContext("2d");
+            var img = new Image();
+            img.src = "";
+            img.onload=function(){
+              draw(this);
+            };
+             function draw(img){
+                 oGc.scale(0.5,0.5);
+                 oGc.drawImage(img,0,0)
+             }
+        }
+    </script>
+</head>
+<body>
+<canvas id="c1" width="1000px" height="650px"></canvas>
+</body>
+</html>

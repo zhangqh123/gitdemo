@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var a=2000;
+        if(a>=3500&&a<=5000){
+            document.write((a-3500)*0.03)
+
+        }
+        else if(a>5000&&a<=8000){
+            document.write(45+(a-5000)*0.1)
+        }
+        else if(a>8000&&a<=12500){
+            document.write(345+(a-8000)*0.2)
+        }
+        else if(a>12500&&a<=38500){
+            document.write(1245+(a-12500)*0.25)
+        }
+        else if(a>38500&&a<=58500){
+            document.write(7745+(a-38500)*0.3)
+        }
+        else if(a>58500&&a<=83500){
+            document.write(13745+(a-58500)*0.35)
+        }
+        else if(a>83500){
+            document.write(22495+(a-83500)*0.45)
+        }
+        else{
+            document.write("不纳税")
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

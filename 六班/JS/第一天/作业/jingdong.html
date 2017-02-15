@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .div1 {
+            width: 100%;
+            height: 40px;
+            background: #999999;
+            line-height: 40px;
+        }
+        .div2 {
+            float: left;
+            margin-left: 150px;
+        }
+        .div3 {
+            float: right;
+        }
+        .div1 a {
+            text-decoration: none;
+            color: #333333;
+            margin: 0 10px 0 10px;
+        }
+        .div1 a:hover {
+            color: red;
+        }
+        #list {
+            display: none;
+            border: 1px solid gray;
+            width: 180px;
+            text-align: center;
+            position: absolute;
+            left: -40px;
+        }
+        #list1 {
+            display: none;
+            border: 1px solid gray;
+            width: 180px;
+            text-align: center;
+            position: absolute;
+            left: -40px;
+        }
+        #set {
+            position: relative;
+        }
+        #set1 {
+            position: relative;
+        }
+        #list1 p {
+            margin-top: -20px;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var oSet = document.getElementById('set');
+            oSet.onmouseover = function () {
+                var oList = document.getElementById('list');
+                oList.style.display = "block";
+            }
+            oSet.onmouseout = function () {
+                var oList = document.getElementById('list');
+                oList.style.display = "none";
+            }
+            var oSet1 = document.getElementById('set1');
+            oSet1.onmouseover = function () {
+                var oList1 = document.getElementById('list1');
+                oList1.style.display = "block";
+            }
+            oSet1.onmouseout = function () {
+                var oList1 = document.getElementById('list1');
+                oList1.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="div1">
+    <div class="div2">
+        <a href="">北京</a>
+    </div>
+    <div class="div3">
+        <a href="">你好，请登录</a>
+        <a href="">免费注册</a>|<a href="">我的订单</a>|<span id="set"><a href="">我的京东</a>
+        <div id="list">
+            <p>待处理订单&nbsp;&nbsp;我的关注</p>
+            <p>我的回答&nbsp;&nbsp;&nbsp;我的京豆</p>
+            <p>降价商品&nbsp;&nbsp;&nbsp;我的理财</p>
+            <p>返修退换货&nbsp;&nbsp;京东白条</p>
+        </div>
+        </span>
+        |<a href="">京东会员</a>|<a href="">企业采购</a>|<span id="set1"><a href="">客户服务</a>
+        <div id="list1">
+            <h4>客户</h4>
+            <p>帮助中心&nbsp;&nbsp;售后服务</p>
+            <p>在线客服&nbsp;&nbsp;意见建议</p>
+            <p>电话客服&nbsp;&nbsp;客服邮箱</p>
+            <p>金融咨询</p>
+        </div>
+     </span>
+        |<a href="">网站导航</a>
+    </div>
+</div>
+</body>
+</html>

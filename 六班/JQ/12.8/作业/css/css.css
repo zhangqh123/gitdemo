@@ -1,0 +1,502 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    cursor: pointer;
+}
+
+body {
+    font-family: "微软雅黑";
+}
+
+.head-box {
+    width: 100%;
+    height: 750px;
+    background-color: #151515;
+    position: relative;
+}
+
+.daohang-box {
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    top: 33px;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.daohang {
+    width: 980px;
+    height: 80px;
+    line-height: 80px;
+    color: white;
+    position: absolute;
+    top: 33px;
+    left: 50%;
+    margin-left: -490px;
+}
+
+.daohang .left {
+    font-size: 36px;
+    float: left;
+}
+.daohang .right {
+    float: right;
+
+}
+.daohang .right ul{
+    width: 700px;
+    height: 40px;
+    position: relative;
+}
+.daohang .right li {
+    float: left;
+    font-size: 14px;
+    margin: 0 10px 0 10px  ;
+}
+.daohang .right ul .div1{
+    height: 5px;
+    background-color: red;
+    width: 60px;
+    position: absolute;
+    top:60px
+}
+.banner .big-banner img {
+    width: 1280px;
+    height: 750px;
+    float: left;
+}
+
+.banner {
+    width: 1280px;
+    height: 750px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+#cir{
+    position: absolute;
+    bottom: 80px;
+    right: 100px;
+}
+.banner span{
+    display: block;
+    width: 50px;
+    height: 5px;
+    margin-left: 8px;
+    background-color: grey;
+    float: left;
+    cursor: pointer;
+}
+.banner .big-banner {
+    width: 8960px;
+    height: 750px;
+    position: absolute;
+    left: -1280px;
+}
+
+.banner .prev {
+    position: absolute;
+    top: 353px;
+    left: 60px;
+}
+
+.banner .next {
+    position: absolute;
+    top: 353px;
+    right: 60px;
+}
+
+.main-box {
+    width: 100%;
+    height: 810px;
+    position: relative;
+}
+
+.main {
+    width: 1000px;
+    height: 910px;
+    position: absolute;
+    left: 50%;
+    margin-left: -500px;
+    top: -50px;
+    background-color: #e2edff;
+    box-sizing: border-box;
+    padding: 48px 0 0 42px;
+}
+
+.main-box .main .up {
+    width: 918px;
+    height: 352px;
+    border-bottom: 1px solid #c8def6;
+}
+
+.main-box .main .up-1 {
+    float: left;
+    margin-right: 35px;
+}
+
+.main-box .main .up .up-1 {
+    width: 295px;
+}
+
+.main-box .main .up .up-2 {
+    width: 261px;
+    float: left;
+    margin-right: 30px;
+}
+
+.main-box .main .up .up-3 {
+    width: 295px;
+    float: left;
+    position: relative;
+}
+
+.k1 {
+    width: 82px;
+    height: 82px;
+    float: left;
+    margin: 0 5px 5px 0;
+    overflow: hidden;
+}
+
+.k1:hover {
+    box-sizing: border-box;
+    border: 4px solid orangered;
+}
+
+.main-box .main .up .up-3 .picture {
+    width: 295px;
+    height: 256px;
+    background-color: #b8d6f2;
+    box-sizing: border-box;
+    padding:3px ;
+}
+
+.main-box .main .up .up-1 .biaoti1 {
+    color: blue;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.main-box .main .up .up-2 .biaoti2 {
+    color: red;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.main-box .main .up .up-2 .picture img {
+    width: 82px;
+    height: 82px;
+    float: left;
+    margin: 0 5px 5px 0;
+}
+
+.wz {
+    clear: both;
+    padding-top: 14px;
+}
+
+.main-box .main .picture .wz .span1 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.main-box .main .picture .wz .span2 {
+    font-size: 12px;
+    color: #2a77fe;
+    font-weight: bold;
+}
+
+.main-box .main .up .up-3 .biaoti3 {
+    color: green;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+.up-3 .picture li{
+    float: left;
+    font-weight: bold;
+    font-size: 14px;
+    width: 96px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+.divp{
+    clear: both;
+    width: 288px;
+    height: 210px;
+    box-sizing: border-box;
+    padding-top: 25px;
+    background-color: #eef7ff;
+    position: absolute;
+    top:92px;
+}
+.up-3 .divp .div1{
+    width: 243px;
+    height: 80px;
+    border-bottom: 1px solid #c8def6;
+    margin-left: 20px;
+}
+.div2{
+    float: left;
+    margin-right: 15px;
+}
+ .div3{
+    float: left;
+    font-size: 14px;
+}
+.div3 span{
+    font-weight: bold;
+}
+.div4{
+    width: 243px;
+    height: 80px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.down-up{
+    font-size: 22px;
+    font-weight: bold;
+    width: 800px;
+    margin: 40px auto 60px auto;
+    text-align: center;
+}
+.down-1{
+    width: 300px;
+    height: 240px;
+    float: left;
+    margin-right: 20px;
+}
+.lunbo{
+    width: 240px;
+    overflow: hidden;
+    height: 55px;
+    float: left;
+    position: relative;
+}
+.big-lb{
+    width: 595px;
+    position: absolute;
+    left: 0;
+}
+.down-1 .down-3 .lunbo img{
+    float: left;
+    margin-right: 7px;
+    height: 53px;
+    width: 53px;
+}
+.down-1 .img1{
+    float: left;
+    margin-top: 10px;
+}
+.down-1 .sp1{
+    color: blue;
+    font-size: 24px;
+    font-weight: bold;
+}
+.down-1 .sp2{
+    font-weight: bold;
+}
+.down-1 p{
+    color: #fd4da2;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 40px 0 15px 0;
+}
+.down-1 .down-5{
+    width: 250px;
+    height: 160px;
+    border: 1px solid grey;
+    font-size: 14px;
+    font-weight: bold;
+    box-sizing: border-box;
+    padding: 20px 0 0 20px;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 1px grey;
+    background-color: white;
+}
+.down-1 .down-4 .left-1,.left-2{
+    float: left;
+}
+.left-1{
+    margin-right: 30px;
+}
+.left-2 .sp9{
+    font-size: 14px;
+    font-weight: bold;
+}
+.left-2 .sp8{
+    font-style: italic;
+}
+.left-2 .sp7{
+    color: blue;
+}
+.down-1 li{
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 12px;
+}
+.down-1 li img{
+    vertical-align: middle;
+    margin-right: 15px;
+}
+.lii1{
+    color: #fd4da2;
+}
+.down-6{
+    width: 285px;
+}
+.foot-box {
+    width: 100%;
+    height: 505px;
+    background-color: black;
+}
+.foot{
+    width: 915px;
+    height: 385px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding-top: 115px;
+}
+.foot-1{
+    width: 285px;
+    height: 110px;
+    float: left;
+}
+.foot-1 li{
+    width: 285px;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px dotted grey;
+    font-size: 12px;
+    color: #8fbff0;
+}
+.foot-1 .li1{
+    height: 60px;
+    line-height: 60px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+.foot-2{
+    float: left;
+    margin: 15px 0 0 40px;
+}
+.foot-2 .span1{
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+.foot-2 .up{
+    width: 250px;
+    height: 73px;
+    border-bottom: 1px dotted grey;
+    margin-top: 25px;
+}
+.foot-2 .up  .picture{
+    float: left;
+}
+.foot-2 .up .rightq{
+    color: grey;
+    font-size: 12px;
+    float: left;
+    margin-left: 15px;
+}
+.foot-2 .up .rightq span{
+    color:#8fbff0 ;
+    font-weight: bold;
+}
+.foot-2 .down{
+    border: none;
+}
+.foot-3{
+    width: 280px;
+   float: left;
+    color: grey;
+    margin-left: 55px;
+    margin-top: 15px;
+    font-size: 12px;
+}
+.foot-3 span{
+    font-size: 22px;
+    color: white;
+    font-weight: bold;
+}
+.foot-3 input{
+    border: none;
+    height: 35px;
+}
+.in1{
+    width: 190px;
+    margin: 15px 0 8px 0;
+}
+.in2{
+    width: 80px;
+    background-color: #9eceff;
+    margin-left: -5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.foot-div{
+    width: 280px;
+    height: 100px;
+    text-align: center;
+    margin-top: 20px;
+}
+.foot-div li{
+    height: 25px;
+    line-height: 25px;
+    float: left;
+    color:white;
+    background-color: grey;
+    margin:0 4px 4px 0;
+}
+.l1{
+    width: 84px;
+}
+.l2{
+    width: 120px;
+}
+.l3{
+    width:60px ;
+ }
+.l4{
+    width: 120px;
+}
+.l5{
+    width: 75px;
+
+}
+.l6{
+    width: 70px;
+}
+.l7{
+    width: 100px;
+}
+.over{
+    width: 1280px;
+    height: 120px;
+    background-color: #0e0e0e;
+    margin: 0 auto;
+}
+.over .left,.right{
+    float: left;
+}
+.over .left{
+    color: grey;
+    font-size: 12px;
+    margin: 34px 380px 0 185px;
+}
+.active{
+    border: 1px solid red;
+    height: 55px;
+    width: 55px;
+
+}

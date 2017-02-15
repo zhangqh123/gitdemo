@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //this是Javascript语言的一个关键字它代表函数运行时，自动生成的一个内部对象，只能在函数内部使用
+        //this  关键字
+        //全局变量 window的属性
+       var length=10;
+        function  showLength(){
+            document.write(this.length)
+        }
+      //  showLength()   10  this 指window
+       var arr=[1,2,3,4,5];
+        arr.showLength=showLength;
+       //  arr.showLength();  5  this 指arr
+
+        arr[5]=showLength;
+        //arr[5]();   6  this 指 arr
+
+        arr.push(showLength);
+      //  arr.pop()()     10  this 指 window
+    </script>
+
+
+
+
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload=function(){
+            var oSel1=document.getElementById('sel1');
+            var oSel2=document.getElementById('sel2');
+           var arr=[];
+            arr[0]=["昌平","chaoyang","shunyi"];
+            arr[1]=["xian","weinan","yanan"];
+            arr[2]=["zhengzhou","kaifeng","luoyang"];
+            oSel1.onchange=function(){
+                 oSel2.options.length=0;
+                for(var i=0;i<arr[oSel1.value].length;i++){
+                    oSel2.add(new Option(arr[oSel1.value][i]))
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<select id="sel1">
+   <option>省份</option>
+    <option value="0">北京</option>
+    <option value="1">陕西</option>
+    <option value="2">河南</option>
+</select>
+<select id="sel2">
+    <option value="">城市与地区</option>
+</select>
+</body>
+</html>

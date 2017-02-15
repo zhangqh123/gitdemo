@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/css.css">
+    <script src="jquery-1.8.3.min.js"></script>
+    <script src="js/js.js"></script>
+    <script>
+        $(function () {
+            $(".ul1>li").hover(function () {
+                $(this).find("ul").stop().slideDown(800);
+            }, function () {
+                $(this).find("ul").stop().slideUp(200);
+            });
+           var page1 = 0;
+            //var oBig = $("#big");
+            var oCir = $("#cir");
+            function next() {
+                page1++;
+                if (page1 <4) {
+                    $("#big").stop(true, true).animate({
+                        "left":page1*-1200 + "px"
+                    });
+                } else {
+                    page1 = 0;
+                    $("#big").stop(true, true).animate({
+                        "left": 4 * -1200 + "px"
+                    }, function () {
+                        $("#big").css({"left": "0px"})
+                    })
+                }
+                oCir.find("span").siblings().css({"backgroundColor":"black"});
+                oCir.find("span").eq(page1).css({"backgroundColor":"red"});
+            }
+         timar=setInterval(next, 3000);
+            $("#big").mouseover(function(){
+                clearInterval(timar)
+            });
+            $("#big").mouseout(function(){
+                timar=setInterval(next, 3000);
+            });
+            var oLeft = $("#left");
+            var oRight = $("#right");
+            var oBanner = $("#banner");
+            var page = 1;
+            oLeft.click(function () {
+                page++;
+                if (page < $(".bigb img").size() - 1) {
+                    $(".bigb").stop(true, true).animate({
+                        "left": page * -1920 + "px"
+                    })
+                } else {
+                    page = 1;
+                    $(".bigb").stop(true, true).animate({
+                        "left": 4 * -1920 + "px"
+                    }, function () {
+                        $(".bigb").css({"left": "-1920px"})
+                    })
+                }
+            });
+            oRight.click(function () {
+                page--;
+                if (page >= 1) {
+                    $(".bigb").stop(true, true).animate({
+                        "left": page * -1920 + "px"
+                    })
+                } else {
+                    page = 3;
+                    $(".bigb").stop(true, true).animate({
+                        "left": "0px"
+                    }, function () {
+                        $(".bigb").css({"left": 3 * -1920 + "px"})
+                    })
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+<div class="head-box">
+    <div class="head">
+        <div class="left">
+            <img src="img/11.png" alt="">
+        </div>
+        <div class="right">
+            <input type="text" value="Uzytkownik">
+            <input type="text" value="Haslo">
+            <input type="button" class="btn" value="ZALOGUJ">
+        </div>
+    </div>
+</div>
+<div class="daohang-box">
+    <div class="daohang">
+        <div class="left">
+            <img src="img/QQ截图20161206184509.png" alt="">
+        </div>
+        <div class="right">
+            <ul class="ul1 ">
+                <li>Zaklady live
+                    <ul class="ul2">
+                        <li>Dyscrpliny</li>
+                        <li>Pilka nozna</li>
+                        <li>Tenis</li>
+                        <li>Koszykwka</li>
+                    </ul>
+                </li>
+                <li>Poker
+                    <ul class="ul3">
+                        <li>Dyscrpliny</li>
+                        <li>Pilka nozna</li>
+                        <li>Tenis</li>
+                        <li>Koszykwka</li>
+                    </ul>
+                </li>
+                <li>Kasyno
+                    <ul class="ul4">
+                        <li>Dyscrpliny</li>
+                        <li>Pilka nozna</li>
+                        <li>Tenis</li>
+                        <li>Koszykwka</li>
+                    </ul>
+                </li>
+                <li>Mobile
+                    <ul class="ul5">
+                        <li>Dyscrpliny</li>
+                        <li>Pilka nozna</li>
+                        <li>Tenis</li>
+                        <li>Koszykwka</li>
+                    </ul>
+                </li>
+                <li>Specjalne
+                    <ul class="ul6">
+                        <li>Dyscrpliny</li>
+                        <li>Pilka nozna</li>
+                        <li>Tenis</li>
+                        <li>Koszykwka</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+<div class="banner" id="banner">
+    <div class="biga">
+        <div class="bigb">
+            <img src="img/banner1.jpg" alt="">
+            <img src="img/banner3.jpg" alt="">
+            <img src="img/banner2.jpg" alt="">
+            <img src="img/banner1.jpg" alt="">
+            <img src="img/banner3.jpg" alt="">
+        </div>
+    </div>
+    <div class="left-right">
+        <div id="left"><</div>
+        <div id="right">></div>
+    </div>
+</div>
+<div class="main-box">
+    <div class="main" id="main">
+        <div class="left">
+            <ul>
+                <li>Dyscrpliny</li>
+                <li>Pilka nozna</li>
+                <li>Tenis</li>
+                <li>Koszykwka>Tauron basket liga</li>
+                <li>Siatkwka</li>
+                <li>Hokej</li>
+            </ul>
+        </div>
+        <div class="right">
+            <div class="up">
+                <img src="img/ye1l2.gif" alt="" class="mm1">
+                <div>
+                    <span>6 kolejka Tauron Basket Ligi</span> <br/>
+                    lorem ipsum is simply dummy text of the printing <br/>
+                    and typesetting industry.Lorem ipsum has been <br/>
+                    the industry's standard dummy text ever<br/>
+                    <input type="button" value="Postaw teraz!">
+                </div>
+            </div>
+            <div class="down">
+                <div class="div1">
+                    <img src="img/yeyuan.gif" alt="">
+                    <div>
+                        <span>Na zywo</span><br/>
+                        lorem ipsum is simply dummy text of the <br/>
+                        and typesetting industry.Lorem ipsum
+                    </div>
+                </div>
+                <div class="div1">
+                    <img src="img/yeyuan.gif" alt="">
+                    <div>
+                        <span>Na zywo</span><br/>
+                        lorem ipsum is simply dummy text of the <br/>
+                        and typesetting industry.Lorem ipsum
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="up">
+                <img src="img/bad1_11.gif" alt="" class="mm1">
+                <div>
+                    <span>6 kolejka Tauron Basket Ligi</span> <br/>
+                    lorem ipsum is simply dummy text of the printing <br/>
+                    and typesetting industry.Lorem ipsum has been <br/>
+                    the industry's standard dummy text ever<br/>
+                    <input type="button" value="Postaw teraz!">
+                </div>
+            </div>
+            <div class="down">
+                <div class="div1">
+                    <img src="img/yeyuan.gif" alt="">
+                    <div>
+                        <span>Na zywo</span><br/>
+                        lorem ipsum is simply dummy text of the <br/>
+                        and typesetting industry.Lorem ipsum
+                    </div>
+                </div>
+                <div class="div1">
+                    <img src="img/yeyuan.gif" alt="">
+                    <div>
+                        <span>Na zywo</span><br/>
+                        lorem ipsum is simply dummy text of the <br/>
+                        and typesetting industry.Lorem ipsum
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="up">
+                <img src="img/bad2_11.gif" alt="" class="mm1">
+                <div>
+                    <span>6 kolejka Tauron Basket Ligi</span> <br/>
+                    lorem ipsum is simply dummy text of the printing <br/>
+                    and typesetting industry.Lorem ipsum has been <br/>
+                    the industry's standard dummy text ever<br/>
+                    <input type="button" value="Postaw teraz!">
+                </div>
+            </div>
+            <div class="down">
+                <div class="div1">
+                    <img src="img/yeyuan.gif" alt="">
+                    <div>
+                        <span>Na zywo</span><br/>
+                        lorem ipsum is simply dummy text of the <br/>
+                        and typesetting industry.Lorem ipsum
+                    </div>
+                </div>
+                <div class="div1">
+                    <img src="img/yeyuan.gif" alt="">
+                    <div>
+                        <span>Na zywo</span><br/>
+                        lorem ipsum is simply dummy text of the <br/>
+                        and typesetting industry.Lorem ipsum
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="up">
+                <img src="img/ye1l2.gif" alt="" class="mm1">
+                <div>
+                    <span>6 kolejka Tauron Basket Ligi</span> <br/>
+                    lorem ipsum is simply dummy text of the printing <br/>
+                    and typesetting industry.Lorem ipsum has been <br/>
+                    the industry's standard dummy text ever<br/>
+                    <input type="button" value="Postaw teraz!">
+                </div>
+            </div>
+            <div class="down">
+                <div class="div1">
+                    <img src="img/yeyuan.gif" alt="">
+                    <div>
+                        <span>Na zywo</span><br/>
+                        lorem ipsum is simply dummy text of the <br/>
+                        and typesetting industry.Lorem ipsum
+                    </div>
+                </div>
+                <div class="div1">
+                    <img src="img/yeyuan.gif" alt="">
+                    <div>
+                        <span>Na zywo</span><br/>
+                        lorem ipsum is simply dummy text of the <br/>
+                        and typesetting industry.Lorem ipsum
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="up">
+                <img src="img/bad3_16.gif" alt="" class="mm1">
+                <div>
+                    <span>6 kolejka Tauron Basket Ligi</span> <br/>
+                    lorem ipsum is simply dummy text of the printing <br/>
+                    and typesetting industry.Lorem ipsum has been <br/>
+                    the industry's standard dummy text ever<br/>
+                    <input type="button" value="Postaw teraz!">
+                </div>
+            </div>
+            <div class="down">
+                <div class="div1">
+                    <img src="img/yeyuan.gif" alt="">
+                    <div>
+                        <span>Na zywo</span><br/>
+                        lorem ipsum is simply dummy text of the <br/>
+                        and typesetting industry.Lorem ipsum
+                    </div>
+                </div>
+                <div class="div1">
+                    <img src="img/yeyuan.gif" alt="">
+                    <div>
+                        <span>Na zywo</span><br/>
+                        lorem ipsum is simply dummy text of the <br/>
+                        and typesetting industry.Lorem ipsum
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="up">
+                <img src="img/bad4.gif" alt="" class="mm1">
+                <div>
+                    <span>6 kolejka Tauron Basket Ligi</span> <br/>
+                    lorem ipsum is simply dummy text of the printing <br/>
+                    and typesetting industry.Lorem ipsum has been <br/>
+                    the industry's standard dummy text ever<br/>
+                    <input type="button" value="Postaw teraz!">
+                </div>
+            </div>
+            <div class="down">
+                <div class="div1">
+                    <img src="img/yeyuan.gif" alt="">
+                    <div>
+                        <span>Na zywo</span><br/>
+                        lorem ipsum is simply dummy text of the <br/>
+                        and typesetting industry.Lorem ipsum
+                    </div>
+                </div>
+                <div class="div1">
+                    <img src="img/yeyuan.gif" alt="">
+                    <div>
+                        <span>Na zywo</span><br/>
+                        lorem ipsum is simply dummy text of the <br/>
+                        and typesetting industry.Lorem ipsum
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="main_1">
+    <div class="main_2">
+        <div class="up">
+            Propozyjc zakladow
+        </div>
+        <div class="down" id="picture">
+            <div class="big" id="big">
+                <div class="picture">
+                    <img src="img/contain2_1.gif" alt="">
+                    <img src="img/contain2_2.gif" alt="">
+                    <img src="img/contain2_3.gif" alt="">
+                    <img src="img/contain2_4.gif" alt="">
+                </div>
+                <div class="picture">
+                    <img src="img/contain2_2.gif" alt="">
+                    <img src="img/contain2_3.gif" alt="">
+                    <img src="img/contain2_1.gif" alt="">
+                    <img src="img/contain2_4.gif" alt="">
+                </div>
+                <div class="picture">
+                    <img src="img/contain2_4.gif" alt="">
+                    <img src="img/contain2_2.gif" alt="">
+                    <img src="img/contain2_3.gif" alt="">
+                    <img src="img/contain2_1.gif" alt="">
+                </div>
+                <div class="picture">
+                    <img src="img/contain2_4.gif" alt="">
+                    <img src="img/contain2_3.gif" alt="">
+                    <img src="img/contain2_2.gif" alt="">
+                    <img src="img/contain2_1.gif" alt="">
+                </div>
+                <div class="picture">
+                    <img src="img/contain2_1.gif" alt="">
+                    <img src="img/contain2_2.gif" alt="">
+                    <img src="img/contain2_3.gif" alt="">
+                    <img src="img/contain2_4.gif" alt="">
+                </div>
+            </div>
+        </div>
+        <div id="cir">
+            <span style="background-color: red"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</div>
+<div class="foot-box">
+    <div class="foot">
+        <div class="up">
+            Propozyjc zakladow
+        </div>
+        <div class="down">
+            <div class="tu1">
+                <img src="img/contain3_1.gif" alt="">
+                <div class="tu2">
+                    <span>Premier</span><span class="span1">league</span><br/>
+                    <p>Wytuyu jkahsdjhask jsdhkwwe <br/>
+                        sajdasd jdj jhjkllj</p>
+                    <img src="img/13.png" alt="">
+                </div>
+            </div>
+            <div class="tu1">
+                <img src="img/contain3_1.gif" alt="">
+                <div class="tu2">
+                    <span>Premier</span><span class="span1">league</span><br/>
+                    <p>Wytuyu jkahsdjhask jsdhkwwe <br/>
+                        sajdasd jdj jhjkllj</p>
+                    <img src="img/13.png" alt="">
+                </div>
+            </div>
+            <div class="tu1 tu3">
+                <img src="img/contain3_1.gif" alt="">
+                <div class="tu2">
+                    <span>Premier</span><span class="span1">league</span><br/>
+                    <p>Wytuyu jkahsdjhask jsdhkwwe <br/>
+                        sajdasd jdj jhjkllj</p>
+                    <img src="img/13.png" alt="">
+                </div>
+            </div>
+            <div class="tu1">
+                <img src="img/contain3_1.gif" alt="">
+                <div class="tu2">
+                    <span>Premier</span><span class="span1">league</span><br/>
+                    <p>Wytuyu jkahsdjhask jsdhkwwe <br/>
+                        sajdasd jdj jhjkllj</p>
+                    <img src="img/13.png" alt="">
+                </div>
+            </div>
+            <div class="tu1">
+                <img src="img/contain3_1.gif" alt="">
+                <div class="tu2">
+                    <span>Premier</span><span class="span1">league</span><br/>
+                    <p>Wytuyu jkahsdjhask jsdhkwwe <br/>
+                        sajdasd jdj jhjkllj</p>
+                    <img src="img/13.png" alt="">
+                </div>
+            </div>
+            <div class="tu1 tu3">
+                <img src="img/contain3_1.gif" alt="">
+                <div class="tu2">
+                    <span>Premier</span><span class="span1">league</span><br/>
+                    <p>Wytuyu jkahsdjhask jsdhkwwe <br/>
+                        sajdasd jdj jhjkllj</p>
+                    <img src="img/13.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="foot-1">
+    <div class="foot-2">
+        <div class="up">
+            <img src="img/yeft.gif" alt="">
+        </div>
+        <div class="down">
+            <img src="img/15.png" alt="" class="img1">
+            <img src="img/yeft1.gif" alt="" class="img2">
+        </div>
+    </div>
+</div>
+</body>
+</html>

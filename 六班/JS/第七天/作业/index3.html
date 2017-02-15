@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var sum=0;
+        var max;
+        var min;
+        var times=0;
+        do{
+
+          var n=parseInt(prompt("请输入数字"));
+            if(n!=0){
+            times++;
+            sum+=n;
+            if(max==undefined){
+                max=n
+            }
+            else{
+                if(max<n){
+                    max=n
+                }
+            }
+            if(min==undefined){
+                min=n
+            }
+            else{
+                if(min>n){
+                    min=n
+                }
+            }
+            }
+        }
+        while(n!=0);
+        document.write(sum+"<br />");
+        document.write(max+"<br />");
+        document.write(min+"<br />");
+        document.write(sum/times)
+    </script>
+</head>
+<body>
+
+</body>
+</html>

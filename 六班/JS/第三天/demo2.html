@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload=function(){
+            var oIn1=document.getElementById('input1');
+            var oIn2=document.getElementById('input2');
+            var oSum=document.getElementById('sum');
+            oSum.onclick=function(){
+                var num1=oIn1.value;   //input 的value  是string类型
+                var num2=oIn2.value;
+                var n1=parseFloat(num1);
+                var n2=parseFloat(num2);
+                alert(n1+n2)
+            }
+//            NaN   不等于任何数字
+//            isNaN()     判断一个内容是否为非数
+        }
+    </script>
+</head>
+<body>
+<input id="input1" type="text" style="vertical-align: middle">
+<input id="input2" type="text" style="vertical-align: middle">
+<input id="sum" type="button" style="vertical-align: middle">
+</body>
+</html>

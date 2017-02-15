@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>会员主页</title>
+    <!--强制让文档的宽度与设备的宽度保持1:1，并且文档最大的宽度比例是1.0，且不允许用户点击屏幕放大浏览-->
+    <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no"/>
+    <!--WebApp全屏模式   隐藏地址栏-->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <!--苹果强制全屏显示-->
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <!--强制全屏显示-->
+    <meta name="full-screen" content="yes"/>
+    <!--制定iphone中safari顶端的状态条的样式（default:白色，black:黑色，black-translucent：半透明）-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <!--告诉设备忽略将页面中的数字识别为电话号码 -->
+    <meta name="format-detection" content="telephone=no"/>
+    <!--告诉设备忽略将页面中的地址识别 -->
+    <meta name="format-detection" content="address=no"/>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            min-height: 100%;
+        }
+        body{
+            background: linear-gradient(to bottom ,#b04d8e,#576294);
+            position: relative;
+        }
+
+        .find_passwork{
+            width: 2.5rem;
+            height: 1rem;
+            font-size: 0.35rem;
+            text-align: center;
+            line-height: 1rem;
+            position: absolute;
+            top: 1.73rem;
+            right: 0;
+            background: #f36da0;
+            border-bottom-left-radius: 1rem;
+            border-top-left-radius: 1rem;
+            color: white;
+            z-index: 10;
+        }
+        .content{
+            width: 10.4rem;
+            margin: 0 auto;
+        }
+        .top{
+            width: 10.4rem;
+            height: 5.58rem;
+        }
+        .box_one{
+         width: 4.74rem;
+            height: 5.16rem;
+            background: rgba(255,255,255,0.2);
+            border-radius: 0.3rem;
+            text-align: center;
+            margin: 0 0.2rem 0 0.2rem;
+            float: left;
+        }
+        .box_one img{
+            width: 2.82rem;
+            margin: 0.24rem 0 0.1rem 0;
+        }
+        .box_one p{
+         font-size: 0.36rem;
+         color: white;
+        }
+        .hover{
+            width: 0.9rem;
+            height: 0.9rem;
+            background: url(images/appointment_icon.png);
+            background-size:0.9rem ;
+            margin: 0.2rem auto;
+        }
+        .hover1{
+            background: url(images/search_icon.png);
+            background-size:0.9rem ;
+        }
+        .hover:hover{
+            background: url(images/appointment_%20icon_on.png);
+            background-size:0.9rem ;
+        }
+        .middle{
+            width: 10rem;
+            height: 4.4rem;
+            background: rgba(255,255,255,0.2);
+            border-radius: 0.3rem;
+            margin: 0 auto;
+            box-sizing: border-box;
+            padding-left: 1.6rem;
+            margin-bottom: 0.4rem;
+        }
+        .middle img{
+            width: 4.24rem;
+            height: 4.24rem;
+        }
+        .middle .lt{
+            width: 4.24rem;
+            float: left;
+        }
+        .middle .rt{
+            width: 3rem;
+            float:left;
+        }
+        .middle .rt p{
+            font-size: 0.36rem;
+            color: white;
+            margin-top: 0.9rem;
+        }
+        .middle .rt .hover{
+            margin: 0.8rem 0 0 0.75rem;
+        }
+        header{
+            width: 100%;
+            height: 1.43rem;
+            background: #3c3c3c;
+            margin-bottom: 0.8rem;
+            overflow: hidden;
+        }
+        header span{
+            display: block;
+            width: 0.7rem;
+            float: left;
+            height: 0.7rem;
+            color: white;
+            line-height: 0.9rem;
+            border-right: 0.01rem solid #303030;
+            font-size: 0.45rem;
+            margin: 0.35rem 0 0 0.5rem;
+        }
+        header p{
+            color: white;
+            font-size: 0.5rem;
+            margin:0.4rem 0 0 1.8rem;
+        }
+        header ul{
+            float: right;
+            list-style: none;
+            margin: -0.6rem 0.5rem 0 0;
+        }
+        header li{
+            width: 0.2rem;
+            height: 0.2rem;
+            background: white;
+            border-radius: 12rem;
+            margin-bottom: 0.1rem;
+        }
+    </style>
+    <script>
+        //   rem   em 相对单位  基础
+        function refresh() {
+            var deviceWidth = document.documentElement.clientWidth;
+            if (deviceWidth > 1080) {
+                document.documentElement.style.fontSize = 1080 / 10.8 + "px";
+            } else {
+                document.documentElement.style.fontSize = deviceWidth / 10.8 + "px";
+            }
+        }
+        refresh();
+        window.onresize = function () {
+            refresh();
+        }
+    </script>
+
+</head>
+<body>
+<div class="box">
+    <header>
+     <span>&times</span>
+        <p>个人中心</p>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </header>
+    <div class="find_passwork">找回密码</div>
+    <div class="content">
+    <div class="top">
+        <div class="box_one">
+            <img src="images/VIPimage01.png" alt=""><br/>
+            <p>健康体质预约</p>
+            <div class="hover"></div>
+        </div>
+        <div class="box_one">
+            <img src="images/VIPimage02.png" alt=""><br/>
+            <p>专家诊疗预约</p>
+            <div class="hover"></div>
+        </div>
+    </div>
+        <div class="middle">
+            <div class="lt">
+            <img src="images/VIPimage03.png" alt="">
+            </div>
+            <div class="rt">
+            <p>华西绿通预约</p>
+            <div class="hover"></div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="box_one">
+                <img src="images/VIPimage04.png" alt=""><br/>
+                <p>住院关怀预约</p>
+                <div class="hover"></div>
+            </div>
+            <div class="box_one">
+                <img src="images/VIPimage05.png" alt=""><br/>
+                <p>消费明细查询</p>
+                <div class="hover hover1"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .div1{
+            width: 251px;
+            height: 26px;
+            border: 1px solid #b4b4b4;
+            float: left;
+        }
+        select{
+            height: 26px;
+            border: none;
+            float: left;
+        }
+        #input1{
+            width: 200px;
+            height: 20px;
+            border: none;
+            float: left;
+            margin-top: 2px;
+        }
+        #input2{
+            height: 28px;
+            float: left;
+        }
+        .div2{
+            width: 300px;
+            clear: both;
+
+        }
+        ol{
+            width: 211px;
+            border: 1px solid #b4b4b4;
+            margin-top: -1px;
+            display: none;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+           var oInt=document.getElementById('input1');
+           var oOl=document.getElementsByTagName('ol')[0];
+            oInt.onfocus=function(){
+                oOl.style.display='block';
+            };
+            oInt.onblur=function(){
+                oOl.style.display='none';
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="div1">
+<select name="" id="">
+    <option>网页</option>
+    <option>新闻</option>
+    <option>贴吧</option>
+    <option>地图</option>
+    <option>图片</option>
+    <option>视频</option>
+    <option>微博</option>
+</select>
+<input type="text" id="input1">
+</div>
+<input type="button" value="百度一下"  id="input2">
+<div class="div2"></div>
+    <ol>
+        <li>天猫双11全球狂欢</li>
+        <li>天猫双11全球狂欢</li>
+        <li>天猫双11全球狂欢</li>
+        <li>天猫双11全球狂欢</li>
+        <li>天猫双11全球狂欢</li>
+        <li>天猫双11全球狂欢</li>
+        <li>天猫双11全球狂欢</li>
+        <li>天猫双11全球狂欢</li>
+    </ol>
+
+</body>
+</html>

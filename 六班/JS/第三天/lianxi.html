@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .a1 {
+            height: 30px;
+            width: 100%;
+            border-bottom: 1px solid #b4b4b4;
+            position: relative;
+        }
+
+        .a2 {
+            float: right;
+        }
+
+        .a2 a {
+            text-decoration: none;
+            color: #333333;
+        }
+
+        .a2 a:hover {
+            color: red;
+        }
+
+        .a1 li {
+            list-style: none;
+            float: left;
+            margin-right: 20px;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        #list {
+            display: none;
+            border: 1px solid #b4b4b4;
+            margin-right: 100px;
+            height: 370px;
+            width: 80px;
+        }
+
+        #set {
+            position: relative;
+        }
+
+        #list {
+            position: absolute;
+            left: -10px;
+        }
+
+        p {
+            list-style: none;
+            margin-bottom: 10px;
+            text-align: center;
+            width: 80px;
+            height: 30px;
+            border: 1px solid #cccccc;
+        }
+
+        li {
+            width: 80px;
+        }
+
+        .li1, .li2 {
+            width: 50px;
+        }
+        .now{
+            background-color: orange;
+            font-family: 楷体;
+            color: white;
+            border-radius: 30px;
+        }
+
+    </style>
+    <script>
+        window.onload = function () {
+            var oSet = document.getElementById('set');
+            var oList = document.getElementById('list');
+            var arrP = document.getElementsByTagName('P');
+            oSet.onmouseover = function () {
+                oList.style.display = 'block';
+            };
+            oSet.onmouseout = function () {
+                oList.style.display = 'none';
+            };
+            var i = 0;
+            for (i = 0; i < arrP.length; i++) {
+                arrP[i].onclick = function () {
+                    var j = 0;
+                    for (j = 0; j < arrP.length; j++) {
+                        arrP[j].classList.remove('now')
+                    }
+                   this.classList.add('now')
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="a1">
+    <div class="a2">
+        <ul>
+            <li class="li1"><a href="#">登录</a></li>
+            <li class="li2"><a href="#">注册</a></li>
+            <li><a href="#">手机京东</a></li>
+            <li><a href="#">我的订单</a></li>
+            <li id="set"><a href="#">我的京东</a>
+                <div id="list">
+                    <p class="now">我的订单</p>
+                    <p>选座订单</p>
+                    <p>我的收藏</p>
+                    <p>我的评价</p>
+                    <p>帐户余额</p>
+                    <p>我的代金券</p>
+                    <p>我的红包</p>
+                    <p>帐户设置</p>
+                    <p>我的百度</p>
+                </div>
+            </li>
+            <li><a href="#">最近浏览</a></li>
+            <li><a href="#">京东企业版</a></li>
+            <li><a href="#">帮助中心</a></li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>

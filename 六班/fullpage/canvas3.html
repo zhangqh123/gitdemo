@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+        }
+        body{
+            background: black;
+        }
+        #c1{
+            background: white;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var oC=document.getElementById("c1");
+            var oGc=oC.getContext("2d");
+//            oGc.translate(200,200);
+//            oGc.rotate(30*Math.PI/180);
+//            oGc.scale(2,2)
+//            oGc.fillRect(0,0,100,100);
+//            oGc.fillStyle="red"
+//            oGc.fillRect(100,100,50,50);
+            var deg=0;
+            var scale=0;
+            var num=1;
+            setInterval(function(){
+                oGc.clearRect(0,0,oGc.canvas.width,oGc.canvas.height);
+                //save  储存
+                oGc.save();
+                deg++;
+                oGc.translate(200,200);
+                oGc.rotate(deg*Math.PI/180);
+                oGc.scale(scale/50,scale/50);
+                oGc.translate(-50,-50);
+                oGc.fillRect(0,0,100,100);
+                //重置
+                oGc.restore();
+               if(scale==100){
+                  num=-1
+               }
+             if(scale==0){
+               num=1
+             }
+                scale+=num;
+            },20)
+        }
+    </script>
+</head>
+<body>
+<canvas id="c1" width="1000px" height="650px"></canvas>
+</body>
+</html>

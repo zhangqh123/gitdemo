@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        a{
+            text-decoration: none;
+            color: black;
+        }
+
+        ul{
+            list-style: none;
+            display: none;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var arrP=document.getElementsByTagName('p');
+            var arrUl=document.getElementsByTagName('ul');
+            var i=0;
+            for(i=0;i<arrP.length;i++) {
+                arrP[i].index = i;
+                arrP[i].onclick = function () {
+                    var uDisplay = arrUl[this.index].style.display;
+                    var k = 0;
+                    for (k = 0; k < arrP.length; k++) {
+                        arrP[k].style.color = "black"
+                    }
+                    var j = 0;
+                    for (j = 0; j < arrUl.length; j++) {
+                        arrUl[j].style.display = "none"
+                    }
+                    if (uDisplay == "block") {
+                        arrUl[this.index].style.display = "none"
+                    }
+                    else {
+                        arrUl[this.index].style.display = "block"
+                    }
+                    arrP[this.index].style.color = "blue";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<p>分类讨论区</p>
+    <ul>
+        <li>BBS安装管理</li>
+        <li>CAD技术</li>
+        <li>数字图像设计</li>
+        <li>电脑音乐制作</li>
+        <li>软件加密与解密</li>
+        <li>计算机体系结构</li>
+    </ul>
+<p>社会信息</p>
+<ul>
+    <li>BBS安装管理</li>
+    <li>CAD技术</li>
+    <li>数字图像设计</li>
+    <li>电脑音乐制作</li>
+    <li>软件加密与解密</li>
+    <li>计算机体系结构</li>
+</ul>
+<p>休闲娱乐</p>
+<ul>
+    <li>BBS安装管理</li>
+    <li>CAD技术</li>
+    <li>数字图像设计</li>
+    <li>电脑音乐制作</li>
+    <li>软件加密与解密</li>
+    <li>计算机体系结构</li>
+</ul>
+<p>电脑技术</p>
+<ul>
+    <li>BBS安装管理</li>
+    <li>CAD技术</li>
+    <li>数字图像设计</li>
+    <li>电脑音乐制作</li>
+    <li>软件加密与解密</li>
+    <li>计算机体系结构</li>
+</ul>
+</body>
+</html>

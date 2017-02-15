@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var balls=[];
+        var newBalls=[];
+        for(var i=0;i<36;i++){
+            balls[i]=i+1
+        }
+        for(var i=0;i<7;i++){
+            var ranIndex=parseInt(Math.random()*balls.length);
+            var ball=balls.splice(ranIndex,1);
+            newBalls.push(ball)
+        }
+        document.write(newBalls.join(" "))
+
+
+
+
+    </script>
+
+
+
+
+
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 400px;
+            margin: 0 auto;
+        }
+
+        #btn {
+            margin: 10px 0 0 40px;
+            width: 200px;
+            height: 30px;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var oIn = document.getElementById('input');
+            var oBtn = document.getElementById('btn');
+            var reg = /^\w+@[a-z0-9]+(\.[a-z]+){1,3}$/;
+            oBtn.onclick = function () {
+                var resut = reg.test(oIn.value);
+                if (resut) {
+                    alert("邮箱正确")
+                }
+                else {
+                    alert("邮箱不正确")
+                }
+
+            }
+        }
+    </script>
+</head>
+<body>
+<div>
+    <h2>电子邮箱地址验证程序</h2>
+    请输入电子邮箱地址: <input type="text" id="input"><br/>
+    <input type="button" value="验证电子邮箱地址" id="btn">
+</div>
+</body>
+</html>

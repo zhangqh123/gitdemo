@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .main {
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            float: left;
+            margin: 0 210px 0 210px;
+        }
+
+        .main_1 {
+            clear: both;
+            padding: 20px;
+
+        }
+
+        .main_1 div {
+            width: 420px;
+            height: 250px;
+            border: 1px solid gray;
+            background-color: rgb(241, 241, 241);
+            float: left;
+            margin-right: 50px;
+            overflow: auto;
+        }
+
+        .div1 {
+            float: left;
+        }
+
+        input {
+            margin-top: 30px;
+            vertical-align: middle;
+        }
+
+        #btn1, #btn2 {
+            width: 80px;
+            height: 31px;
+            background-color: #008cba;
+            color: white;
+            border: none;
+            margin-right: 30px;
+        }
+
+        #in1, #in2 {
+            width: 335px;
+            height: 31px;
+            margin-left: 20px;
+            color: #9b9391;
+            box-sizing: border-box;
+            padding-left: 8px;
+        }
+
+        li {
+            list-style: none;
+        }
+    </style>
+    <script>
+
+        window.onload = function () {
+
+            var oBtn1 = document.getElementById('btn1');
+            var oBtn2 = document.getElementById('btn2');
+            var oIn1 = document.getElementById('in1');
+            var oIn2 = document.getElementById('in2');
+            var oDiv1 = document.getElementById('div1');
+            var oDiv2 = document.getElementById('div2');
+            var oDate = new Date();
+            var year = oDate.getFullYear();
+            var mouth = oDate.getMonth() + 1;
+            var date = oDate.getDate();
+            var hour = oDate.getHours();
+            var min = oDate.getMinutes();
+            var second = oDate.getSeconds();
+            var ap = "早上";
+            if (hour > 6 && hour < 12) {
+                ap = "早上"
+            }
+            else if (hour >= 12 && hour <= 14) {
+                ap = "中午"
+            }
+            else if (hour > 14 && hour <= 18) {
+                ap = "下午"
+            }
+            else {
+                ap = "晚上"
+            }
+            var time = year + "/" + mouth + "/" + date + " " + ap + hour + ":" + min + ":" + second + " " + "我";
+            var time1 = year + "/" + mouth + "/" + date + " " + ap + hour + ":" + min + ":" + second;
+
+            document.onkeydown = function (ev) {
+                var oEvent = window.event || ev;
+                // console.log(oEvent.keyCode)
+                if (oEvent.keyCode == 13) {
+
+                        var oLi = document.createElement('li');
+                        var oLi1 = document.createElement('li');
+                        var oLi2 = document.createElement('li');
+                        var oLi3 = document.createElement('li');
+                        oDiv2.appendChild(oLi3);
+                        oDiv2.appendChild(oLi1);
+                        oDiv1.appendChild(oLi2);
+                        oDiv1.appendChild(oLi);
+                        oLi.innerHTML = oIn1.value;
+                        oLi2.innerHTML = time;
+                        oLi1.innerHTML = oIn1.value;
+                        oLi3.innerHTML = time1;
+                        oLi.style.textAlign = "right";
+                        oLi2.style.textAlign = "right";
+                        oLi.style.color = "blue";
+                        oLi2.style.color = "blue";
+
+                }
+               if(oEvent.ctrlKey){
+
+                var oLi4 = document.createElement('li');
+                        var oLi5 = document.createElement('li');
+                        var oLi6 = document.createElement('li');
+                        var oLi7 = document.createElement('li');
+                        oDiv2.appendChild(oLi7);
+                        oDiv2.appendChild(oLi5);
+                        oDiv1.appendChild(oLi6);
+                        oDiv1.appendChild(oLi4);
+                        oLi5.innerHTML = oIn2.value;
+                        oLi7.innerHTML = time;
+                        oLi4.innerHTML = oIn2.value;
+                        oLi6.innerHTML = time1;
+                        oLi5.style.textAlign = "right";
+                        oLi7.style.textAlign = "right";
+                        oLi5.style.color = "blue";
+                        oLi7.style.color = "blue";
+                }
+            };
+
+
+            oBtn1.onclick = function () {
+                var oLi = document.createElement('li');
+                var oLi1 = document.createElement('li');
+                var oLi2 = document.createElement('li');
+                var oLi3 = document.createElement('li');
+                oDiv2.appendChild(oLi3);
+                oDiv2.appendChild(oLi1);
+                oDiv1.appendChild(oLi2);
+                oDiv1.appendChild(oLi);
+                oLi.innerHTML = oIn1.value;
+                oLi2.innerHTML = time;
+                oLi1.innerHTML = oIn1.value;
+                oLi3.innerHTML = time1;
+                oLi.style.textAlign = "right";
+                oLi2.style.textAlign = "right";
+                oLi.style.color = "blue";
+                oLi2.style.color = "blue";
+            };
+            oBtn2.onclick = function () {
+                var oLi4 = document.createElement('li');
+                var oLi5 = document.createElement('li');
+                var oLi6 = document.createElement('li');
+                var oLi7 = document.createElement('li');
+                oDiv2.appendChild(oLi7);
+                oDiv2.appendChild(oLi5);
+                oDiv1.appendChild(oLi6);
+                oDiv1.appendChild(oLi4);
+                oLi5.innerHTML = oIn2.value;
+                oLi7.innerHTML = time;
+                oLi4.innerHTML = oIn2.value;
+                oLi6.innerHTML = time1;
+                oLi5.style.textAlign = "right";
+                oLi7.style.textAlign = "right";
+                oLi5.style.color = "blue";
+                oLi7.style.color = "blue";
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="main">
+    <h2>用户1</h2>
+    <h2>用户2</h2>
+    <div class="main_1">
+        <div id="div1"></div>
+        <div id="div2"></div>
+    </div>
+    <div class="div1">
+        <input type="text" id="in1" placeholder="请输入留言内容">
+        <input type="button" id="btn1" value="提交">
+    </div>
+    <div class="div1">
+        <input type="text" id="in2" placeholder="请输入留言内容">
+        <input type="button" id="btn2" value="提交">
+    </div>
+</div>
+</body>
+</html>

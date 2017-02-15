@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 210px;
+            height: 160px;
+            overflow: hidden;
+            position: relative;
+        }
+        ul{
+            list-style: none;
+            position: absolute;
+            left: 0;
+           width: 1260px;
+        }
+        li{
+            width: 200px;
+            height: 150px;
+            float: left;
+            font-size: 100px;
+            line-height: 150px;
+            text-align: center;
+            border: 5px solid black;
+            margin-right: -5px;
+        }
+
+    </style>
+    <script src="../12.7/jquery-1.8.3.min.js"></script>
+    <script>
+        $(function(){
+            var oUl=$("ul");
+            var oNext=$(".btn2");
+            var oPevi=$(".btn1");
+            var page=0;
+            oNext.click(function(){
+                page++;
+                if(page<oUl.find("li").size()-3){
+                   oUl.stop().animate({"left":page*-205+"px"})
+                }
+                else{
+                    page=0;
+                    oUl.stop().animate({"left":3*-205+"px"},function(){
+
+                        oUl.css("left","0px")
+
+                    })
+                }
+            });
+            oPevi.click(function(){
+                page--;
+               if(page>2){
+                   oUl.stop().animate({"left":page*-205+"px"})
+               }
+                else{
+                   page=5;
+                   oUl.stop().animate({"left":2*-205+"px"},function(){
+                       oUl.css("left","-1025px");
+
+                   })
+               }
+            })
+        })
+    </script>
+</head>
+<body>
+<div>
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+</div>
+<input type="button" value="上一张" class="btn1">
+<input type="button" value="下一张" class="btn2">
+</body>
+</html>

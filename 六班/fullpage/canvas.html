@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+        }
+        body{
+            background: black;
+        }
+        #c1{
+            background: white;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var oC=document.getElementById("c1");
+            var oGc=oC.getContext("2d");
+            oGc.fillStyle="red";
+            //50 50 坐标
+            //100   100   宽高
+            //rect   矩形
+//            oGc.fillRect(50,50,100,100)
+            //空心矩形
+//            oGc.strokeStyle="blue";
+//            oGc.lineWidth=30;
+//            oGc.strokeRect(150,50,100,50);
+//            oGc.strokeRect(125,100,150,50);
+//            oGc.strokeRect(100,150,200,50);
+//            oGc.strokeRect(75,200,250,50);
+//            oGc.strokeRect(50,250,300,50);
+
+
+//            oGc.fillRect(450,50,50,600);
+//            oGc.fillRect(300,100,50,200);
+//            oGc.fillRect(600,100,50,200);
+//            oGc.fillRect(300,250,350,50);
+//            oGc.fillRect(250,450,50,200);
+//            oGc.fillRect(650,450,50,200);
+//            oGc.fillRect(300,600,400,50)
+            //bevel   round
+//            oGc.lineJoin="round";
+//            oGc.lineWidth=20;
+//            oGc.fillRect(50,50,100,100);
+//            oGc.strokeRect(50,50,100,100);
+//            oGc.font="400px  楷体"
+//            oGc.fillText("张启红",0, 400,400)
+
+
+
+
+
+//            oGc.beginPath();
+//            oGc.moveTo(100,100);
+//            oGc.lineTo(200,200);
+//            oGc.lineTo(250,70);
+//            oGc.closePath();
+//            oGc.fill();
+
+
+
+
+
+//            oGc.clearRect(0,0,oGc.canvas.width,oGc.canvas.height)
+
+
+//        var x= 0,y=0;
+//            setInterval(function(){
+//                oGc.clearRect(0,0,oGc.canvas.width,oGc.canvas.height)
+//                x++;
+//                y++;
+//                if(y>600){
+//                    x=0;y=0
+//                }
+//                oGc.fillRect(x,y,50,50)
+//
+//            },1)
+            var color;
+            var oBtn=document.getElementsByTagName("input")[0];
+            oBtn.onclick=function(){
+                var n1=parseInt(Math.random()*256);
+                var n2=parseInt(Math.random()*256);
+                var n3=parseInt(Math.random()*256);
+                var n4=Math.random();
+                color="rgba("+n1+","+n2+","+n3+","+n4+")"
+            };
+            oC.onmousedown=function(ev){
+                var oEvent=window.ev||ev;
+                oGc.moveTo(oEvent.clientX,oEvent.clientY);
+                oGc.beginPath();
+                document.onmousemove=function(ev){
+                    var oEvent=window.ev||ev;
+                     oGc.strokeStyle=color;
+                    oGc.lineTo(oEvent.clientX-48,oEvent.clientY);
+                    oGc.stroke();
+                };
+                document.onmouseup=function(){
+                    document.onmousemove=undefined;
+                    document.onmouseup=undefined
+                }
+
+
+            }
+
+
+        }
+
+    </script>
+</head>
+<body>
+<input type="button" value="change">
+<canvas id="c1" width="1000px" height="650px"></canvas>
+</body>
+</html>

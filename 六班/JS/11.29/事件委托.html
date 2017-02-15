@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        div{
+            height: 20px;
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        window.onload=function() {
+
+            var arrLi = document.getElementsByTagName('li');
+//            for(var i=0;i<arrLi.length;i++){
+//                arrLi[i].onclick=function(){
+//                    alert('li')
+//                }
+//            }
+            var oul1 = document.getElementById('ul1');
+            for (var i = 0; i < arrLi.length; i++) {
+                arrLi[i].index = i;
+//
+//            oul1.onclick=function(ev){
+//            //    alert('li')
+//            var oevent=window.event||ev;
+//               alert(oevent.target.index);
+//
+//            }
+                //  }
+            }
+                function liClick(ev) {
+                    var oevent = window.event || ev;
+                    if(oevent.target.tagName=="LI"){
+                        alert(oevent.target.index)
+                    }
+                }
+
+                oul1.addEventListener('click', liClick)
+
+        }
+
+    </script>
+</head>
+<body>
+<ul id="ul1">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</ul>
+</body>
+</html>

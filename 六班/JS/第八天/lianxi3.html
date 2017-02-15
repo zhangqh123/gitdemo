@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var arr=[1,2,3,4,5,6];
+        var resultArr;
+        var arr1=[];
+       for(var i=0;i<arr.length;i++) {
+           if (arr1.indexOf(arr) == -1) {
+               arr1.push(arr[i])
+           }
+           /*var isCz=false;
+           for(var j=0;j<arr1.length;j++){
+               if(arr1[j]==arr[i]){
+                   isCz=true;
+                   break;
+               }
+           }
+           if(isCz!=true){
+               arr1.push(arr[i])
+           }
+       }*/
+           }
+       resultArr=arr.concat(arr1);
+     document.write(resultArr)
+
+
+
+    </script>
+
+
+</head>
+<body>
+
+</body>
+</html>

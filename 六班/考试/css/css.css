@@ -1,0 +1,610 @@
+*{
+    margin: 0;padding: 0;
+}
+li{
+    list-style: none;
+}
+body{
+    font-family: 微软雅黑;
+}
+.head{
+    width: 1207px;
+    height: 90px;
+    margin: 0 auto;
+    border-bottom: 1px solid #f2f2f2;
+    position: relative;
+}
+.logo{
+    padding-top: 20px;
+    float: left;
+    cursor: pointer;
+}
+.head ul.ul1{
+    float: left;
+    text-align: center;
+    line-height: 90px;
+    font-size: 18px;
+}
+.head .ul1 li{
+    float: left;
+    height: 90px;
+    cursor: pointer;
+}
+.head li:hover{
+    color: #31c27c;
+}
+.head .li1:hover{
+    color: white;
+}
+.head .li1{
+    width: 95px;
+    margin-left: 30px;
+    background-color: #31c27c;
+    color: white;
+}
+.head .li2{
+    width: 112px;
+}
+.head .li3{
+    margin:0 40px 0  20px;
+}
+.head .input1{
+    width: 250px;
+    height: 40px;
+    margin: 25px 20px 0 50px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    border: 1px solid #c9c9c9;
+    padding-left: 12px;
+    color: #a9a9b1;
+    outline: none;
+    z-index: 20;
+}
+em{
+    background: url(../img/icon.png) no-repeat;
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    background-position:0 -39px;
+}
+.head .tu1{
+    position: absolute;
+    left: 868px;
+    top: 35px;
+}
+.head .span1{
+    cursor: pointer;
+}
+.head span:hover{
+    color:#31c27c ;
+}
+.head .btn1{
+    width: 115px;
+    height: 40px;
+    background: #31c27c;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    margin: 0 7px 0 20px;
+}
+.head .btn2{
+    width: 90px;
+    height: 40px;
+    background-color: white;
+    border-radius: 3px;
+    border: 1px solid #c9c9c9;
+}
+.head .ss{
+    width: 248px;
+    height: 240px;
+    border: 1px solid #c9c9c9;
+    position: absolute;
+    left: 655px;
+    top: 65px;
+    border-top: none;
+    display: none;
+    background: white;
+    z-index: 30;
+}
+.head .ss li{
+    width: 248px;
+    height: 32px;
+    margin: 0 auto;
+    line-height: 32px;
+    font-size: 14px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    padding: 0 13px 0 13px;
+}
+.head .p1{
+    float: left;
+    color: red;
+    margin-right: 20px;
+}
+.head .p2{
+    float: right;
+    color: #aaaaaa;
+}
+.head .tu2{
+    width: 19px;
+    height: 19px;
+    background-position: -100px 0;
+    vertical-align: middle;
+    margin-left: 140px;
+}
+.head .div1{
+    font-size: 14px;
+    margin: 20px 0 0 15px;
+    color: #aaaaaa;
+}
+.head .ss li:hover{
+    background: #31c27c;
+    color: white;
+    cursor: pointer;
+}
+.daohang{
+    width: 700px;
+    height: 52px;
+    margin: 0 auto;
+}
+.daohang li{
+    float: left;
+    margin-right: 60px;
+    line-height: 52px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.daohang li:hover{
+    color: #31c27c;
+}
+.banner{
+    width: 100%;
+    height: 735px;
+    background: url(../img/bg.jpg);
+    position: relative;
+    clear: both;
+}
+.banner .newsong{
+    width: 200px;
+    color: white;
+    font-size: 46px;
+   margin: 0 auto;
+    box-sizing: border-box;
+    padding-top: 80px;
+    font-family: 宋体;
+}
+.banner .main{
+    width: 1200px;
+    margin: 40px auto 0 auto;
+    height:60px ;
+
+}
+.banner .sdaohang ul{
+    float: left;
+    color: #8e8e8e;
+    padding-left: 380px;
+}
+.banner .sdaohang .right{
+    float: right;
+    color: white;
+    cursor: pointer;
+}
+.banner .sdaohang .right:hover{
+    color:#31c27c ;
+}
+.banner .sdaohang li{
+    float: left;
+    margin-right: 60px;
+    cursor: pointer;
+}
+.banner .sdaohang li:hover{
+    color: white;
+}
+.banner  .lbt{
+    width: 1200px;
+    float: left;
+}
+.banner .lbt .tu1{
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+}
+.banner .tu6{
+    width: 300px;
+    height: 415px;
+    float: left;
+    background-color: black;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+.banner .tu6 .img1{
+    position:  absolute;
+    width: 70px;
+    height: 70px;
+    top:115px;
+    left: 115px;
+    transition-property: opacity,transform;
+    transition-duration: .5s;
+    zoom: 1;
+    -webkit-transition-duration: .5s;
+    opacity: 0.7;
+    display: none;
+}
+.tu1:hover .img1{
+    display: block;
+}
+.banner .tu6:hover{
+    background-color:#31c27c;
+}
+.banner .pp1{
+  margin-top: 35px ;
+}
+.banner .pp2{
+    color: #aaaaaa;
+    margin-top:10px;
+}
+.banner .lbt img{
+    transition: all 1s;
+}
+.banner .lbt img:hover{
+   transform: scale(1.1);
+}
+.banner .lunbotu{
+    width: 1200px;
+    overflow: hidden;
+    height: 415px;
+    margin: 0 auto;
+    position: relative;
+}
+.banner .picture{
+    width: 3600px;
+    height: 415px;
+    position: absolute;
+    left: 0;
+    transition: left 0.5s;
+}
+.banner #p1{
+    position: absolute;
+    left: 50%;
+    margin-left:-70px ;
+    bottom: 20px;
+}
+.banner p span{
+    display: inline-block;
+    border-bottom: 1px solid #8e8e8e;
+    width: 40px;
+    margin-right: 7px;
+    cursor: pointer;
+    height: 7px;
+    background-color: transparent;
+}
+.banner .lt{
+    width: 78px;
+    height:110px;
+    background-color: #515151;
+    font-size: 40px;
+    color: white;
+    position: absolute;
+    left: 0;
+    top:312px;
+    text-align: center;
+    line-height: 110px;
+    display: none;
+    opacity: 0.6;
+    cursor: pointer;
+}
+.banner .rt{
+    width: 78px;
+    height:110px;
+    background-color: #515151;
+    font-size: 40px;
+    color: white;
+    position: absolute;
+   right: 0;
+    top:312px;
+    text-align: center;
+    line-height: 110px;
+    display: none;
+    opacity: 0.6;
+    cursor: pointer;
+}
+.main-box .jctj{
+    width:100%;
+    height: 490px;
+}
+.main-box .jctj_wz{
+    width: 440px;
+    height: 63px;
+    margin: 60px auto 0 auto;
+    text-align: center;
+    font-size: 40px;
+    font-family: 微软雅黑;
+    position: relative;
+}
+.main-box .jctj_wz p{
+    position: absolute;
+    width: 70px;
+    border-bottom: 1px solid #eee;
+}
+.main-box .jctj_wz .left{
+    top: 30px;
+    left: 20px;
+}
+.main-box .jctj_wz .right{
+    top: 30px;
+    right: 20px;
+}
+.main-box .jctj .tup{
+    width: 1200px;
+    height: 300px;
+    margin: 30px auto;
+    overflow: hidden;
+}
+.main-box .jctj .tup img{
+    float: left;
+}
+.main-box .jctj .tup_1{
+    width: 6000px;
+}
+
+.main-box .phb{
+    width: 100%;
+    height: 830px;
+    background: url(../img/bg_index_top2.jpg) ;
+    background-position: -330px 0;
+}
+.main-box .phb_wz{
+    width: 440px;
+    height: 63px;
+    margin:0 auto;
+    text-align: center;
+    font-size: 40px;
+    font-family: 微软雅黑;
+    position: relative;
+    padding-top: 60px;
+    color: white;
+}
+.main-box .phb_wz p{
+    position: absolute;
+    width: 70px;
+    border-bottom: 1px solid #eee;
+}
+.main-box .phb_wz .left{
+    top: 90px;
+    left: 20px;
+}
+.main-box .phb_wz .right{
+    top: 90px;
+    right: 20px;
+}
+.phb .qb{
+    width: 1200px;
+    margin: 10px auto;
+    color: white;
+    font-size: 14px;
+    text-align: right;
+    cursor: pointer;
+}
+.phb .qb:hover{
+    color:#31c27c;
+}
+.phb .tupian{
+    width:1200px;
+    margin: 20px auto 0 auto;
+}
+.rmgd{
+    width: 100%;
+    height: 680px;
+    position: relative;
+}
+.rmgd  .lbt{
+    width: 1200px;
+    float: left;
+}
+.rmgd .lbt .tu1{
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+}
+.rmgd .tu6{
+    width: 300px;
+    height: 465px;
+    float: left;
+    background-color: black;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+.rmgd .tu6 .img1{
+    position:  absolute;
+    width: 70px;
+    height: 70px;
+    top:115px;
+    left: 115px;
+    transition-property: opacity,transform;
+    transition-duration: .5s;
+    zoom: 1;
+    -webkit-transition-duration: .5s;
+    opacity: 0.7;
+    display: none;
+}
+.tu1:hover .img1{
+    display: block;
+}
+.rmgd .tu6:hover{
+    background-color:#31c27c;
+}
+.rmgd .pp1{
+    margin-top: 55px ;
+}
+.rmgd .pp2{
+    color: #aaaaaa;
+    margin-top:10px;
+}
+.rmgd .lbt img{
+    transition: all 1s;
+}
+.rmgd .lbt img:hover{
+    transform: scale(1.1);
+}
+.rmgd .lunbotu{
+    width: 1200px;
+    overflow: hidden;
+    height: 465px;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 30px;
+}
+.rmgd .picture{
+    width: 3600px;
+    height: 415px;
+    position: absolute;
+    left: 0;
+    transition: left 0.5s;
+}
+.rmgd #p2{
+    position: absolute;
+    left: 50%;
+    margin-left:-70px ;
+    bottom: 80px;
+}
+.rmgd p span{
+    display: inline-block;
+    border-bottom: 1px solid #8e8e8e;
+    width: 40px;
+    margin-right: 7px;
+    cursor: pointer;
+    height: 7px;
+    background-color: transparent;
+}
+.rmgd .lt{
+    width: 78px;
+    height:110px;
+    background-color: #515151;
+    font-size: 40px;
+    color: white;
+    position: absolute;
+    left: 0;
+    top:285px;
+    text-align: center;
+    line-height: 110px;
+    /*display: none;*/
+    opacity: 0.6;
+    cursor: pointer;
+}
+.rmgd .rt{
+    width: 78px;
+    height:110px;
+    background-color: #515151;
+    font-size: 40px;
+    color: white;
+    position: absolute;
+    right: 0;
+    top:285px;
+    text-align: center;
+    line-height: 110px;
+    /*display: none;*/
+    opacity: 0.6;
+    cursor: pointer;
+}
+.main-box .mv{
+    width: 100%;
+    height: 800px;
+    background-color: #e6e6e6;
+}
+.main-box .mv .mv_wz{
+    color: black;
+}
+.mv .dh{
+    width: 1200px;
+    height: 20px;
+    margin: 40px auto 15px auto;
+}
+.mv ul{
+    float: left;
+    padding-left: 370px;
+}
+.mv .dh_qb{
+    float: right;
+    cursor: pointer;
+}
+.mv .dh_qb:hover{
+    color: #31c273;
+}
+.mv li{
+    float: left;
+    margin-right: 58px;
+    cursor: pointer;
+    color: #8e8e8e;
+}
+.mv li:hover{
+    color: black;
+}
+.mv .mv_hz{
+    width: 1200px;
+    clear: both;
+    margin: 30px auto 0 auto;
+}
+.mv  .lbt{
+    width: 1200px;
+    float: left;
+}
+.mv .lbt .tu1{
+    width: 300px;
+    height: 170px;
+    overflow: hidden;
+    position: relative;
+}
+.mv .tu6{
+    width: 300px;
+    height: 305px;
+    float: left;
+    background-color: #e6e6e6;
+    color: white;
+    text-align: center;
+    position: relative;
+
+}
+.mv .tu6 .img1{
+    position:  absolute;
+    width: 70px;
+    height: 70px;
+    top:50px;
+    left: 115px;
+    transition-property: opacity,transform;
+    transition-duration: .5s;
+    zoom: 1;
+    -webkit-transition-duration: .5s;
+    opacity: 0.7;
+    display: none;
+}
+.tu1:hover .img1{
+    display: block;
+}
+.mv .pp1{
+    margin-top: 30px ;
+}
+.mv .pp2{
+    color: #aaaaaa;
+    margin-top:10px;
+}
+.mv .lbt img{
+    transition: all 1s;
+    position: absolute;
+    left: -30px;
+
+}
+.mv .lbt img:hover{
+    transform: scale(1.1);
+}
+.mv_hz .pp1{
+    color: black;
+    cursor: pointer;
+}
+.mv_hz .pp2{
+    cursor: pointer;
+}
+.mv_hz p:hover{
+    color: #31c273;
+}

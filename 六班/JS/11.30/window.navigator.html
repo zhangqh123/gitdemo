@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        for(var x in navigator){
+
+           // document.write(x+":"+navigator[x]+"<br />")
+
+
+        }
+       if(navigator.userAgent.toLowerCase().indexOf('firefox')!=-1)
+       {
+           document.write("火狐浏览器")
+       }
+       else if(navigator.userAgent.toLowerCase().indexOf('webkit')!=-1){
+           document.write("谷歌浏览器")
+       }
+       else if(navigator.userAgent.toLowerCase().indexOf('mise')!=-1){
+           document.write("IE")
+       }
+        else{
+           document.write("默认浏览器")
+       }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

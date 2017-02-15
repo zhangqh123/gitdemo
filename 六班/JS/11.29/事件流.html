@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1{
+            width: 300px;
+            height: 300px;
+            background-color: red;
+        }
+        #div2{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+        #div3{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+
+
+    </style>
+    <script>
+        window.onload=function(){
+            var oDiv1=document.getElementById('div1');
+            var oDiv2=document.getElementById('div2');
+            var oDiv3=document.getElementById('div3');
+
+            function f1(ev){
+                alert(1);
+                var oEvent=window.event||ev;
+               // oEvent.cancelBubble=true;
+                //阻止事件传播
+               // oEvent.stopPropagation();
+            }
+            function f2(){alert(2)}
+            function f3(ev){alert(3);
+                var oEvent=window.event||ev;
+                //oEvent.cancelBubble=true;
+                oEvent.stopPropagation();
+                }
+
+          //3 表示事件函数在哪个阶段执行
+         //false  表示在事件冒泡阶段执行
+          //true  表示在事件捕获阶段执行
+
+            oDiv1.addEventListener('click',f1);
+            oDiv2.addEventListener('click',f2);
+            oDiv3.addEventListener('click',f3, true);
+
+
+
+
+        }
+
+
+
+
+
+    </script>
+</head>
+<body>
+<div id="div1">
+    <div id="div2">
+        <div id="div3">
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

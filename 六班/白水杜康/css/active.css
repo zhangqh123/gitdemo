@@ -1,0 +1,69 @@
+.active_box{
+    width: 376px;
+    height: 376px;
+    margin:100px auto;
+    border: 5px solid #ff755b;
+    position: relative;
+}
+.active_one{
+    width: 90px;
+    height: 90px;
+    border: 2px solid #ccc;
+    float: left;
+}
+.active_one img{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+.active_box_btn{
+    width: 188px;
+    height: 188px;
+    position: absolute;
+    top:94px;
+    left: 94px;
+}
+.active_box_btn img{
+    width: 188px;
+    height: 188px;
+}
+.active_two{
+    position: absolute;
+    right: 0;
+    top:94px;
+}
+.active_three{
+    position: absolute;
+    right: 0;
+    top:188px;
+}
+.active_four{
+    position: absolute;
+    right: 0;
+    bottom:0;
+}
+.active_six{
+    position: absolute;
+    right: 94px;
+    bottom:0;
+}
+.active_seven{
+    position: absolute;
+    right: 188px;
+    bottom:0;
+}
+.active_eight{
+    position: absolute;
+    left: 0;
+    bottom:0;
+}
+.active_nine{
+    position: absolute;
+    left: 0;
+    bottom:94px;
+}
+.active_ten{
+    position: absolute;
+    top: 94px;
+    left:0;
+}

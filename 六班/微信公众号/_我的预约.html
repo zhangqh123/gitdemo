@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>我的预约</title>
+    <!--强制让文档的宽度与设备的宽度保持1:1，并且文档最大的宽度比例是1.0，且不允许用户点击屏幕放大浏览-->
+    <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no"/>
+    <!--WebApp全屏模式   隐藏地址栏-->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <!--苹果强制全屏显示-->
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <!--强制全屏显示-->
+    <meta name="full-screen" content="yes"/>
+    <!--制定iphone中safari顶端的状态条的样式（default:白色，black:黑色，black-translucent：半透明）-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <!--告诉设备忽略将页面中的数字识别为电话号码 -->
+    <meta name="format-detection" content="telephone=no"/>
+    <!--告诉设备忽略将页面中的地址识别 -->
+    <meta name="format-detection" content="address=no"/>
+    <script src="jquery-3.1.1/jquery-3.1.1.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            min-height: 100%;
+        }
+        body{
+            background: linear-gradient(to bottom ,#b04d8e,#576294);
+        }
+        a {
+            text-decoration: none;
+            color:white;
+        }
+        header{
+            width: 100%;
+            height: 1.43rem;
+            background: #3c3c3c;
+            margin-bottom: 0.8rem;
+            overflow: hidden;
+
+        }
+        header span{
+            display: block;
+            width: 0.7rem;
+            float: left;
+            height: 0.7rem;
+            color: white;
+            line-height: 0.7rem;
+            border-right: 0.01rem solid #303030;
+            font-size: 0.55rem;
+            margin: 0.35rem 0 0 0.5rem;
+        }
+        header p{
+            color: white;
+            font-size: 0.5rem;
+            margin:0.4rem 0 0 1.8rem;
+        }
+        header ul{
+            float: right;
+            list-style: none;
+            margin: -0.6rem 0.5rem 0 0;
+        }
+        header li{
+            width: 0.2rem;
+            height: 0.2rem;
+            background: white;
+            border-radius: 12rem;
+            margin-bottom: 0.1rem;
+        }
+        .bg {
+            width: 100%;
+            position:relative;
+        }
+        .box {
+            position: absolute;
+            top:1.3rem;
+        }
+
+        .box .box-top {
+            background: url(images/line_top.png) no-repeat;
+            height:3rem;
+            width:0.3rem;
+            clear:both;
+            margin-left:1.8rem;
+            background-size:0.06rem;
+            position:relative;
+        }
+        .box .box-top .yuan-box {
+            height: 1.4rem;
+            width: 4.35rem;
+            border-radius: 1.1rem;
+            background: rgba(225, 225, 225, 0.20);
+            position:absolute;
+            top:1rem;
+            left:-0.7rem;
+        }
+        .box .box-top .yuan-box .tu {
+            background: url(images/detailImage01.png) no-repeat center center ;
+            height:1.4rem;
+            width:1.4rem;
+            float:left;
+            background-size:1.4rem;
+        }
+        .box .box-top .yuan-box .zi {
+            float: right;
+            color: white;
+            line-height:1.4rem;
+            font-size:0.7rem;
+        }
+        .box .box-center {
+            height: 12rem;
+            width: 100%;
+        }
+        .box .box-center .center-line {
+            background: url(images/line_middle.png) repeat-y;
+            height:12rem;
+            width:0.4rem;
+            background-size:0.06rem;
+            position:absolute;
+            top:3.1rem;
+            left:1.8rem;
+        }
+        .box .box-center .shijian {
+            list-style: none;
+            height: 10rem;
+            width: 1.5rem;
+            margin-left:0.3rem;
+            float: left;
+            margin-top:1.2rem;
+        }
+        .box .box-center .shijian li {
+            color: white;
+            line-height: 1.8rem;
+            font-size:0.5rem;
+        }
+        .box .box-center .dian {
+            list-style: none;
+            height: 12rem;
+            width: 0.5rem;
+            float: left;
+            margin-left:-0.14rem;
+            margin-top:0.13rem;
+        }
+        .box .box-center .dian li {
+            background: white;
+            margin-bottom:1.5rem;
+            height:0.3rem;
+            width:0.3rem;
+            border-radius:10rem;
+        }
+        .box .box-center .right-box {
+            height: 12rem;
+            width: 8.2rem;
+            float: left;
+            margin-top: 0.2rem;
+            margin-left:0.3rem;
+            position:relative;
+        }
+        .box .box-center .right-box .right-top {
+            list-style: none;
+            height:0.5rem;
+            width:8.2rem;
+            position:absolute;
+            top:-0.6rem;
+            left:-0.4rem;
+        }
+        .box .box-center .right-box .right-top li{
+            float:left;
+            height:0.5rem;
+            color:white;
+            font-size:0.5rem;
+            padding:0 0.55rem;
+        }
+        .box .box-center .right-box .right-top li:last-child{
+            padding:0 0.15rem ;
+        }
+        .box .box-center .right-box .line {
+            background: url(images/line_middle.png) repeat-y center ;
+            background-size: 0.04rem;
+            transform:rotate(-90deg);
+            height:8rem;
+            width:0.3rem;
+            position:absolute;
+            top: -3.84rem;
+            left: 3.1rem;
+        }
+        .box .box-center .right-box .neirong {
+            list-style: none;
+            width: 3.8rem;
+            height: 10rem;
+            float:left;
+            margin-top:1.7rem;
+        }
+        .box .box-center .right-box .neirong li{
+            color: white;
+            margin-bottom:1.5rem;
+            height:0.3rem;
+            width: 3.8rem;
+            font-size:0.43rem;
+        }
+        .box .box-center .right-box .xingming {
+            list-style: none;
+            width: 0.9rem;
+            height: 10rem;
+            float:left;
+            margin-top:1.7rem;
+        }
+        .box .box-center .right-box .xingming li{
+            color: white;
+            margin-bottom:1.5rem;
+            height:0.3rem;
+            width: 0.9rem;
+            font-size:0.43rem;
+            margin-left: -0.35rem;
+        }
+        .box .box-center .right-box .yiyuan {
+            list-style: none;
+            width: 1.85rem;
+            height: 10rem;
+            float:left;
+            margin-top:1.7rem;
+            margin-left:0.8rem;
+        }
+        .box .box-center .right-box .yiyuan li{
+            color: white;
+            margin-bottom:1.5rem;
+            height:0.3rem;
+            width: 1.85rem;
+            font-size:0.43rem;
+        }
+        .box .box-bottom {
+            background: url(images/line_bottom.png) no-repeat 1.8rem;
+            height:2.41rem;
+            width:100%;
+            clear:both;
+            background-size:0.06rem;
+            position: relative;
+        }
+        .box-bottom .picture img{
+            position: absolute;
+           width: 0.33rem;
+            height: 0.33rem;
+            left: 1.65rem;
+            top:0.5rem;
+        }
+        .box-bottom p{
+            font-size: 0.34rem;
+            position: absolute;
+            color: white;
+            left: 2.5rem;
+            top:0.5rem;
+        }
+    </style>
+    <script>
+
+        //   rem   em 相对单位  基础
+        function refresh() {
+            var deviceWidth = document.documentElement.clientWidth;
+            if (deviceWidth > 1080) {
+                document.documentElement.style.fontSize = 1080 / 10.8 + "px";
+            } else {
+                //  540    50
+                document.documentElement.style.fontSize = deviceWidth / 10.8 + "px";
+            }
+        }
+        refresh();
+        window.onresize = function () {
+            refresh();
+        }
+
+
+
+
+    </script>
+
+</head>
+<body>
+
+<div class="bg">
+    <header>
+        <span><</span>
+        <p>预约列表</p>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </header>
+    <div class="box">
+        <div class="box-top">
+            <div class="yuan-box">
+                <div class="tu"></div>
+                <div class="zi">2015 ></div>
+            </div>
+        </div>
+        <div class="box-center">
+            <div class="center-line"></div>
+            <ul class="shijian">
+                <li>12.8</li>
+                <li>12.1</li>
+                <li>10.5</li>
+                <li>10.4</li>
+                <li>10.1</li>
+                <li>8.10</li>
+            </ul>
+            <ul class="dian">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <div class="right-box">
+                <ul class="right-top">
+                    <li>消费内容</li>
+                    <li>消费人</li>
+                    <li style="padding-right:0">消费地点</li>
+                </ul>
+                <div class="line"></div>
+                <ul class="neirong">
+                    <li>体检800元</li>
+                    <li>专家门诊1000元</li>
+                    <li>体检800元</li>
+                    <li>专家门诊1000元</li>
+                    <li>体检800元</li>
+                    <li>专家门诊1000元</li>
+                </ul>
+                <ul class="xingming">
+                    <li>刘铭</li>
+                    <li>刘贝</li>
+                    <li>李东</li>
+                    <li>刘铭</li>
+                    <li>刘贝</li>
+                    <li>李东</li>
+                </ul>
+                <ul class="yiyuan">
+                    <li>华西医院</li>
+                    <li>华西医院</li>
+                    <li>华西医院</li>
+                    <li>华西医院</li>
+                    <li>华西医院</li>
+                    <li>华西医院</li>
+                </ul>
+            </div>
+        </div>
+        <div class="box-bottom">
+            <div class="picture"><img src="images/cycle.png" alt=""></div>
+            <p>没有消费记录了····</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

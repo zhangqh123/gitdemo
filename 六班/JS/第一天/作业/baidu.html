@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .div1 {
+            height: 50px;
+            line-height: 50px;
+            float: right;
+            box-sizing: border-box;
+            padding-right: 30px;
+        }
+
+        .li1, .li2 {
+            float: left;
+            font-size: 12px;
+            color: black;
+            list-style: none;
+            width: 50px;
+        }
+
+        a {
+            color: black;
+        }
+
+        #set ul {
+            display: none;
+        }
+
+        .li1 {
+            width: 60px;
+            height: 25px;
+            background: blue;
+            margin-top: 10px;
+            line-height: 25px;
+            text-align: center;
+        }
+
+        #set {
+            position: relative;
+        }
+
+        #list {
+            height: 150px;
+            position: absolute;
+            top: 35px;
+            left: -50px;
+        }
+
+        #list li {
+            width: 50px;
+            list-style: none;
+            margin-top: -10px;
+        }
+
+        #list a:hover {
+            background: blue;
+        }
+
+        .div2 {
+            width: 80px;
+            height: 150px;
+        }
+
+        #list1 {
+            display: none;
+        }
+
+        .div2 img {
+            width: 60px;
+            height: 60px;
+        }
+
+        .div3 {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 10px;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var oLi = document.getElementById('set');
+            oLi.onmouseover = function () {
+                var oList = document.getElementById('list');
+                oList.style.display = "block";
+            }
+            oLi.onmouseout = function () {
+                var oList = document.getElementById('list');
+                oList.style.display = "none";
+            }
+            var oSet1 = document.getElementById('set1');
+            oSet1.onmouseover = function () {
+                var oList1 = document.getElementById('list1');
+                oList1.style.display = "block";
+            }
+            oSet1.onmouseout = function () {
+                var oList1 = document.getElementById('list1');
+                oList1.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="div1">
+    <ul>
+        <li class="li2"><a href="">糯米</a></li>
+        <li class="li2"><a href="">新闻</a></li>
+        <li class="li2"><a href="">hao123</a></li>
+        <li class="li2"><a href="">地图</a></li>
+        <li class="li2"><a href="">视频</a></li>
+        <li class="li2"><a href="">贴吧</a></li>
+        <li class="li2"><a href="">登录</a></li>
+        <li class="li2" id="set"><a href="">设置</a>
+            <ul id="list">
+                <li><a href="">搜索设置</a></li>
+                <li><a href="">高级搜索</a></li>
+                <li><a href="">关闭预测</a></li>
+                <li><a href="">搜索历史</a></li>
+            </ul>
+        </li>
+        <li class="li1" id="set1">更多产品
+
+            <div class="div2" id="list1">
+                <div class="div3">
+                    <img src="img/music.png" alt="">
+                </div>
+                <div class="div3">
+                    <img src="img/image.png" alt="">
+                </div>
+                <div class="div3">
+                    <img src="img/zhidao.png" alt="">
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

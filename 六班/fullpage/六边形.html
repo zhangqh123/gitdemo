@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #c1{
+            width: 400px;
+            height: 260px;
+            border-radius: 50%;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var oC=document.getElementById("c1");
+            var oGc=oC.getContext("2d");
+            oGc.beginPath();
+            oGc.moveTo(500,100);
+            oGc.lineTo(400,150);
+            oGc.lineTo(450,150);
+            oGc.lineTo(300,200);
+            oGc.lineTo(450,200);
+            oGc.lineTo(200,250);
+            oGc.lineTo(450,250);
+            oGc.lineTo(100,300);
+            oGc.lineTo(450,300);
+            oGc.lineTo(0,350);
+            oGc.lineTo(1000,350);
+            oGc.lineTo(550,300);
+            oGc.lineTo(900,300);
+            oGc.lineTo(550,250);
+            oGc.lineTo(800,250);
+            oGc.lineTo(550,200);
+            oGc.lineTo(700,200);
+            oGc.lineTo(550,150);
+            oGc.lineTo(600,150);
+            oGc.lineTo(500,100);
+            oGc.stroke();
+            oGc.beginPath();
+            oGc.moveTo(450,350);
+            oGc.lineTo(550,350);
+            oGc.lineTo(550,650);
+            oGc.lineTo(450,650);
+            oGc.lineTo(450,350);
+            oGc.stroke();
+        }
+    </script>
+</head>
+<body>
+<canvas id="c1" width="1000px" height="650px"></canvas>
+</body>
+</html>

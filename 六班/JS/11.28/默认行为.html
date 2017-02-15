@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload=function() {
+
+            document.forms[0].onsubmit = function () {
+                 //获取表单name 为in2的值    this.in2.value
+                // 当输入长度小于10取消默认行为
+                // alert(this.in2.value.length<10);
+                if(this.wd.value.length<10){
+                    return false
+                }
+            }
+        }
+
+    </script>
+</head>
+<body>
+<form action="https://www.baidu.com/s">
+    <input type="text" id="in1" name="wd">
+    <input type="submit">
+</form>
+</body>
+</html>

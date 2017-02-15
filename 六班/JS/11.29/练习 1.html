@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        window.onload=function(){
+            var oBtn=document.getElementsByTagName('input')[0];
+            oBtn.onclick=function(){
+
+               // url    资源统一定位符     网址
+                //windowName
+
+                window.open("https://www.baidu.com","_blank");
+                window.close();
+                //chrome    close   直接关闭
+                //IE     close   弹窗确认是否关闭
+                //ff    close    禁止关闭非脚本语言打开的窗口
+            }
+
+
+
+
+
+        }
+
+
+
+
+    </script>
+
+
+
+</head>
+<body>
+<input type="button" value="按钮">
+</body>
+</html>

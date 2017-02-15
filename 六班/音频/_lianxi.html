@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function () {
+            var oV = document.getElementById("video");
+            var oPlay = document.getElementById("play");
+            var oMuted = document.getElementById("muted");
+            var oNow = document.getElementById("now");
+            var oDur = document.getElementById("dur");
+            var oFull = document.getElementById("full");
+            var timer=null;
+            oPlay.onclick = function () {
+                if (oV.paused) {
+                    oV.play();
+                    this.value = "暂停";
+                    timer=setInterval(nowTime,200)
+                }
+                else {
+                    oV.pause();
+                    this.value = "播放";
+                    clearInterval(timer);
+                }
+            };
+            oMuted.onclick = function () {
+                if (oV.muted) {
+                    oV.muted = false;
+                    this.value = "静音"
+                }
+                else {
+                    oV.muted = true;
+                    this.value = "取消静音"
+                }
+            };
+            oFull.onclick=function(){
+//                oV.requestFullScreen();
+//               oV.webkitRequestFullScreen();
+//                oV.mozRequestFullScreen()
+                if( oV.requestFullScreen){
+                    oV.requestFullScreen()
+                }
+                else if(oV.webkitRequestFullScreen){
+                    oV.webkitRequestFullScreen()
+                }
+                else if(oV.mozRequestFullScreen){
+                    oV.mozRequestFullScreen()
+                }
+                else if(oV.oRequestFullScreen){
+                    oV.oRequestFullScreen()
+                }
+            };
+            oDur.value=timeFormat(oV.duration);
+            function timeFormat(time){
+                var m=parseInt((time/60)%60);
+                m=m<10?"0"+m:m;
+                var s=parseInt(time%60);
+                s=s<10?"0"+s:s;
+                var h=parseInt(time/3600);
+                h=h<10?"0"+h:h;
+                return h+":"+m+":"+s
+            }
+            function nowTime(){
+                oNow.value=timeFormat(oV.currentTime)
+            }
+        }
+    </script>
+</head>
+<body>
+<!--视频-->
+<!--<video controls src="Intermission-Walk-in.ogv"></video>-->
+<video id="video" controls style="display:block ;margin-bottom: 20px">
+    <source src="Intermission-Walk-in.ogv">
+    <source src="Intermission-Walk-in_512kb.mp4">
+    该浏览器不支持该视频格式
+</video>
+<input type="button" id="play" value="播放">
+<input type="button" id="now" value="00:00:00">
+<input type="button" id="dur" value="99:99:99">
+<input type="button" id="muted" value="静音">
+<input type="button" id="full" value="全屏">
+</body>
+</html>

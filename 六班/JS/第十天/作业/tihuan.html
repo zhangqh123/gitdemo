@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var str = "abaasdffggghhjjkkgfddsssss3444343";
+        var isCz = true;
+        do {
+            for (var i = 0; i < str.length; i++) {
+                var str1 = str.charAt(i);
+                if (str1 == "g") {
+                    isCz = true;
+                    str = str.replace("g", "22")
+                }
+            }
+        }
+        while (isCz == false);
+        for (var j = 0; j < str.length; j++) {
+            var str2 = str.search("ss");
+            if (str2 != -1) {
+                str = str.replace("ss", "b");
+            }
+        }
+        document.write(str)
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

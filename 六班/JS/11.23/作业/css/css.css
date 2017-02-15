@@ -1,0 +1,142 @@
+.divp{
+    width: 700px;
+    height: 600px;
+    background-color: #f8fdff;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+.head{
+    width: 600px;
+    height: 20px;
+    border-left: 3px solid blue;
+    margin:  0 auto;
+    padding-left: 10px;
+    line-height: 20px;
+}
+.p1{
+    width: 610px;
+    border-bottom: 1px solid #ccc;
+    margin: 10px auto 0 auto;
+}
+.main{
+    width: 610px;
+    margin: 0 auto;
+}
+.left{
+    float: left;
+    text-align: right;
+    width: 150px;
+   line-height: 40px;
+}
+.right{
+    float: left;
+    width: 450px;
+    line-height: 40px;
+    position: relative;
+
+}
+.in1{
+    width: 300px;
+    height: 30px;
+    margin: 20px 0 0 20px;
+}
+.in2{
+    margin: 32px 0 0 25px;
+}
+select{
+    width: 61px;
+    height: 20px;
+    margin-top: 25px;
+}
+.se2{
+    margin-left: 20px;
+}
+.se1{
+    width: 95px;
+}
+.se3,.se4{
+    width: 147px;
+    height: 20px;
+    margin-top: 25px;
+}
+.se3{
+    margin-left: 20px;
+}
+.right p{
+    font-size: 12px;
+    margin: 5px 0 0 20px;
+}
+.in3{
+    width: 305px;
+    height: 40px;
+    color: white;
+    background-color: #61bf1a;
+    border: none;
+}
+em{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(../img/pwd_sprite.png);
+    background-position: 0 -350px;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+span{
+    color: red;
+    font-size: 12px;
+}
+#sp1{
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    display: none;
+}
+#sp2{
+    position: absolute;
+    top: 74px;
+    right: 40px;
+    display: none;
+}
+#sp3{
+    position: absolute;
+    top: 129px;
+    right: 40px;
+    display: none;
+}
+#sp4{
+    position: absolute;
+    top: 353px;
+    right: 40px;
+    display: none;
+}
+#sp5{
+    background-position: 0 -250px;
+    position: absolute;
+    top: 25px;
+    right: 80px;
+    display: none;
+}
+#sp6{
+    background-position: 0 -250px;
+    position: absolute;
+    top: 88px;
+    right: 80px;
+    display: none;
+}
+
+#sp8{
+    background-position: 0 -250px;
+    position: absolute;
+    top: 365px;
+    right: 80px;
+    display: none;
+}
+.foot{
+    color: black;
+    vertical-align: middle;
+}
+.chek{
+    vertical-align: middle;
+    margin-left: 20px;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            overflow: auto;
+        }
+
+
+    </style>
+    <script>
+        window.onload=function(){
+
+            var oDiv=document.getElementById('div1');
+            var oIn=document.getElementById('in1');
+            var oBtn=document.getElementById('btn1');
+            // 1.按钮发送
+            oBtn.onclick=function(){
+                oDiv.innerHTML+=oIn.value+"<br />"
+            };
+            oIn.onkeydown=function(ev){
+                var oEvent=window.event||ev;
+                if(oEvent.keyCode==13){
+                    oDiv.innerHTML+=oIn.value+"<br />"
+                }
+            };
+            oIn.onkeydown=function(ev){
+                var oEvent=window.event||ev;
+                if(oEvent.keyCode==13&&oEvent.ctrlKey){
+                    oDiv.innerHTML+=oIn.value+"<br />"
+                }
+            }
+        }
+
+
+
+
+    </script>
+</head>
+<body>
+<div id="div1"></div>
+<input type="text" id="in1">
+<input type="button" id="btn1" value="按钮">
+</body>
+</html>

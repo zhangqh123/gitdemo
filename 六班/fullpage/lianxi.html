@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #menu{
+            width: 980px;
+            margin: 0 auto;
+            list-style: none;
+        }
+        .section{
+            font-size: 100px;
+            text-align: center;
+        }
+        #menu>li{
+            width: 300px;
+            height: 250px;
+            float: left;
+            border: 1px solid black;
+            margin: 15px 0 0 15px;
+            position: relative;
+        }
+        .slide p{
+            position: relative;
+            top:-100%;
+        }
+        .left{
+            left: -120%;
+        }
+        .right{
+            right:-120%;
+        }
+    </style>
+    <link rel="stylesheet" href="css/jquery.fullPage.css">
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery.fullPage.min.js"></script>
+    <script src="js/jquery-ui-1.10.3.min.js"></script>
+    <script src="js/move.js"></script>
+    <script>
+        $(function(){
+            $("#fullpage").fullpage({
+                navigation:true,
+                anchors:["page1","page2","page3","page4"],
+                menu:"#menu",
+                afterLoad:function(anchorLink,index){
+                    $(".section").eq(index-1).find(".left").animate({left:"0"});
+                    $(".section").eq(index-1).find(".right").animate({right:"0"})
+                    $(".slide").eq(index-1).find("p").animate({top:0});
+                },
+               onLeave:function(index){
+                   $(".section").eq(index-1).find(".left").delay(800).animate({left:"-120%"});
+                   $(".section").eq(index-1).find(".right").delay(800).animate({right:"-120%"})
+               },
+
+                afterSlideLoad:function(anchorLink,index,slideIndex){
+                    $(".slide").eq(slideIndex).find("p").animate({top:0});
+                },
+                onSlideLeave:function(anchorLink,index,slideIndex){
+                    $(".slide").eq(slideIndex).find("p").delay(1000).animate({top:"-100%"});
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+<div class="section"><p>这是第一屏</p></div>
+<div class="section">
+    <ul id="menu">
+        <li class="left"></li>
+        <li></li>
+        <li class="right"></li>
+        <li class="left"></li>
+        <li></li>
+        <li class="right"></li>
+    </ul>
+</div>
+<div class="section">
+    <div class="slide"><p>第三屏中的第一屏</p></div>
+    <div class="slide"><p>第三屏中的第二屏</p></div>
+    <div class="slide"><p>第三屏中的第三屏</p></div>
+    <div class="slide"><p>第三屏中的第四屏</p></div>
+</div>
+<div class="section"><p>这是第四屏</p></div>
+</body>
+</html>

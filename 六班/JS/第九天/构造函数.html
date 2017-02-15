@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function  Person(name,age,sex,work) {  //构造函数
+            this.name = name;   //属性
+            this.age = age;
+            this.sex = sex;
+            this.work = work;
+        }
+        //prototype   原型
+        Person.prototype.showMes=function(){
+            alert(this.name+","+this.age+","+this.sex+","+this.work+",");
+        };
+        var p1=new Person("张三","20","男","工人");
+        var p2=new Person("李四","20","男","工人");
+        var p3=new Person("王五","20","男","工人");
+        p1.showMes();
+        p2.showMes();
+        p3.showMes();
+
+
+
+    </script>
+
+
+
+
+
+</head>
+<body>
+
+</body>
+</html>

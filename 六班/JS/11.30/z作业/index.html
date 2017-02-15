@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .div1{
+            width: 520px;
+            height: 50px;
+            position: relative;
+            margin: 60px auto;
+        }
+      li{
+          width: 120px;
+          height: 50px;
+          background-color: #ccc;
+          list-style: none;
+          text-align: center;
+          line-height: 50px;
+          font-size: 16px;
+          cursor: pointer;
+      }
+        .li1{
+            float: left;
+        }
+        li:hover{
+            background-color: royalblue;
+            color: white;
+        }
+        li:hover a{
+            color: white;
+        }
+        #ul1{
+            position: absolute;
+            top:34px;
+            display: none;
+        }
+        #ul2{
+            position: absolute;
+            top: 34px;
+            left: 120px;
+            display: none;
+        }
+        #ul3{
+             position: absolute;
+             top: 34px;
+             left: 240px;
+            display: none;
+         }
+        #ul4{
+            position: absolute;
+            top: 34px;
+            left: 360px;
+            display: none;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+
+    </style>
+    <script>
+        window.onload=function(){
+            var oDiv2=document.getElementById('div2');
+            var arrLi=oDiv2.getElementsByTagName('li');
+            var oDiv1=document.getElementById('div1');
+            var arrUl=oDiv1.getElementsByTagName('ul');
+            for(var i= 0;i<arrLi.length;i++){
+                arrLi[i].index=i;
+                arrLi[i].onclick=function(){
+                    var display=arrUl[this.index].style.display;
+                    for(var j=0;j<arrLi.length;j++){
+                        arrUl[j].style.display="none";
+                    }
+                    if(display=="block"){
+                        arrUl[this.index].style.display="none";
+                    }
+                    else{
+                        arrUl[this.index].style.display="block";
+                    }
+                }
+            }
+            var arrA=oDiv1.getElementsByTagName('a');
+            for(var i=0;i<arrA.length;i++){
+                arrA[i].indenx=i;
+                arrA[i].onclick=function(){
+                    window.open("index1.html#"+this.name,"_blank")
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="div1">
+<ul id="div2">
+    <li class="li1">美食</li>
+    <li class="li1">美景</li>
+    <li class="li1">美食</li>
+    <li class="li1">美景</li>
+</ul>
+    <div id="div1">
+          <ul id="ul1">
+              <li><a href="javascript:" name="food" target="_blank">美食</a></li>
+              <li><a href="javascript:" name="iceCream" target="_blank">冰淇淋</a></li>
+              <li><a href="javascript:" name="fruit" target="_blank">水果</a></li>
+          </ul>
+          <ul id="ul2">
+              <li><a href="javascript:" name="scenery" target="_blank">美景</a></li>
+              <li><a href="javascript:" name="mountains" target="_blank">山川</a></li>
+              <li><a href="javascript:" name="maerdaifu" target="_blank">马尔代夫</a></li>
+          </ul>
+          <ul id="ul3">
+              <li><a href="javascript:" name="food" target="_blank">美食</a></li>
+              <li><a href="javascript:" name="iceCrean" target="_blank">冰淇淋</a></li>
+              <li><a href="javascript:" name="fruit" target="_blank">水果</a></li>
+          </ul>
+          <ul id="ul4">
+              <li><a href="javascript:" name="scenery" target="_blank">美景</a></li>
+              <li><a href="javascript:" name="mountains" target="_blank">山川</a></li>
+              <li><a href="javascript:" name="maerdaifu" target="_blank">马尔代夫</a></li>
+          </ul>
+    </div>
+</div>
+</body>
+</html>

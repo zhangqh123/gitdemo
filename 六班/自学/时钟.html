@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .clock {
+            width: 600px;
+            height: 600px;
+            margin: 0 auto;
+            position: relative;
+            background: url(img/clock.jpg) no-repeat;
+        }
+
+        .hour {
+            position: absolute;
+            left: 285px;
+        }
+
+        .minutes {
+            position: absolute;
+            left: 285px;
+            z-index: 2;
+        }
+
+        .second {
+            position: absolute;
+            left: 285px;
+            z-index: 3;
+        }
+
+    </style>
+    <script>
+        window.onload = function () {
+            var oHour = document.getElementsByClassName("hour")[0];
+            var oMin = document.getElementsByClassName("minutes")[0];
+            var oSecond = document.getElementsByClassName("second")[0];
+            setInterval(function f() {
+                var oDate = new Date();
+                var hour = oDate.getHours();
+                var min = oDate.getMinutes();
+                var second = oDate.getSeconds();
+                var ms = oDate.getMilliseconds();
+                var s = (second) / 60 * 360;
+                var m = min / 60 * 360 + s / 60;
+                var h = hour / 12 * 360 + m / 12;
+                oSecond.style.transform = "rotate(" + s + "deg)";
+                oMin.style.transform="rotate("+m+"deg)";
+                oHour.style.transform="rotate("+h+"deg)";
+            }, 10)
+
+
+        }
+    </script>
+</head>
+<body>
+<div class="clock">
+    <div class="hour"><img src="img/hour.png" alt=""></div>
+    <div class="second"><img src="img/second.png" alt=""></div>
+    <div class="minutes"><img src="img/minute.png" alt=""></div>
+</div>
+</body>
+</html>

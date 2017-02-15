@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var string = "abaasdffggghhjjkkgfddsssss3444343";
+        var json = {};
+        for (var i = 0; i < string.length; i++) {
+            var c = string.charAt(i);
+            if (json[c]) {
+                json[c]++;
+            }
+            else {
+                json[c] = 1;
+            }
+        }
+
+        //        document.write(JSON.stringify(json))
+        //循环json    for   in  循环
+        for (var x in json) {
+            document.write(x + ":" + json[x] + "<br />")
+        }
+
+        /*var arr = [1, 2, 3, 4, 5];
+        for( var x in arr){
+            document.write(x)
+        }*/
+
+
+
+
+    </script>
+
+
+</head>
+<body>
+
+</body>
+</html>

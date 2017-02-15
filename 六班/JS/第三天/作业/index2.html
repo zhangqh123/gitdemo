@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .div1{
+            width: 140px;
+            height: 200px;
+            position: relative;
+            margin-top: 100px;
+        }
+        p{
+            background: url(img/11.png) no-repeat;
+            width: 24px;
+            height: 24px;
+            vertical-align: middle;
+            background-position: -95px -210px;
+            margin-bottom: -5px;
+           margin-left: 40px;
+            margin-top: 15px;
+        }
+        .p1{
+            background-position: 0 0;
+        }
+        .p2{
+            background-position: 0 -50px;
+        }
+        .p3{
+             background-position: 0 -100px;
+         }
+        .p4{
+            background-position: 0 -150px;
+        }
+        li{
+            list-style: none;
+            display: none;
+            width:80px ;
+            height: 24px;
+            line-height: 24px;
+            text-align: center;
+        }
+        .li1{
+            position: absolute;
+            top:0;
+            left: 60px;
+        }
+        .li2{
+            position: absolute;
+            top:34px;
+            left: 60px;
+        }
+        .li3{
+            position: absolute;
+            top:68px;
+            left: 60px;
+        }
+        .li4{
+            position: absolute;
+            top:102px;
+            left: 60px;
+        }
+        .li5{
+            position: absolute;
+            top:136px;
+            left: 60px;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+          var arrP=document.getElementsByTagName('p');
+          var arrLi=document.getElementsByTagName('li');
+            var i=0;
+            for(i=0;i<arrP.length;i++){
+                arrP[i].index=i;
+                arrP[i].onmouseover=function(){
+                    arrLi[this.index].style.display="block";
+                    arrLi[this.index].style.backgroundColor="red";
+                    this.style.backgroundColor="red"
+                };
+                arrP[i].onmouseout=function(){
+                    arrLi[this.index].style.display="none";
+                    this.style.backgroundColor="white"
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="div1">
+<p></p>
+<p class="p1"></p>
+<p class="p2"></p>
+<p class="p3"></p>
+<p class="p4"></p>
+    <ul>
+        <li class="li1">京东会员</li>
+        <li  class="li2">购物车</li>
+        <li  class="li3">我的关注</li>
+        <li  class="li4">我的足迹</li>
+        <li  class="li5">咨询JIMI</li>
+    </ul>
+</div>
+</body>
+</html>
+

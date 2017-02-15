@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+    <script>
+        //$
+        function $(id){
+           return document.getElementById(id);
+        }
+     function showImg(s1d,did,arrc){
+         var oS1=$(s1d);
+         var oDiv1=$(did);
+         oS1.onchange=function(){
+         oDiv1.style.backgroundColor=arrc[this.value];
+         }
+        }
+      window.onload=function(){
+        showImg("s1","div1",["red","black","blue"]);
+}
+    </script>
+
+
+
+
+</head>
+<body>
+<select name="" id="s1">
+    <option value="0">red</option>
+    <option value="1">black</option>
+    <option value="2">blue</option>
+</select>
+<div id="div1"></div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload=function(){
+            var oIn=document.getElementById('input1');
+            var oBtn=document.getElementById('btn');
+            var oUl=document.getElementById('ul1');
+          //  var oLi=document.getElementById('li1');
+            var index=0;  //要替换节点的位置
+            //oBtn.onclick=function(){
+            var num=0;
+            setInterval( show=function(){
+            var oLi1=document.createElement('li');
+            oLi1.innerHTML=num++;
+                if(num==1000){
+                    num=0;
+                }
+            oUl.replaceChild(oLi1,oUl.children[index]);
+            /*index++;
+            if(index>=oUl.children.length){
+                index=0;
+            }*/
+                index=++index%oUl.children.length
+        }, 1);
+
+                //  删除
+           // oUl.removeChild(oLi)
+             // oUl.removeChild(oUl.firstElementChild)
+             //     替换
+           //   替换成哪个节点   新节点
+            //   要替换的节点   旧节点
+            //   创建一个li节点
+               /* var oLi1=document.createElement('li');
+                oLi1.innerHTML=oIn.value;
+                oUl.replaceChild(oLi1,oUl.children[index]);
+                index++;
+               if(index>=oUl.children.length){
+                   index=0;
+               }
+            }*/
+
+}
+
+            </script>
+</head>
+<body>
+<input type="text" id="input1">
+<input type="button" id="btn">
+<ul id="ul1">
+
+<li></li>
+    <li>这是一个节点1</li>
+    <li>这是一个节点2</li>
+    <li>这是一个节点3</li>
+    <li>这是一个节点4</li>
+
+
+
+</ul>
+</body>
+</html>

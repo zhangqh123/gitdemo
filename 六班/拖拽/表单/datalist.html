@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<input type="text" list="valList" />
+<!--datalist   含有提示的输入框-->
+<datalist id="valList">
+    <option value="javascript">javascript</option>
+    <option value="javascript">javascript</option>
+    <option value="javascript">javascript</option>
+</datalist>
+
+<form action="">
+    <input type="email">
+    <input type="tel">
+    <input type="search">
+    <input type="url">
+    
+    <!--进度条-->
+    <input type="range" max="100" min="0" value="2" step="2">
+    <input type="number">
+    <input type="color">
+    <input type="datetime-local">
+
+
+    <!--autocomplete    启用自动完成功能的表单-->
+    <input type="text" placeholder="请输入4-16个字符" name="user" autocomplete="off">
+    <input type="submit">
+
+    <!--autofocus   自动获取焦点   当标签存在该属性时起作用-->
+    <!--required  输入不能为空   当标签存在该属性时起作用 -->
+    <input type="text" placeholder="请输入4-16个字符" name="user" autocomplete="off" required />
+    <input type="password" placeholder="请输入4-16个字符" name="user" autocomplete="off" required />
+
+
+
+</form>
+pattern="\d{1,5}
+formaction="http://www.qq.com"
+<form action="http://www.baidu.com">
+    <input type="text" placeholder="请输入4-16个字符" name="user" autocomplete="off" pattern="\d{1,5}" />
+    <input type="submit" value="提交">
+    <input type="submit" value="提交到草稿箱" formaction="http://www.qq.com">
+</form>
+</body>
+</html>

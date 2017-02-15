@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        window.onload=function(){
+            var oBtn=document.getElementById('btn1');
+
+         function f1(){
+             alert(1)
+         }
+            function f2(){
+                alert(2);
+            }
+          //事件绑定
+            //1.事件类型   onclick   click
+            //2 .事件函数
+           //oBtn.addEventListener('click',f1);
+           //oBtn.addEventListener('click',f2);
+            //事件解绑
+            //1.事件类型   onclick   click
+            //2 .事件函数
+            //oBtn.removeEventListener('click',f1)
+
+
+            //type
+            // listener
+            //oBtn.attachEvent("onclick",f1);
+            //oBtn.attachEvent("onclick",f2);
+            //type
+            // listener
+           // oBtn.detachEvent("onclick",f2);
+
+         //事件绑定兼容
+            //  IE 9以上    ff  chrome  addEventListener
+            //  IE 8及以下   attachEvent
+            //判断
+
+          addEvent(oBtn,'click',f1);
+            addEvent(oBtn,'click',f2);
+            // ele     type "click"
+            function addEvent(ele,type,listener){   //click
+                if(ele.addEventListener){
+                    ele.addEventListener(type,listener)
+                }
+                else{                                      //onclick
+                   ele.attachEvent("on"+type,listener)
+                }
+            }
+            function removeEvent(ele,type,listener){    //click
+
+                if(ele.removeEventListener){
+                    ele.removeEventListener(type,listener)
+                }
+                else{                                      //onclick
+                    ele.deteachEvent("on"+type,listener)
+                }
+
+
+            }
+        }
+
+
+
+
+
+
+    </script>
+
+</head>
+<body>
+<input type="button" value="按钮" id="btn1">
+</body>
+</html>

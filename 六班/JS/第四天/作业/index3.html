@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #lt {
+            float: left;
+            width: 120px;
+            height: 350px;
+            border: 1px solid #eee;
+            background-color: #b4b4b4;
+        }
+
+        #rt {
+            float: left;
+            width: 150px;
+            height: 350px;
+            text-align: center;
+
+        }
+
+        li {
+            list-style: none;
+            width: 120px;
+            height: 50px;
+            margin-left: -40px;
+            line-height: 50px;
+            text-align: center;
+        }
+
+        #rt ul {
+            position: absolute;
+            display: none;
+
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var oLt = document.getElementById('lt');
+            var oLi1 = oLt.getElementsByTagName('li');
+            var oRt = document.getElementById('rt');
+            var oUl = oRt.getElementsByTagName('ul');
+            for (var i = 0; i < oLi1.length; i++) {
+                oLi1[i].index = i;
+                oLi1[i].onmouseover = function () {
+                    this.style.backgroundColor = "red";
+                    this.style.color="white";
+                    oUl[this.index].style.display = "block";
+                };
+                oLi1[i].onmouseout = function (){
+                    this.style.backgroundColor = "#b4b4b4";
+                    this.style.color="black";
+                    oUl[this.index].style.display = "none";
+                }
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+<div id="lt">
+    <ul>
+        <li>家用电器</li>
+        <li>手机</li>
+        <li>服装</li>
+        <li>运动</li>
+        <li>食品</li>
+        <li>图书</li>
+    </ul>
+</div>
+<div id="rt">
+    <div>
+        <ul>
+            <li>电视</li>
+            <li>空调</li>
+            <li>洗衣机</li>
+            <li>冰箱</li>
+            <li>厨卫小电</li>
+            <li>进口电器</li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            <li>华为</li>
+            <li>三星</li>
+            <li>苹果</li>
+            <li>小米</li>
+            <li>vivo</li>
+            <li>魅族</li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            <li>男装</li>
+            <li>女装</li>
+            <li>童装</li>
+            <li>配饰</li>
+            <li>内衣</li>
+            <li>羽绒服</li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            <li>户外装备</li>
+            <li>骑行运动</li>
+            <li>健身训练</li>
+            <li>体育用品</li>
+            <li>垂钓用品</li>
+            <li>游泳用品</li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            <li>水果</li>
+            <li>海鲜</li>
+            <li>特产</li>
+            <li>茗茶</li>
+            <li>名酒</li>
+            <li>小吃</li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            <li>少儿</li>
+            <li>教育</li>
+            <li>文艺</li>
+            <li>科技</li>
+            <li>生活</li>
+            <li>电子书</li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

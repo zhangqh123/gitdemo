@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var arr=[1,23,4,2,1,2,5,68,4];
+        var arr1=[];
+//        for(var i=0;i<arr.length;i++){
+//            var isCz=false;
+//            for(var j=0;j<arr1.length;j++){
+//                if(arr1[j]==arr[i]){
+//                    isCz=true;
+//                    break;
+//                }
+//            }
+//            if(isCz!=true){
+//               arr1.push(arr[i])
+//            }
+//        }
+
+        for(i=0;i<arr.length;i++){
+            if(arr1.indexOf(arr[i])==-1){
+                arr1.push(arr[i])
+            }
+        }
+        document.write(arr1)
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

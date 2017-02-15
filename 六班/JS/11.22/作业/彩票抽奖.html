@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+          float: left;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: red;
+            color: white;
+            font-size: 30px;
+            text-align: center;
+            line-height: 40px;
+        }
+        .div1{
+            background-color: blue;
+            margin-left: 20px;
+        }
+
+    </style>
+    <script>
+
+        var balls = [];
+        var newBalls = [];
+        for (var i = 0; i < 35; i++) {
+            balls[i] = i + 1;
+        }
+        for (var i = 0; i < 6; i++) {
+            var ranIndex = Math.floor(Math.random() * balls.length);
+            var ball = balls.splice(ranIndex, 1);
+            newBalls.push(ball);
+        }
+        for(var i=0;i<newBalls.length;i++){
+        document.write("<div>"+newBalls[i]+"</div>");
+        }
+        document.write("<div class='div1'>"+Math.floor(Math.random() * 16+1)+"</div>")
+    </script>
+</head>
+<body>
+
+</body>
+</html>

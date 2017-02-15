@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+            float: left;
+            overflow: hidden;
+            position: relative;
+        }
+        #img-big{
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            background: black;
+            opacity: 0.2;
+            display: none;
+        }
+        #big-img{
+            width: 600px;
+            height: 600px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: none;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+
+            var oSmallWarp=document.getElementById('small-warp');
+            var oBigImg=document.getElementById('img-big');
+            var oSmallImg=document.getElementById('small-img');
+            var oBg=document.getElementById('big-img');
+            oSmallWarp.onmouseover=function(){
+                oBigImg.style.display="block";
+                oBg.style.display="block"
+            };
+            oSmallWarp.onmouseout=function(){
+                oBigImg.style.display="none";
+                oBg.style.display="none"
+            };
+            // 1.  对小盒子添加  move
+
+            oSmallWarp.onmousemove=function(){
+                // 获取事件对象
+                var oEvent=window.event||ev;
+
+                //2. 控制oBigImg  的位置
+                var x=oEvent.clientX;
+                var y=oEvent.clientY;
+                //滚动条坐标   scrollTop
+                var  scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+                var  scrollLeft=document.documentElement.scrollLeft||document.body.scrollLeft;
+
+                var top=y+scrollTop-oSmallWarp.offsetTop;
+                var left=x+scrollLeft-oSmallWarp.offsetLeft;
+
+                top -=75;
+                left -=75;
+                if(top<0){
+                    top=0;
+                }
+                if(top>150){
+                    top=150;
+                }
+                if(left<0){
+                    left=0;
+                }
+                if(left>150){
+                    left=150;
+                }
+                oBigImg.style.left=left+"px";
+                oBigImg.style.top=top+"px";
+
+
+                //3. 控制大图片
+                oBg.style.left=-left*2+"px";
+                oBg.style.top=-top*2+"px"
+            }
+        }
+    </script>
+
+
+</head>
+<body>
+<div id="small-warp">
+    <img src="300%20(1).jpg" alt="" id="small-img">
+
+    <div id="img-big"></div>
+</div>
+<div><img src="300%20(1).jpg" alt="" id="big-img"></div>
+</body>
+</html>

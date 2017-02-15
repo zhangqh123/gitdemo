@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;padding: 0;
+        }
+        div{
+            width: 100px;
+            margin: 0 auto;
+        }
+        ul{
+            list-style: none;
+            display: none;
+        }
+    </style>
+    <script>
+//        显示
+        function show(){
+            var oList=document.getElementById('list');
+            oList.style.display="block";
+        }
+//        隐藏
+        function hide(){
+            var oList=document.getElementById('list');
+            oList.style.display="none";
+        }
+        window.onload=function(){
+             var oH4=document.getElementById('set');
+            oH4.onmouseover=function(){
+                show();
+            };
+            oH4.onmouseout=function(){
+                hide();
+            }
+        }
+    </script>
+</head>
+<body>
+<div>
+    <!--html    结构层html   样式层css   行为层js-->
+<h4 id="set">设置</h4>
+<ul id="list">
+    <li>搜索设置</li>
+    <li>搜索设置</li>
+    <li>搜索设置</li>
+    <li>搜索设置</li>
+</ul>
+</div>
+
+
+
+</body>
+</html>

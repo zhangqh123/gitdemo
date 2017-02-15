@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        window.onload = function () {
+             var oUl = document.getElementById('ul');
+             var oLi=document.getElementById('li');
+           //nodeName   标签名
+            //alert(oLi.parentNode.nodeName);
+             // alert(oLi.offsetParent.nodeName);
+          //alert(oLi.nextSibling.nodeName) ;//下一个兄弟节点，有可能是文本节点
+            //alert(oLi.nextElementSibling.nodeName) ;//下一个元素兄弟节点
+            alert(oLi.previousElementSibling.nodeName);
+        }
+
+
+    </script>
+
+</head>
+<body>
+<ul id="ul">
+    <li id="li"></li>
+    <li id="li1"></li>
+    <li></li>
+    <li></li>
+
+
+</ul>
+</body>
+</html>

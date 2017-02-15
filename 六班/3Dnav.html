@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+		*{margin: 0;padding: 0;box-sizing: border-box;}
+		ul{list-style: none;}
+		a{text-decoration: none;}
+		.box{
+			width: 1200px;
+			height: 452px;
+			margin: 0 auto;
+			position: relative;
+			z-index: 100;
+		}
+		ul li{
+			width: 120px;
+			height: 452px;
+			float: left;
+			cursor: pointer;
+			position: relative;
+			transition: transform 1s ease;
+			transform-style:preserve-3d ;
+		}
+		ul li span{
+			transform-style:preserve-3d ;
+			display: block;
+			width: 100%;
+			height: 100%;
+			transition: transform 1s ease;
+			position: absolute;
+		}
+		.sp1{
+			transform:translateZ(226px);
+			transform-origin: top;
+		}
+		.sp3{
+			transform:translateZ(-226px) rotateZ(180deg) rotateY(180deg);
+		}
+		.sp4{
+			transform:translateY(-226px) rotateX(90deg);
+		}
+		.sp2{
+			transform:translateY(226px) rotateX(-90deg);
+		}
+		li .sp1{background: url(白水杜康/images/banner1.jpg);}
+		li .sp2{background: url(白水杜康/images/banner2.jpg);}
+		li .sp3{background: url(白水杜康/images/banner3.jpg);}
+		li .sp4{background: url(白水杜康/images/banner4.jpg);}
+		.li1 .sp1,.li1 .sp2,.li1 .sp3,.li1 .sp4{
+			background-position: 0 0 ;
+		}
+		.li2 .sp1,.li2 .sp2,.li2 .sp3,.li2 .sp4{
+			background-position: -120px 0 ;
+		}
+		.li3 .sp1,.li3 .sp2,.li3 .sp3,.li3 .sp4{
+			background-position: -240px 0 ;
+		}
+		.li4 .sp1,.li4 .sp2,.li4 .sp3,.li4 .sp4{
+			background-position: -360px 0 ;
+		}
+		.li5 .sp1,.li5 .sp2,.li5 .sp3,.li5 .sp4{
+			background-position: -480px 0 ;
+		}
+		.li6 .sp1,.li6 .sp2,.li6 .sp3,.li6 .sp4{
+			background-position: -600px 0 ;
+		}
+		.li7 .sp1,.li7 .sp2,.li7 .sp3,.li7 .sp4{
+			background-position: -720px 0 ;
+		}
+		.li8 .sp1,.li8 .sp2,.li8 .sp3,.li8 .sp4{
+			background-position: -840px 0 ;
+		}
+		.li9 .sp1,.li9 .sp2,.li9 .sp3,.li9 .sp4{
+			background-position: -960px 0 ;
+		}
+		.li10 .sp1,.li10 .sp2,.li10 .sp3,.li10 .sp4{
+			background-position: -1080px 0 ;
+		}
+		.btn_box button{
+			cursor: pointer;
+			border: none;
+			outline: none;
+			position: absolute;
+			width: 40px;
+			height: 80px;
+			top: 50%;
+			margin-top: -40px;
+			font-size: 30px;
+			color: white;
+			background-color: rgba(6,6,6,0.5);
+			line-height: 80px;
+			z-index: 999;
+		}
+		.btn_box #btnl{
+			left: 0;
+		}
+		.btn_box #btnr{
+			right: 0;
+		}
+	</style>
+</head>
+<body>
+<div class="box">
+	<div class="btn_box">
+		<button id="btnl">←</button>
+		<button id="btnr">→</button>
+	</div>
+	<ul>
+		<li class="li1">
+			<span class="sp1"></span>
+			<span class="sp2"></span>
+			<span class="sp3"></span>
+			<span class="sp4"></span>
+		</li>
+		<li class="li2">
+			<span class="sp1"></span>
+			<span class="sp2"></span>
+			<span class="sp3"></span>
+			<span class="sp4"></span>
+		</li>
+		<li class="li3">
+			<span class="sp1"></span>
+			<span class="sp2"></span>
+			<span class="sp3"></span>
+			<span class="sp4"></span>
+		</li>
+		<li class="li4">
+			<span class="sp1"></span>
+			<span class="sp2"></span>
+			<span class="sp3"></span>
+			<span class="sp4"></span>
+		</li>
+		<li class="li5">
+			<span class="sp1"></span>
+			<span class="sp2"></span>
+			<span class="sp3"></span>
+			<span class="sp4"></span>
+		</li>
+		<li class="li6">
+			<span class="sp1"></span>
+			<span class="sp2"></span>
+			<span class="sp3"></span>
+			<span class="sp4"></span>
+		</li>
+		<li class="li7">
+			<span class="sp1"></span>
+			<span class="sp2"></span>
+			<span class="sp3"></span>
+			<span class="sp4"></span>
+		</li>
+		<li class="li8">
+			<span class="sp1"></span>
+			<span class="sp2"></span>
+			<span class="sp3"></span>
+			<span class="sp4"></span>
+		</li>
+		<li class="li9">
+			<span class="sp1"></span>
+			<span class="sp2"></span>
+			<span class="sp3"></span>
+			<span class="sp4"></span>
+		</li>
+		<li class="li10">
+			<span class="sp1"></span>
+			<span class="sp2"></span>
+			<span class="sp3"></span>
+			<span class="sp4"></span>
+		</li>
+	</ul>
+</div>
+</body>
+</html>
+<script src="白水杜康/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+    var arrLi=$("li");
+		var oBtnl=$("#btnl");
+		var oBtnr=$("#btnr");
+	    var page = 0;
+		var timer=0;
+		arrLi.each(function (i) {
+			var _this = $(this);
+				_this.css({"transitionDelay":0.2*i+"s"})
+		});
+		oBtnr.click(next);
+		function next(){
+			page++;
+			arrLi.stop().css({"transform":"rotateX("+(page*90)+"deg)"})
+		};
+		oBtnl.click(function(){
+			page--;
+			arrLi.stop().css({"transform":"rotateX("+(page*90)+"deg)"})
+		});
+		if(!timer){
+		timer=setInterval(next,5000);
+		}
+		$(".box").mouseover(function(){
+			clearInterval(timer);
+			timer=0;
+		});
+		$(".box").mouseout(function(){
+			timer=setInterval(next,5000);
+		})
+arrLi.css({"transform":"rotateX("+(page*90)+"deg)"})
+	})
+</script>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //如果只有一个该类型的对象推荐json
+        //如果对象使用次数很多推荐使用构造函数
+        //命名空间
+/*
+
+        var tb={};
+        //淘宝购物车模块
+        tb.gwc={};
+        tb.shoplist={};
+
+*/
+//  字符串转换成json   JSON.parse()
+        //  json转换成字符串    JSON.stringify()
+
+
+
+
+        //eval   执行字符串    如果代码存在返回值  eval 将返回该值
+        //eval  {} 内部代码当成代码块
+
+
+        /*var arr="[1,2,3,4]";
+        var result=eval(arr);
+        document.write(result);*/
+
+        var a='{"name":"liming"}';
+        var result=eval("("+a+")");
+        document.write(result["name"])
+
+
+    </script>
+
+
+
+
+</head>
+<body>
+
+</body>
+</html>

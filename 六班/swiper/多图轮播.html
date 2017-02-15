@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="dist/css/swiper.min.css">
+    <style>
+        body{
+            background: #eee;
+        }
+        .swiper-container{
+            width: 500px;
+            height:200px;
+            margin: 50px auto;
+            background: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">这是第一个选项页</div>
+        <div class="swiper-slide">这是第二个选项页</div>
+        <div class="swiper-slide">这是第三个选项页</div>
+        <div class="swiper-slide">这是第四个选项页</div>
+        <div class="swiper-slide">这是第5个选项页</div>
+        <div class="swiper-slide">这是第6个选项页</div>
+        <div class="swiper-slide">这是第7个选项页</div>
+        <div class="swiper-slide">这是第8个选项页</div>
+        <div class="swiper-slide">这是第9个选项页</div>
+        <div class="swiper-slide">这是第10个选项页</div>
+        <div class="swiper-slide">这是第11个选项页</div>
+        <div class="swiper-slide">这是第12个选项页</div>
+        <div class="swiper-slide">这是第13个选项页</div>
+    </div>
+   <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-scrollbar"></div>
+</div>
+<script src="dist/js/swiper.min.js"></script>
+<script>
+   var mySwiper= new Swiper(".swiper-container",({
+       slidesPerView:3,
+       pagination:".swiper-pagination",
+       paginationClickable:true,
+       prevButton:".swiper-button-prev",
+       nextButton:".swiper-button-next",
+//       loop:true,
+       scrollbar:'.swiper-scrollbar',
+       scrollbarHide : false,
+       scrollbarDraggable : true ,
+       scrollbarSnapOnRelease : true ,
+   }));
+</script>
+</body>
+</html>

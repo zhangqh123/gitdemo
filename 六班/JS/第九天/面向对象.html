@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+    //面向对象
+        //只关心功能的作用，不关心功能的具体实现
+   //对象
+   //封装    将具体功能密封起来，  外界不可见   安全
+   //继承
+   //多态
+
+   //静态
+   //动态
+
+
+        //创建一个人的对象
+
+        //1.在一个已经成型的对象上面添加
+        //2.在一个空白的对象上面添加
+
+
+/*
+        var obj=new Object();
+        obj.name="张振";    //属性
+        obj.age="25";
+        obj.sex="男";
+        obj.showMes=function(){   //方法
+            alert(this.name+","+this.age+","+this.sex)
+        };
+        obj.showMes();*/
+
+     function  person(name,age,sex){
+         this.name=name;
+         this.age=age;
+         this.sex=sex;
+
+     }
+    var p1=new person("zhangqihong",25,"men");
+    person.prototype.show=function(){
+        alert(this.name+","+this.age+","+this.sex)
+    };
+
+    p1.show();
+
+    </script>
+
+
+
+
+</head>
+<body>
+
+</body>
+</html>

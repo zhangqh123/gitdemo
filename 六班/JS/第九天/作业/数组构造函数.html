@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var arr1 = [1, 2, 3, 4, 5, 5, 5];
+        Array.prototype.sum = function () {
+            var s = 0;
+            for (var i = 0; i < this.length; i++) {
+                s += this[i];
+            }
+            return s;
+        };
+        alert(arr1.sum())
+
+
+    </script>
+
+
+</head>
+<body>
+
+</body>
+</html>

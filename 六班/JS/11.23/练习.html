@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jnm</title>
+    <style>
+        div{
+            color: red;
+        }
+    </style>
+    <script>
+        function $(id){
+            return document.getElementById(id);
+        }
+
+        window.onload=function(){
+            var oName=$("name");
+            var oPassword=$("password");
+            var oRePsaaword=$("repassword");
+            var oEmail=$("email");
+            var oPhone=$("phone");
+            var oSubmit=$("submit");
+            var oMessage=$("message");
+            var RegName=/^\w{6,12}$/;
+            var RegPass=/^\w{6,12}$/;
+            var RegEmail=/^\w{6,}[0-9a-z]{2,7}\.[a-z]{3,5}$/;
+            var RegpPhone=/^1[34578]\d{9}$/;
+
+            oSubmit.onclick=function(){
+                var strError="";
+                if(!RegName.test(oName.value)){
+                    strError+="用户名输入错误<br />"
+                }
+                if(!RegPass.test(oPassword.value)){
+                    strError+="密码输入错误<br />"
+                }
+                if(oPassword.value!=oRePsaaword.value){
+                    strError+="密码输入不一致<br />"
+                }
+                if(!RegEmail.test(oEmail.value)){
+                    strError+="邮箱输入错误<br />"
+                }
+                if(!RegpPhone.test(oPhone.value)){
+                    strError+="手机号输入错误<br />"
+                }
+             oMessage.innerHTML=strError;
+           }
+        }
+    </script>
+</head>
+<body>
+<form action="">
+
+    用户名<input type="text" id="name"><br />
+    密码<input type="password" id="password"><br />
+    确认密码<input type="password" id="repassword"><br />
+    邮箱<input type="text" id="email"><br />
+    手机号<input type="text" id="phone"><br />
+    <input type="button" value="注册" id="submit">
+</form>
+<div id="message"></div>
+</body>
+</html>

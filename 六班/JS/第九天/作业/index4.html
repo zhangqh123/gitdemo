@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var i=parseInt(prompt("请输入当月利润"));
+        var bonus=0;
+        if(i<=10){
+          bonus=i*0.1;
+        }
+        else if(i<=20){
+            bonus=1+(i-10)*0.075;
+        }
+        else if(i<=40){
+            bonus=1.75+(i-20)*0.05;
+        }
+        else if(i<=60){
+            bonus=2.75+(i-40)*0.03;
+        }
+        else if(i<=100){
+            bonus=3.35+(i-60)*0.015;
+        }
+        else if(i>100){
+            bonus=3.95+(i-100)*0.01;
+        }
+        else{
+            alert("输入错误");
+        }
+    document.write(bonus);
+
+
+
+
+    </script>
+
+
+
+
+
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .nav{
+            list-style: none;
+        }
+       .nav>li{
+           width: 40px;
+           float: left;
+           margin-left:50px;
+           position: relative;
+       }
+        .nav ul{
+            display: none;
+            position: absolute;
+            top:20px;
+        }
+    </style>
+    <script src="jquery-1.8.3.min.js"></script>
+    <script>
+        $(function(){
+           $(".nav>li").hover(
+                   function(){
+                       $(this).find("ul").stop().fadeToggle();
+                   })
+        })
+
+
+
+
+    </script>
+</head>
+<body>
+<ul class="nav">
+    <li>1
+        <ul>
+            <li>2312</li>
+            <li>214</li>
+            <li>4343</li>
+            <li>23423</li>
+        </ul>
+    </li>
+    <li>2
+        <ul>
+            <li>2312</li>
+            <li>214</li>
+            <li>4343</li>
+            <li>23423</li>
+        </ul>
+    </li>
+    <li>3
+        <ul>
+            <li>2312</li>
+            <li>214</li>
+            <li>4343</li>
+            <li>23423</li>
+        </ul>
+    </li>
+    <li>4
+        <ul>
+            <li>2312</li>
+            <li>214</li>
+            <li>4343</li>
+            <li>23423</li>
+        </ul>
+    </li>
+</ul>
+</body>
+</html>

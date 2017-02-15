@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            height: 2500px;
+            width: 100px;
+            background-color: royalblue;
+        }
+
+        #back_top {
+            position: fixed;
+            right: 50px;
+            bottom: 50px;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var oBack = document.getElementById('back_top');
+            var timer = 0;
+            oBack.onclick = function () {
+                if (timer == 0) {
+                    timer = setInterval(function () {
+                        var scrollTop;
+                        if (document.documentElement.scrollTop) {
+                            scrollTop = document.documentElement.scrollTop;
+                        }
+                        else {
+                            scrollTop = document.body.scrollTop;
+                        }
+
+                        var speed = 1;
+                        document.body.scrollTop -= speed;
+                        document.documentElement.scrollTop -= speed;
+
+                        if (scrollTop <= 0) {
+                            clearInterval(timer);
+                            timer=0;
+                        }
+                    }, 20)
+                }
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+<div></div>
+<input type="button" value="返回顶部" id="back_top">
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 180px;
+            height: 180px;
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        function dragstart(event){
+          //  dataTransfer   事件过程中   传递数据
+          event.dataTransfer.setData("imgId",event.target.id);
+        }
+        function drop(event){
+            var id=event.dataTransfer.getData("imgId");
+           var oImg= document.getElementById(id);
+            event.target.appendChild(oImg)
+        }
+       function allowDrop(event){
+          event.preventDefault();
+        }
+    </script>
+</head>
+<body id="body1" ondrop="drop(event)" ondragover="allowDrop(event)">
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<img id="drag1" draggable="true" ondragstart="dragstart(event)" src="未标题-1.png" alt="" width="180" height="180">
+</body>
+</html>
+
+
+拖放思路
+1.   图片能被拖拽， draggable true
+2.   ondragstart    将图片的id进行存储，   event.dataTransfer.setData
+3.   允许将图片拖拽到div内部，   ondragover  取消默认行为   return  false     event.preventDefault
+4.   div  ondrop  先从event.dataTransfer.getData  获取图片id   利用Dom将图片放入div

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    div {
+        width: 150px;
+        height: 200px;
+        background: #ccc;
+        display: none;
+    }
+    </style>
+    <script>
+        window.onload=function(){
+            var oInt=document.getElementsByTagName('input')[0];
+            var oDiv=document.getElementsByTagName('div')[0];
+
+            oInt.onclick=function(ev){
+                if(oDiv.style.display=="block"){
+                    oDiv.style.display="none";
+                }
+                 else{
+                    oDiv.style.display="block"
+                }
+                var oEvent=window.event||ev;
+                oEvent.cancelBubble=true;
+            };
+            document.onclick=function(){
+                oDiv.style.display="none"
+            };
+            oDiv.onclick=function(ev){
+                var oEvent=window.event||ev;
+                oEvent.cancelBubble=true;
+            };
+        }
+    </script>
+</head>
+<body>
+<input type="button" value="按钮">
+<div></div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../JQ/jquery-1.8.3.min.js"></script>
+    <script>
+        $(function(){
+//           document.write($(".p1").parent().is(".div1"))
+            /*$("p").append( $("input").map(function(){
+                return $(this).val();
+            }).get().join(", ") );*/
+//            $('li').has('ul').css('background-color', 'red');
+           $("p").slice(0,2).wrapInner("<i></i>");
+
+        })
+    </script>
+</head>
+<body>
+<!--<p> This is just a test.</p> <p class="p1"> So is this</p>-->
+<p>Hello</p><p>cruel</p><p>World</p>
+
+<!--<div class="div1"><p class="p1"> So is this</p></div>-->
+<!--<p><b>Values: </b></p>
+<form>
+    <input type="text" name="name" value="John"/>
+    <input type="text" name="password" value="password"/>
+    <input type="text" name="url" value="http://ejohn.org/"/>
+</form>-->
+<!--<ul>
+    <li>list item 1
+        <ul>
+            <li>list item 1-a</li>
+        </ul>
+    </li>
+    <li>list item 3</li>
+</ul>-->
+</body>
+</html>

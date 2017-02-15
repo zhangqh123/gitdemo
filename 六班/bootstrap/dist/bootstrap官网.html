@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width;initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <script src="js/jquery-3.1.1/jquery-3.1.1.min.js"></script>
+    <!--依赖于jq文件  要求1.9以上-->
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+            function fixedTop() {
+                var oFixed=document.getElementById("scroll");
+                var timer = 0;
+                if (timer == 0) {
+                    timer = setInterval(function () {
+                        var scrollTop;
+                        if (document.documentElement.scrollTop) {
+                            scrollTop = document.documentElement.scrollTop;
+                        } else {
+                            scrollTop = document.body.scrollTop;
+                        }
+                        if(scrollTop>300){
+                           oFixed.style.display="block";
+                        }
+                        var speed = 20;
+                        document.documentElement.scrollTop -= speed;
+                        document.body.scrollTop -= speed;
+                        if (scrollTop <= 0) {
+                            clearInterval(timer);
+                            timer = 0;
+                        }
+                    }, 1);
+                }
+            }
+    </script>
+    <style>
+        body {
+            font-family: 微软雅黑;
+        }
+        .jumbotron{
+            background: -webkit-gradient(linear,left bottom,right top,color-stop(0%,#020031),color-stop(100%,#6d3353));
+            color:white;
+            padding: 150px 0 150px 0;
+            margin-bottom: 0;
+        }
+        .jumbotron a{
+            color: gray;
+        }
+        .jumbotron .btn{
+            margin: 20px 0 10px 0;
+        }
+        .navbar li{
+            box-sizing: border-box;
+            line-height: 50px;
+        }
+        .social-qq:hover{
+            color: #1a3e78;
+        }
+        .social-forum a:hover{
+            color: gray;
+        }
+        .social-weibo a:hover{
+            color: red;
+        }
+        @media screen and (max-width: 1000px) {
+           .jumbotron  h2{
+               font-size: 25px;
+           }
+        }
+        @media screen and (max-width: 768px) {
+            .jumbotron  h2{
+                font-size: 20px;
+            }
+        }
+        @media screen and (max-width: 600px) {
+            .jumbotron  h2{
+                font-size: 14px;
+            }
+        }
+        @media screen and (max-width: 400px) {
+            .jumbotron  h2{
+                font-size: 10px;
+            }
+        }
+        dt{
+            margin-bottom: 8px;
+        }
+      dd:hover{
+          cursor: pointer;
+      }
+        #scroll{
+          width: 50px;
+            height: 50px;
+            font-size: 40px;
+            color: white;
+            position: fixed;
+            bottom: 40px;
+            right: 50px;
+            background: grey;
+            border-radius: 5px;
+            text-align: center;
+            line-height: 50px;
+            z-index: 10000;
+            /*display: none;*/
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-default  navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="row">
+            <div class="navbar-header hidden-sm">
+                <a href="#" class=" navbar-brand ">bootstrap中文网</a>
+                <button class="btn navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse navbar-left">
+                <ul class="navbar-nav nav">
+                    <li class="hidden-md  hidden-sm"><a href="#" class="navbar-link">bootstrap2中文文档</a></li>
+                    <li><a href="#" class="navbar-link">bootstrap3中文文档</a></li>
+                    <li><a href="#" class="navbar-link">bootstrap4.0预览</a></li>
+                    <li><a href="#" class="navbar-link">Less教程</a></li>
+                    <li><a href="#" class="navbar-link">jQuery API</a></li>
+                    <li><a href="#" class="navbar-link">网站实例</a></li>
+                </ul>
+            </div>
+            <div class="collapse navbar-collapse navbar-right">
+                <ul class="navbar-nav nav">
+                    <li class="hidden-sm"><a href="#" class="navbar-link">关于</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="jumbotron masthead">
+    <div class="container text-center">
+        <h1>Bootstrap</h1>
+        <h2>简洁、直观、强悍的前端开发框架，让web开发更迅速、简单。</h2>
+        <button class="btn btn-primary">bootstrap3中文文档(v3.3.7)</button><br />
+        <a>bootstrap2中文文档(v2.3.2)</a>
+    </div>
+</div>
+<nav class="navbar navbar-default">
+    <div class="container">
+        <ul class="list-unstyled bc-social-buttons list-inline text-center">
+            <li class="social-qq">
+                <i class="fa fa-qq"></i> Bootstrap技术交流群：<span id="qqgroup">318630708</span>
+                </li> |
+            <li class="social-forum">
+                <a class="" href="#" title="Bootstrap问答社区" >
+                    <i class="fa fa-comments"></i> Bootstrap问答社区
+                </a>
+                </li> |
+            <li class="social-weibo">
+                <a href="#"><i class="fa fa-weibo"></i> 新浪微博：@Bootstrap中文网</a>
+                </li>
+        </ul>
+    </div>
+
+</nav>
+<div class="text-center">
+    <h1>Bootstrap相关优质项目推荐</h1>
+    <h5>这些项目或者是对Bootstrap进行了有益的补充，或者是基于Bootstrap开发的</h5>
+    <div style="width: 50%;border-bottom: 1px solid gray;margin: 5px  auto 20px auto"></div>
+</div>
+<div class="container">
+<div class="row">
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+        <div class="thumbnail">
+            <img src="images/codeguide.png" alt="">
+            <div class="caption">
+                <h3>Bootstrap 编码规范</h3>
+                <p class="text-center">by @mdo</p>
+                <p>Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+        <div class="thumbnail">
+            <img src="images/1.png" alt="">
+            <div class="caption">
+                <h3>Bootstrap 编码规范</h3>
+                <p class="text-center">by @mdo</p>
+                <p>Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+        <div class="thumbnail">
+            <img src="images/2.png" alt="">
+            <div class="caption">
+                <h3>Bootstrap 编码规范</h3>
+                <p class="text-center">by @mdo</p>
+                <p>Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+        <div class="thumbnail">
+            <img src="images/3.png" alt="">
+            <div class="caption">
+                <h3>Bootstrap 编码规范</h3>
+                <p class="text-center">by @mdo</p>
+                <p>Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+        <div class="thumbnail">
+            <img src="images/4i.png" alt="">
+            <div class="caption">
+                <h3>Bootstrap 编码规范</h3>
+                <p class="text-center">by @mdo</p>
+                <p>Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+        <div class="thumbnail">
+            <img src="images/5.png" alt="">
+            <div class="caption">
+                <h3>Bootstrap 编码规范</h3>
+                <p class="text-center">by @mdo</p>
+                <p>Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+        <div class="thumbnail">
+            <img src="images/6.png" alt="">
+            <div class="caption">
+                <h3>Bootstrap 编码规范</h3>
+                <p class="text-center">by @mdo</p>
+                <p>Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+        <div class="thumbnail">
+            <img src="images/7.png" alt="">
+            <div class="caption">
+                <h3>Bootstrap 编码规范</h3>
+                <p class="text-center">by @mdo</p>
+                <p>Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+        <div class="thumbnail">
+            <img src="images/8.png" alt="">
+            <div class="caption">
+                <h3>Bootstrap 编码规范</h3>
+                <p class="text-center">by @mdo</p>
+                <p>Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+        <div class="thumbnail">
+            <img src="images/9.png" alt="">
+            <div class="caption">
+                <h3>Bootstrap 编码规范</h3>
+                <p class="text-center">by @mdo</p>
+                <p>Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+        <div class="thumbnail">
+            <img src="images/10.png" alt="">
+            <div class="caption">
+                <h3>Bootstrap 编码规范</h3>
+                <p class="text-center">by @mdo</p>
+                <p>Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+        <div class="thumbnail">
+            <img src="images/11.png" alt="">
+            <div class="caption">
+                <h3>Bootstrap 编码规范</h3>
+                <p class="text-center">by @mdo</p>
+                <p>Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+</div>
+</div>
+<hr>
+<div class="container">
+    <div class="row">
+    <div class="col-sm-6 col-xs-12">
+        <img src="images/logo%20(1).png" alt=""><br />
+        本网站所列开源项目的中文版文档全部由Bootstrap中文网成员翻译整理，并全部遵循 CC BY 3.0协议发布。
+    </div>
+
+    <div class="col-sm-6  col-xs-12">
+        <div class="row" id="row">
+            <dl class="col-xs-3 ">
+                <dt>关于</dt>
+                <dd>关于我们</dd>
+                <dd>广告合作</dd>
+                <dd>友情链接</dd>
+                <dd>招聘</dd>
+            </dl>
+            <dl class="col-xs-3  ">
+                <dt>联系方式</dt>
+                <dd>新浪微博</dd>
+                <dd>电子邮件</dd>
+            </dl>
+            <dl class="col-xs-3  ">
+                <dt>旗下网站</dt>
+                <dd>Laravel中文网</dd>
+                <dd>Ghost中国</dd>
+            </dl>
+            <dl class="col-xs-3 ">
+                <dt>赞助商</dt>
+                <dd>UCloud</dd>
+                <dd>又拍云</dd>
+            </dl>
+        </div>
+    </div>
+    </div>
+    <hr>
+    <div class="text-center"><a style="cursor: pointer;color: grey">京ICP备11008151号</a> | 京公网安备11010802014853</div>
+</div>
+<div onclick="fixedTop();" id="scroll">
+    <i class="fa fa-angle-up"></i>
+</div>
+
+</body>
+</html>

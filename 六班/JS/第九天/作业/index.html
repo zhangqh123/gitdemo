@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var arr=[1,1];
+        var num=parseInt(prompt("请输入数字"));
+        var sum=2;
+        for(var i=2;i<num;i++){
+            arr[i]=arr[i-2]+arr[i-1];
+            sum+=arr[i];
+            arr.push(arr[i])
+
+        }
+        document.write(sum)
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+</head>
+<body>
+
+</body>
+</html>

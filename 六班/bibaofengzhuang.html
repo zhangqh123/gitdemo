@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var per=function(){
+            var name="liming";
+            var age=20;
+            var sex="men";
+            var ta=null;
+           function getName(){
+              return{
+                  "name":name,
+                  "age":age,
+                  "sex":sex
+              }
+           }
+            function setName(nam,ag,se){
+                name=nam;
+                age=ag;
+                sex=se
+            }
+            function setTa(t){
+                ta=t
+            }
+            function say(){
+                return name+"的心里的那个ta是"+ta.getName();
+            }
+           return{
+               "getName":getName,
+               "setName":setName,
+               "say":say,
+               "setTa":setTa,
+           };
+        };
+        var p1=per();
+        var p2=per();
+        p1.setName("xiaowang","25","men");
+        p2.setName("xiaoli","20","women");
+        p1.setTa(p2);
+        alert(p1.ta)
+       alert(p1.say());
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .div1{
+            position: relative;
+        }
+        .div2{
+            width: 360px;
+            height: 500px;
+            float: left;
+        }
+        .div3{
+            width: 360px;
+            height: 180px;
+        }
+        .div3 img{
+            position: absolute;
+            display: none;
+        }
+        .div4{
+            width:60px;
+            height: 30px;
+            float: left;
+            margin-left: 8px;
+            margin-top: 20px;
+        }
+        .div4 img{
+            width: 100%;
+            height: 100%;
+        }
+        .div5{
+            width: 360px;
+            height: 180px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: none;
+        }
+       .div5 img{
+           width: 720px;
+           height: 360px;
+       }
+        #img-big{
+            width: 180px;
+            height: 90px;
+            position: absolute;
+            background: black;
+            opacity: 0.2;
+            display: none;
+        }
+        .div6{
+            float: left;
+            width: 360px;
+            height: 180px;
+            position: relative;
+            overflow: hidden;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var oDiv3=document.getElementById('div3');
+            var arrImg=oDiv3.getElementsByTagName('img');
+            var arrDiv4=document.getElementsByClassName('div4');
+            var arrDiv5=document.getElementsByClassName('div5');
+            var oBigImg=document.getElementById('img-big');
+            var oDiv6=document.getElementById('div6');
+            for(var i=0;i<arrDiv4.length;i++){
+                arrDiv4[i].index=i;
+                arrDiv4[i].onclick=function(){
+                   for(var j=0;j<arrImg.length;j++){
+                       arrImg[j].style.display="none"
+                   }
+                    arrImg[this.index].style.display="block"
+                }
+            }
+            for(var i=0;i<arrImg.length;i++){
+                arrImg[i].index=i;
+                arrImg[i].onmouseover=function(){
+                    for(var j=0;j<arrDiv5.length;j++){
+                        arrDiv5[j].style.display="none"
+                    }
+                    arrDiv5[this.index].style.display="block";
+                   // oBigImg.style.display="block"
+                };
+                arrImg[i].onmouseout=function(){
+                    arrDiv5[this.index].style.display="none";
+                  // oBigImg.style.display="none"
+                };
+          /* oBigImg.onmouseover=function(){
+               oBigImg.style.display="block"
+           };*/
+            arrImg[i].onmousemove=function(ev){
+                var oEvent=window.event||ev;
+                var x=oEvent.clientX;
+                var y=oEvent.clientY;
+                var  scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+                var  scrollLeft=document.documentElement.scrollLeft||document.body.scrollLeft;
+                var top=y+scrollTop-oDiv3.offsetTop;
+                var left=x+scrollLeft-oDiv3.offsetLeft;
+                //oBigImg.style.left=left+"px";
+               // oBigImg.style.top=top+"px";
+                top -=45;
+                left -=90;
+                if(top<0){
+                    top=0;
+                }
+                if(top>90){
+                    top=90;
+                }
+                if(left<0){
+                    left=0;
+                }
+                if(left>180){
+                    left=180;
+                }
+                oBigImg.style.left=left+"px";
+                oBigImg.style.top=top+"px";
+                arrDiv5[this.index].style.left=-left*2+"px";
+                arrDiv5[this.index].style.top=-top*2+"px"
+            }
+        }
+
+        }
+    </script>
+</head>
+<body>
+<div class="div1">
+    <div class="div2">
+        <div class="div3" id="div3">
+            <img src="img/escort.png" alt="" style="display: block">
+            <img src="img/explorer.png" alt="">
+            <img src="img/fiesta.png" alt="">
+            <img src="img/focus-rs.jpg" alt="">
+            <img src="img/focus-st.png" alt="">
+            <div id="img-big"></div>
+        </div>
+        <div class="div4"><img src="img/escort.png" alt=""></div>
+        <div class="div4"><img src="img/explorer.png" alt=""></div>
+        <div class="div4"><img src="img/fiesta.png" alt=""></div>
+        <div class="div4"><img src="img/focus-rs.jpg" alt=""></div>
+        <div class="div4"><img src="img/focus-st.png" alt=""></div>
+    </div>
+    <div class="div6">
+         <div class="div5">
+             <img src="img/escort.png" alt="">
+         </div>
+         <div class="div5">
+             <img src="img/explorer.png" alt="">
+         </div>
+         <div class="div5">
+             <img src="img/fiesta.png" alt="">
+         </div>
+         <div class="div5">
+             <img src="img/focus-rs.jpg" alt="">
+         </div>
+         <div class="div5">
+             <img src="img/focus-st.png" alt="">
+         </div>
+    </div>
+</div>
+</body>
+</html>

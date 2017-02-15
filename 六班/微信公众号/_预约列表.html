@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>预约列表</title>
+    <!--强制让文档的宽度与设备的宽度保持1:1，并且文档最大的宽度比例是1.0，且不允许用户点击屏幕放大浏览-->
+    <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no"/>
+    <!--WebApp全屏模式   隐藏地址栏-->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <!--苹果强制全屏显示-->
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <!--强制全屏显示-->
+    <meta name="full-screen" content="yes"/>
+    <!--制定iphone中safari顶端的状态条的样式（default:白色，black:黑色，black-translucent：半透明）-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <!--告诉设备忽略将页面中的数字识别为电话号码 -->
+    <meta name="format-detection" content="telephone=no"/>
+    <!--告诉设备忽略将页面中的地址识别 -->
+    <meta name="format-detection" content="address=no"/>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            min-height: 100%;
+        }
+        body{
+            background: linear-gradient(to bottom ,#b04d8e,#576294);
+            position: relative;
+        }
+        header{
+            width: 100%;
+            height: 1.43rem;
+            background: #3c3c3c;
+            margin-bottom: 0.8rem;
+            overflow: hidden;
+        }
+        header span{
+            display: block;
+            width: 0.7rem;
+            float: left;
+            height: 0.7rem;
+            color: white;
+            line-height: 0.7rem;
+            border-right: 0.01rem solid #303030;
+            font-size: 0.55rem;
+            margin: 0.35rem 0 0 0.5rem;
+        }
+        header p{
+            color: white;
+            font-size: 0.5rem;
+            margin:0.4rem 0 0 1.8rem;
+        }
+        header ul{
+            float: right;
+            list-style: none;
+            margin: -0.6rem 0.5rem 0 0;
+        }
+        header li{
+            width: 0.2rem;
+            height: 0.2rem;
+            background: white;
+            border-radius: 12rem;
+            margin-bottom: 0.1rem;
+        }
+        .top{
+            width: 100%;
+            height: 2.08rem;
+            background: url(images/line_top.png)no-repeat 1.7rem;
+            background-size: 0.04rem;
+        }
+        .middle{
+            width: 100%;
+            height: 12.74rem;
+            background: url(images/line_middle.png)repeat-y 1.7rem;
+            background-size: 0.04rem;
+            position: relative;
+        }
+        .bottom{
+            width: 100%;
+            height: 2.41rem;
+            background:url(images/line_bottom.png)no-repeat 1.7rem;
+            background-size: 0.04rem;
+        }
+        .middle .input_warp{
+            position: relative;
+        }
+        .middle .circle{
+            position: absolute;
+            left: 1.58rem;
+        }
+        .middle .circle span{
+            position: absolute;
+            width: 0.27rem;
+            height: 0.27rem;
+            display: block;
+            background: white;
+            border-radius: 13rem;
+        }
+        .middle .circle img{
+            position: absolute;
+            width: 0.27rem;
+        }
+        .middle .circle{
+            position: absolute;
+            top:0.64rem
+        }
+        .middle label{
+            font-size: 0.36rem;
+            color: white;
+            padding-left: 0.4rem;
+        }
+        .middle .input_warp:nth-child(2){
+            margin: 2.5rem 0 1.5rem 0;
+        }
+        .middle .input_warp:nth-child(3){
+            margin-bottom: 2.5rem;
+        }
+        .big_circle{
+            animation:myframe 2s infinite ;
+        }
+        @keyframes myframe {
+            from{
+                transform: scale(0,0);
+                opacity: 1;
+            }
+            to{
+                transform:scale(3.0,3.0);
+                opacity: 0;
+            }
+        }
+        .big_box{
+            width: 7.48rem;
+            height:13.18rem;
+            background: rgba(255,255,255,0.2);
+            border-radius: 0.2rem;
+            position: absolute;
+            top: -7.2rem;
+            left: 1.15rem;
+            box-sizing: border-box;
+            padding: 0.7rem 0 0 0.6rem;
+            font-size: 0.38rem;
+            color: white;
+        }
+        .big_box1{
+            top:-4.6rem;
+            display: none;
+        }
+        .big_box2{
+            top:-10.86rem;
+            display: none;
+        }
+        .small{
+           width: 0;
+            height: 0;
+            border-right: 0.3rem solid rgba(255,255,255,0.2);
+            border-bottom: 0.3rem solid transparent;
+            border-left: 0.3rem solid transparent;
+            border-top: 0.3rem solid transparent;
+            position: absolute;
+            left: 0.6rem;
+            top: -0.08rem;
+            display: none;
+        }
+        .big_box p{
+            margin-bottom: 0.65rem;
+        }
+        .small_one{
+            width: 0;
+            height: 0;
+            border-right: 0.8rem solid #f36da0;
+            border-top: 0.8rem solid transparent;
+            border-left: 0.8rem solid transparent;
+            border-bottom: 0.8rem solid #f36da0;
+            border-bottom-right-radius: 0.2rem;
+            position: absolute;
+            right: 0;
+            bottom:0;
+        }
+        .small_two{
+            font-size: 0.4rem;
+            position: absolute;
+            right: 0.15rem;
+            bottom:0.15rem;
+        }
+
+    </style>
+    <script>
+        //   rem   em 相对单位  基础
+        function refresh() {
+            var deviceWidth = document.documentElement.clientWidth;
+            if (deviceWidth > 1080) {
+                document.documentElement.style.fontSize = 1080 / 10.8 + "px";
+            } else {
+                document.documentElement.style.fontSize = deviceWidth / 10.8 + "px";
+            }
+        }
+        refresh();
+        window.onresize = function () {
+            refresh();
+        }
+    </script>
+
+</head>
+<body>
+<div class="box">
+    <header>
+     <span><</span>
+        <p>预约列表</p>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </header>
+<div class="top"></div>
+<div class="middle">
+    <div class="input_warp">
+        <label>2015</label>
+    </div>
+    <div class="input_warp">
+        <label>12.8</label>
+        <div class="circle">
+            <span></span>
+            <img src="images/cycle.png" alt="">
+            <div class="small small1"></div>
+            <div class="big_box big_box1">
+                <p>会员注册手机号:18652554122</p>
+                <p>体验中心：八一体验中心</p>
+                <p>姓名:Xiaoming</p>
+                <p>性别:男</p>
+                <p>年龄:30</p>
+                <p>姓名:Dalei</p>
+                <p>联系电话:18652554122</p>
+                <p>预约时间:2015-12-05</p>
+                <p>体验套餐:成人体验套餐</p>
+                <p>体检时间:2015-12-10</p>
+                <p>预约状态:已联系</p>
+                <div class="small_one"></div>
+                <div class="small_two">修改</div>
+            </div>
+        </div>
+    </div>
+    <div class="input_warp">
+        <label>12.3</label>
+        <div class="circle">
+            <span class="big_circle"></span>
+            <img src="images/cycle.png" alt="">
+            <div class="small small2" style="display: block"></div>
+            <div class="big_box">
+                <p>会员注册手机号:18655412252</p>
+                <p>体验中心：八一体验中心</p>
+                <p>姓名:Dalei</p>
+                <p>年龄:27</p>
+                <p>性别:男</p>
+                <p>姓名:Dalei</p>
+                <p>联系电话:18655412252</p>
+                <p>预约时间:2015-12-03</p>
+                <p>体验套餐:成人体验套餐</p>
+                <p>体检时间:2015-12-10</p>
+                <p>预约状态:已联系</p>
+                <div class="small_one"></div>
+                <div class="small_two">修改</div>
+            </div>
+        </div>
+    </div>
+    <div class="input_warp">
+        <label>10.7</label>
+        <div class="circle">
+            <span></span>
+            <img src="images/cycle.png" alt="">
+            <div class="small small3"></div>
+            <div class="big_box big_box2">
+                <p>会员注册手机号:18612252554</p>
+                <p>体验中心：八一体验中心</p>
+                <p>姓名:liwei</p>
+                <p>性别:女</p>
+                <p>姓名:Dalei</p>
+                <p>年龄:26</p>
+                <p>联系电话:18612252554</p>
+                <p>预约时间:2015-12-05</p>
+                <p>体验套餐:成人体验套餐</p>
+                <p>体检时间:2015-12-14</p>
+                <p>预约状态:已联系</p>
+                <div class="small_one"></div>
+                <div class="small_two">修改</div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="bottom"></div>
+</div>
+<script src=jquery-3.1.1/jquery-3.1.1.min.js></script>
+<script>
+    $(function(){
+        $(".circle").click(function(){
+            $("span").removeClass("big_circle");
+            $(".small").css({"display":"none"});
+            $(".big_box").css({"display":"none"});
+            $(this).find("span").addClass("big_circle");
+            $(this).find(".small").css({"display":"block"});
+            $(this).find(".big_box").css({"display":"block"})
+        });
+
+    })
+</script>
+
+</body>
+</html>

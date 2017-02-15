@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="末那/css/animate.min.css">
+    <script src="末那/js/wow.min.js"></script>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background: royalblue;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+  <div class="wow animated rotateInDownLeft" data-wow-duration="1s"></div>
+  <div class="wow animated rotateInDownLeft" data-wow-duration="1s" data-wow-delay="1s"></div>
+  <div class="wow animated rotateInDownLeft" data-wow-duration="1s" data-wow-delay="2s" data-wow-offset="1000"></div>
+  <div class="wow animated rotateInDownLeft" data-wow-duration="1s" data-wow-delay="3s" data-wow-iteration="10"></div>
+  <div class="wow animated rotateInDownLeft" data-wow-duration="1s" data-wow-delay="4s"></div>
+  <div class="wow animated rotateInDownLeft" data-wow-duration="1s" data-wow-delay="5s"></div>
+  <div class="wow animated rotateInDownLeft" data-wow-duration="1s" data-wow-delay="6s"></div>
+  <div class="wow animated rotateInDownLeft" data-wow-duration="1s" data-wow-delay="7s"></div>
+  <div class="wow animated rotateInDownLeft" data-wow-duration="1s" data-wow-delay="8s"></div>
+  <div class="wow animated rotateInDownLeft" data-wow-duration="1s" data-wow-delay="9s"></div>
+  <div class="wow animated rotateInDownLeft" data-wow-duration="1s" data-wow-delay="10s"></div>
+  <div class="wow animated rotateInDownLeft" data-wow-duration="1s" data-wow-delay="1s"></div>
+  <div class="wow animated rotateInDownLeft" data-wow-duration="1s" data-wow-delay="1s"></div>
+  <div class="wow animated rotateInDownLeft" data-wow-duration="1s" data-wow-delay="1s"></div>
+  <script>
+     // new WOW().init()
+
+     //字符串
+
+     //正则
+
+
+     //字符串包含子字符串
+//     if(!(navigator.userAgent.indexOf("MSIE 6.0")||
+//             navigator.userAgent.indexOf("MSIE 7.0")||
+//             navigator.userAgent.indexOf("MSIE 8.0"))){
+//         new WOW().init()
+//     }
+//      正则表达式
+//      str   match  search  replace  split
+//      reg   test  exet
+//      验证userAgent是IE6  7  8
+     var reg=/MSIE [6789]/
+      if(reg.test(navigator.userAgent)){
+          new WOW().init()
+      }
+  </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+/**
+ * Created by Administrator on 2017/1/11.
+ */
+$(function(){
+    var width=$("body").width();
+
+    if(width>=700){
+    $("#fullpage").fullpage({
+        navigation:true,
+        anchors:["page1","page2","page3","page4","page5"],
+        menu:"#menu",
+        afterLoad:function(anchorLink,index){
+            $(".section").eq(index-1).find(".left_one").animate({left:"0"});
+            $(".section").eq(index-1).find(".right_one").animate({right:"0"});
+            $(".section").eq(index-1).find(".wz").animate({bottom:"0"});
+            $(".section").eq(index-1).find(".picture-five").animate({opacity:1},1000)
+},
+        onLeave:function(index){
+            $(".section").eq(index-1).find(".left_one").delay(800).animate({left:"-120%"});
+            $(".section").eq(index-1).find(".right_one").delay(800).animate({right:"-120%"});
+            $(".section").eq(index-1).find(".wz").delay(800).animate({bottom:"-60px"});
+            $(".section").eq(index-1).find(".picture-five").delay(800).animate({opacity:0},1000)
+        },
+    })
+    }
+    if(width<700){
+        $("#fullpage").fullpage({
+            navigation:true,
+            anchors:["page1","page2","page3","page4","page5"],
+            menu:"#menu",
+            afterLoad:function(anchorLink,index){
+                $(".section").eq(index-1).find(".lt").animate({left:"0"});
+                $(".section").eq(index-1).find(".rt").animate({left:"0"});
+                $(".section").eq(index-1).find(".wz").animate({bottom:"0"});
+                $(".section").eq(index-1).find(".picture-five").animate({opacity:1},1000)
+            },
+            onLeave:function(index){
+                $(".section").eq(index-1).find(".lt").delay(800).animate({left:"-120%"});
+                $(".section").eq(index-1).find(".rt").delay(800).animate({left:"120%"});
+                $(".section").eq(index-1).find(".wz").delay(800).animate({bottom:"-60px"});
+                $(".section").eq(index-1).find(".picture-five").delay(800).animate({opacity:0},1000)
+            },
+        })
+    }
+})

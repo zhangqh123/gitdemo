@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script>
+        window.onload = function () {
+            var oClick = document.getElementById('clock');
+            //   目标时间
+            var timer = setInterval(function () {
+                var targetDate = new Date(2017, 0);
+                //当前时间
+                var newDate = new Date();
+                //目标时间与当前时间的毫秒值之差
+                var ms = targetDate.getTime() - newDate.getTime();
+                if (targetDate < newDate) {
+                    clearInterval(timer);
+                    oClick.innerHTML = "剩余时间为  0天  0小时  0分钟 0秒 0";
+                    alert("时间到");
+                    return;
+                }
+                var ss = Math.floor(ms / 1000);
+                var hm = Math.floor((ms % 1000) / 10);
+                var second = ss % 60;
+                var min = Math.floor(ss / 60) % 60;
+                var hour = Math.floor(ss / 3600) % 24;
+                var date = Math.floor(ss / 3600 / 24);
+                oClick.innerHTML = "剩余时间为" + date + "天 " +
+                        "''" + hour + "小时 " + min + "分钟 " + second + "秒" + " " + hm
+
+            }, 1);
+        }
+    </script>
+
+</head>
+<body>
+<div id="clock"></div>
+</body>
+</html>

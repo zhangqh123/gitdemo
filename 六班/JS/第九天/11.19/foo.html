@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+       function $T(tag,ele){
+           if(arguments.length==1){
+               return document.getElementsByTagName(tag)
+           }
+           else if(arguments.length==2){
+               return ele.getElementsByTagName(tag)
+           }
+       }
+       function foo(tag){
+           var aIn=$T(tag);
+          for(var i=0;i<aIn.length;i++){
+              aIn[i].indenx=i;
+              aIn[i].onclick=function(){
+                   alert(this.indenx)
+              }
+          }
+
+       }
+
+     window.onload=function(){
+
+      foo("input");
+
+
+
+     }
+
+
+
+
+    </script>
+
+
+
+</head>
+<body>
+<input type="checkbox">
+<input type="checkbox">
+<input type="checkbox">
+<input type="checkbox">
+<input type="checkbox">
+<input type="checkbox">
+<input type="checkbox">
+<input type="checkbox">
+<input type="checkbox">
+<input type="checkbox">
+</body>
+</html>

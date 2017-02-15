@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .div3{
+            width: 790px;
+            height: 340px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        #divp {
+            width: 6320px;
+            position: absolute;
+            left: 0;
+            transition: left 0.5s;
+        }
+
+        img {
+          float: left;
+        }
+
+        span {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 20px;
+            margin-left: 10px;
+            background-color: white;
+            z-index: 3;
+            cursor: pointer;
+        }
+
+        .div1 {
+            width: 310px;
+            height: 20px;
+            border-radius: 30px;
+            position: absolute;
+            top:300px;
+            left: 240px;
+            z-index: 3;
+        }
+        p{
+            width: 30px;
+            height: 50px;
+            background-color: #999999;
+            text-align: center;
+            line-height: 50px;
+            color: white;
+        }
+        #p1{
+            position: absolute;
+            left: 0;
+            top:129px;
+            cursor: pointer;
+        }
+        #p2{
+            position: absolute;
+           left: 760px;
+            top:145px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var oDivp=document.getElementById('divp');
+            var arrSpan = document.getElementsByTagName('span');
+            var arrImg = document.getElementsByTagName('img');
+            var oLt = document.getElementById('p1');
+            var oRt = document.getElementById('p2');
+            var i = 0;
+            for (i = 0; i < arrSpan.length; i++) {
+                arrSpan[i].index = i;
+                arrSpan[i].onmouseover = function () {
+                    oDivp.style.left=this.index*-790+"px";
+                    var k=0;
+
+                    for(k=0;k<arrSpan.length;k++){
+                        arrSpan[k].style.backgroundColor="white"
+                    }
+                    this.style.backgroundColor = "red";
+                    page=this.index;
+                }
+            };
+                var page=0;
+
+
+               oLt.onclick=function(){
+                   page--;
+                   if(page<0) {
+                       page = arrImg.length-1;
+
+                   }
+                var k=0;
+                for(k=0;k<arrSpan.length;k++){
+                    arrSpan[k].style.backgroundColor="white"
+                }
+                   oDivp.style.left=page*-790+"px";
+
+                arrSpan[page].style.backgroundColor = "red";
+
+            };
+            var page=0;
+            oRt.onclick=function(){
+                page++;
+                if(page>=arrImg.length) {
+                    page = 0;
+                    oDivp.style.left=0;
+                }
+
+                var k=0;
+                for(k=0;k<arrSpan.length;k++){
+                    arrSpan[k].style.backgroundColor="white"
+                }
+                oDivp.style.left=page*-790+"px";
+
+                arrSpan[page].style.backgroundColor = "red";
+            }
+
+        }
+    </script>
+</head>
+<body>
+<div class="div3">
+<div id="divp">
+    <img src="img/1.jpg" alt="">
+    <img src="img/2.jpg" alt="">
+    <img src="img/3.jpg" alt="">
+    <img src="img/4.jpg" alt="">
+    <img src="img/5.jpg" alt="">
+    <img src="img/6.jpg" alt="">
+    <img src="img/7.jpg" alt="">
+    <img src="img/8.jpg" alt="">
+</div>
+    <div class="div1">
+        <span style="background-color: red"></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="div2">
+        <p id="p1"><</p>
+        <p id="p2">></p>
+    </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+       img{
+           width: 300px;
+           height: 250px;
+           margin-bottom: 10px;
+
+        }
+       ul{
+           width: 1280px;
+           margin: 0 auto;
+       }
+        li{
+            list-style: none;
+            float: left;
+            width: 300px;
+            height: 300px;
+            text-align: center;
+            margin-right: 20px;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+           var arrLi=document.getElementsByTagName('li');
+        var imgDir=location.hash.substring(1);
+        var arrImgName=[];
+        for(var i=1;i<=10;i++){
+            arrImgName.push("img/"+imgDir+"/image0"+i+".jpg");
+        }
+        for(var i= 0;i<arrImgName.length;i++){
+            var tagStr='<img src="'+arrImgName[i]+'" alt="">';
+            arrLi[i].innerHTML=tagStr+"图片"+parseInt(i+1);
+        }
+        }
+    </script>
+</head>
+<body>
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+</body>
+</html>

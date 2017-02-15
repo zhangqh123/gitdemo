@@ -1,0 +1,438 @@
+.nav-box{
+    width: 100%;
+    height:50px ;
+    background: url(../images/aboutxiaoniao/beader_bg.jpg)no-repeat center;
+    position: fixed;
+    z-index: 30;
+    box-sizing: border-box;
+}
+.nav{
+    width: 1100px;
+    height: 50px;
+    margin: 0 auto;
+}
+.nav-lt{
+    float: left;
+}
+.nav-rt{
+    float: left;
+    margin-left: 20px;
+}
+.nav-rt li img{
+    display: none;
+    position:absolute ;
+    top:36px;
+    left: 46%;
+}
+.nav-rt li:hover{
+    background: url(../images/nav_now_bg.png)no-repeat 46% 36px;
+    color: white;
+}
+.nav-rt li{
+    float: left;
+    color: #b1aba1;
+    cursor: pointer;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 0 0 35px;
+    position: relative;
+}
+
+.bird-shouye{
+    width: 100%;
+    background: #221236;
+    color: white;
+    z-index: 6;
+}
+.bird-welcome{
+    width: 400px;
+    height: 401px;
+    margin: 0 auto;
+}
+.bird-wz{
+   width: 190px;
+    height: 60px;
+    margin: 0 auto;
+    text-align: center;
+}
+.bird-wz p:first-child{
+    font-size: 36px;
+}
+.bird-wz p:last-child{
+    letter-spacing: 3px;
+}
+.bird-wz-1{
+    width: 460px;
+    height: 90px;
+    margin: 10px auto;
+}
+.bird-wz-1-center{
+    margin-top:-8px;
+    width: 460px;
+    height: 45px;
+    text-align: center;
+    font-size: 45px;
+}
+.bird-wz-1-rt{
+    float: right;
+    margin-top: -6px;
+}
+.bird-wz-2{
+    width: 540px;
+    height: 90px;
+    font-size: 18px;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 28px;
+}
+.bird-gaishu-box{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    height: 650px;
+    z-index: 5;
+    background: white;
+}
+.bird-gaishu{
+    width: 100%;
+   position: absolute;
+    z-index: 1;
+}
+.gaishu{
+    width: 110px;
+    font-size: 46px;
+    color: #1c2c4d;
+    margin: 0 auto;
+    padding-top: 55px;
+    font-weight: bold;
+}
+.gaishu-wz{
+    width: 580px;
+    margin: 30px auto;
+}
+.gaishu-wz-center {
+    text-align: center;
+    width: 580px;
+    margin-top: -10px;
+    line-height: 22px;
+}
+.gaishu-wz-rt{
+    float: right;
+    margin-top: -20px;
+}
+.gaishu-goleft{
+    width:58px;
+    height: 58px;
+    position: absolute;
+    left: 5%;
+    z-index: 10;
+    top:350px;
+    background: url(../images/aboutxiaoniao/goleft.png)no-repeat;
+}
+.gaishu-goleft:hover{
+    background-position: -58px 0;
+    transition:0.5s;
+}
+.gaishu-goright{
+    width:58px;
+    height: 58px;
+    position: absolute;
+    right: 5%;
+    top:350px;
+    z-index: 10;
+    background: url(../images/aboutxiaoniao/goright.png)no-repeat -58px 0;
+}
+.gaishu-goright:hover{
+    background-position: 0 0;
+    transition:0.5s;
+}
+.gaishu-picture-box{
+    clear: both;
+    width: 870px;
+    height: 379px;
+    margin: 30px auto 0 auto;
+}
+.gaishu-picture-box img{
+    float: left;
+    margin-right: 35px;
+}
+.gaishu-picture-box img:last-child{
+    margin-right: 0;
+}
+.bird-gaishu-1-box{
+    width: 100%;
+    background: white;
+    position: absolute;
+    display: none;
+}
+.bird-gaishu-1{
+    width: 1000px;
+    margin: 0 auto;
+    padding-top: 70px;
+}
+.bird-gaishu_1-top{
+    width:502px ;
+   margin: 0 auto;
+}
+.bird-gaishu_1-bottom{
+    width: 650px;
+    height: 450px;
+    margin: 40px auto;
+}
+.bird-gaishu_1-bottom-lt{
+    float: left;
+}
+.bird-gaishu_1-bottom-rt{
+    width: 470px;
+    height: 50px;
+    margin: 25px 0 0 60px;
+    float: left;
+}
+.bird-gaishu_1-bottom-rt p{
+    font-size: 20px;
+}
+.bird-gaishu_1-bottom-1{
+    width: 650px;
+    height: 100px;
+    margin-bottom: 50px;
+}
+.gaishu-wz-1{
+    margin-top: 50px;
+}
+.bird-gaishu-2-box{
+    width: 100%;
+    display: none;
+}
+.bird-gaishu-2-wz{
+    width: 600px;
+    margin: 10px auto;
+    line-height: 22px;
+}
+.bird-gaishu-2-wz p{
+    text-indent: 30px;
+}
+.gaishu-scrollon{
+    width: 104px;
+    margin: 50px auto 0 auto;
+}
+.bird-jiazhi-box{
+    width: 100%;
+    background: #221236;
+    z-index: 4;
+}
+.bird-jiazhi{
+    width: 1000px;
+    margin: 0 auto;
+    color: white;
+}
+.bird-jiazhi-wz{
+    font-size: 44px;
+    width: 480px;
+    margin: 0 auto;
+    padding-top: 55px;
+}
+.bird-border-top{
+    width: 1000px;
+    height: 20px;
+    margin-top: 110px;
+}
+.bird-jiazhi img{
+    position: absolute;
+}
+.picture_1{
+    animation: my_animation 2s linear infinite;
+    -moz-animation: my_animation 2s linear infinite;
+    -o-animation: my_animation 2s linear infinite;
+    -webkit-animation: my_animation 2s linear infinite;
+}
+@keyframes  my_animation{
+    0%{
+        opacity: 0.2;
+    }
+    10%{
+        opacity: 0.4;
+    }
+    20%{
+        opacity: 0.6;
+    }
+    20%{
+        opacity: 0.8;
+    }
+    40%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0.8;
+    }
+    60%{
+        opacity: 0.6;
+    }
+    70%{
+        opacity: 0.4;
+    }
+    80%{
+        opacity: 0.2;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.bird-border-top-lt{
+    width: 20px;
+    height: 20px;
+    float: left;
+    position: relative;
+}
+.bird-border-top-rt{
+    width: 20px;
+    height: 20px;
+    float: right;
+    position: relative;
+}
+.bird-jiazhi-content{
+    width: 840px;
+    height: 330px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.bird-jiazhi-content-1{
+    width: 375px;
+    float: left;
+    margin:0 40px 48px 0;
+}
+.bird-jiazhi-content-lt{
+    width: 76px;
+    height: 76px;
+    border: 1px solid #675c75;
+    border-radius: 50%;
+    float: left;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    line-height: 76px;
+}
+.bird-jiazhi-content-rt{
+   width: 260px;
+    height: 50px;
+    margin: 20px 0 0 32px;
+    float: left;
+    line-height: 20px;
+}
+.bird-border-bottom{
+    clear: both;
+    width: 1000px;
+    height: 97px;
+}
+
+.bird-border-bottom-lt{
+     width: 20px;
+     height: 20px;
+     float: left;
+    position: relative;
+ }
+.bird-border-bottom-rt{
+    width: 20px;
+    height: 20px;
+    float: right;
+    position: relative;
+}
+.bird_zhangyun{
+    width: 100%;
+    height: 660px;
+    overflow: hidden;
+    position: relative;
+    z-index: 3;
+}
+.zhangyun_box{
+    margin: 0 auto;
+    width: 870px;
+    height: 600px;
+    position:relative;
+    overflow: hidden;
+}
+.bird-zhangyun-box{
+    width: 1740px;
+   position: absolute;
+}
+.bird-zhangyun{
+    width: 870px;
+    float: left;
+}
+.bird-zhangyun-wz{
+    width: 200px;
+    padding-top: 55px;
+    margin: 0 auto;
+    font-size: 44px;
+    text-align: center;
+    color: #301658;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.bird-zhangyun li{
+    width: 870px;
+    height: 40px;
+    border-bottom: 1px dotted #a3a5a7;
+    line-height: 40px;
+}
+
+.bird-zhangyun .li1{
+    text-indent: 30px;
+}
+
+.bird-zhangyun-btn{
+    width: 165px;
+    height: 8px;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    margin-left: -82px;
+}
+.bird-zhangyun-btn1{
+    margin-right: 8px;
+    width: 78px;
+    height: 8px;
+    float: left;
+    background: url(../images/aboutxiaoniao/xiaoniaoyun_btn.png)no-repeat ;
+    transition: 0.5s;
+}
+.bird-zhangyun-btn2{
+    width: 78px;
+    height: 8px;
+    float: left;
+    background: url(../images/aboutxiaoniao/xiaoniaoyun_btn.png)no-repeat 0 -8px ;
+    transition: 0.5s;
+}
+.bird-app{
+    width: 100%;
+    height: 660px;
+    background: url(../images/aboutxiaoniao/app&contacts.jpg)no-repeat center;
+}
+
+.box{
+    position: absolute;
+    overflow: hidden;
+}
+.box-1{
+    top:0;
+    position: absolute;
+    transition: top .5s;
+}
+.bird-welcome-box{
+    width: 100%;
+    height:650px;
+    background: #299ad6;
+    color: white;
+    position: absolute;
+    z-index: 100;
+    overflow: hidden;
+}
+.bird-welcome-content{
+    width: 800px;
+    position: absolute;
+    top:20%;
+    left: 50%;
+    margin-left: -400px;
+}
+.welcome_animate{
+    display: none;
+}

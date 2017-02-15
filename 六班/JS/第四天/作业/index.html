@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function () {
+            var oInt2 = document.getElementById('input2');
+            var oInt1=document.getElementById('input1')
+            oInt2.onclick = function () {
+                var i=oInt1.value;
+                if (i%4==0&&i%100!=0||i%400==0) {
+                    alert("闰年")
+                }
+                else {
+                    alert("非闰年")
+                }
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+<input id="input1" type="text">
+<input id="input2" type="button" value="输出">
+</body>
+</html>

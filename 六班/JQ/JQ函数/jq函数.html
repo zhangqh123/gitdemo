@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+           border: 1px solid black;
+            margin-bottom: 10px;
+            width: 100px;
+            height: 100px;
+            float: left;
+        }
+    </style>
+    <script src="../jquery-1.8.3.min.js"></script>
+    <script>
+        $(function(){
+//            $("div").css("background","red")
+//            $("<div>Hello</div>").appendTo("body");
+
+          /*  $("<div>", {
+                "class": "test",
+                text: "Click me!",
+                click: function(){
+                    $(this).toggleClass("test");
+                }
+            }).appendTo("body");*/
+
+
+
+            /*$.holdReady(true);
+            $.getScript("myplugin.js", function() {
+                $.holdReady(false);
+            });*/
+
+    /* $("div").each(function(i){
+         $(this).css({"width":(i+1)*100})
+     })*/
+
+          /*  $("div").data("test", 16);
+            $("div").removeData("test")
+            document.write($("div").data("test"))*/
+           // $("div").data("test").last  //pizza!;
+           // document.write(jQuery.data(document.body, "div", 52))
+            document.write($('#bar').index('p'))
+        })
+
+    </script>
+</head>
+<body>
+<!--<div></div>-->
+<div></div>
+<ul>
+    <li id="foo">foo</li>
+    <li id="bar">bar</li>
+    <li id="baz">baz</li>
+</ul>
+</body>
+</html>

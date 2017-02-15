@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <script>
+    window.onload = function () {
+        /* var oUl = document.getElementById('ul');
+         var arrNodes = oUl.childNodes;
+         //    alert(arrNodes.length)
+         //  3  文本节点    1  元素节点
+         for(var i=0;i<arrNodes.length;i++){
+         if(arrNodes[i].nodeType==1){
+         arrNodes[i].style.backgroundColor="red"
+         }
+         }*/
+        var oUl = document.getElementById('ul');
+        //所有元素子节点     children  兼容性问题
+        alert(oUl.children.length)
+
+
+
+
+    }
+
+
+</script>
+</head>
+<body>
+<ul id="ul">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+
+
+</ul>
+</body>
+</html>

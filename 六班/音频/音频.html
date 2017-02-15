@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function () {
+
+            var oAu = document.getElementById("audio");
+
+//             duration    音频总时间
+            // volume    音量
+            //muted    静音
+            //paused    是否暂停
+            // ended     是否结束
+            // error    是否错误
+            //currentSrc  当前播放的资源路径
+            //currentTime   当前播放的时间
+
+            var oV = document.getElementById("video");
+            var oBtn = document.getElementById("btn");
+            var arrSou = document.getElementsByTagName("source");
+            oV.onmouseover = function () {
+                this.play();
+            };
+            oV.onmouseout = function () {
+                this.pause();
+            };
+            oBtn.onclick = function () {
+                arrSou[0].src = "Intermission-Walk-in_512kb.mp4";
+                arrSou[1].src = "Intermission-Walk-in.ogv";
+                oV.load();
+
+            }
+
+        }
+
+
+    </script>
+</head>
+<body>
+<!--音频-->
+<!--muted   静音-->
+<!--autoplay  自动播放-->
+<!--loop   循环-->
+<!--controls   操作面板-->
+<audio id="audio" muted loop autoplay controls src="johann_sebastian_bach_air.mp3"></audio>
+
+
+<!--视频-->
+<!--<video controls src="Intermission-Walk-in.ogv"></video>-->
+<video id="video" controls>
+    <source src="Intermission-Walk-in.ogv">
+    <source src="Intermission-Walk-in_512kb.mp4">
+    该浏览器不支持该视频格式
+
+</video>
+<input type="button" id="btn" value="加载">
+</body>
+</html>

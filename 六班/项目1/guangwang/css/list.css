@@ -1,0 +1,144 @@
+body{
+    background: #f1f2f6;
+}
+.company-box{
+    width: 1100px;
+    margin: 0 auto;
+}
+.company-wz{
+     width: 220px;
+     height: 82px;
+     margin: 120px  auto 0 auto;
+     text-align: center;
+ }
+.company-wz p:first-child{
+    font-size: 44px;
+    color: #28285c;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+.company-wz p:last-child{
+    font-size: 14px;
+    color: #312e43;
+    letter-spacing: 5px;
+}
+.company-point{
+    width: 45px;
+    margin: -5px auto 0 auto;
+}
+.company-pen{
+    width: 1100px;
+    height: 100px;
+    position: relative;
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+.works-xiaoniaozhangxue{
+    font-size: 28px;
+    font-weight: bold;
+    float: left;
+}
+.company-pen-line{
+    float: left;
+    margin-top: 18px;
+    width: 1049px;
+    height: 2px;
+    background: url(../images/pen_line_long.png)no-repeat;
+
+}
+
+.works-pen {
+    width: 61px;
+    height: 58px;
+    background: url(../images/pen.png)no-repeat;
+    position: absolute;
+    right: 10px;
+}
+.works-pen:hover{
+    background: url(../images/pen_hover.png);
+}
+.company-1{
+    width: 540px;
+    height: 241px;
+    background: white;
+    box-sizing: border-box;
+    padding: 36px 0 0 25px;
+    margin: 0 20px 30px 0 ;
+    float: left;
+    position: relative;
+}
+.company-img{
+    position: absolute;
+    top: 30px;
+    left:0;
+}
+.company-1-lt{
+    width: 260px;
+    height: 168px;
+    float: left;
+
+}
+.company-1-rt{
+    width: 206px;
+    height: 170px;
+    float: left;
+    margin: 20px 0 0 20px;
+}
+.company-1-rt p{
+    font-size: 12px;
+}
+.company-1-rt p:first-child{
+    font-size: 18px;
+    margin-bottom: 3px;
+}
+.company-1-rt p:last-child{
+    margin-top: 5px;
+    line-height: 22px;
+    font-size: 14px;
+}
+.company-1-box .company-1:nth-child(2n){
+    margin-right: 0;
+}
+.list_content .company-1:nth-child(2n+1){
+    margin-right: 0;
+}
+.company-goon{
+    box-sizing: border-box;
+    padding-top: 20px;
+    width:107px;
+    height: 175px;
+    clear: both;
+    margin: 0 auto;
+    background:url(../images/list_gomore_bg.jpg) no-repeat;
+
+}
+.list-btn{
+    margin: 20px auto 100px auto;
+    width: 58px;
+    height: 58px;
+    background: url(../images/lis_more_btn_bg.png)no-repeat 0  -58px;
+}
+.list-btn:hover{
+    background: url(../images/lis_more_btn_bg.png)no-repeat;
+}
+.map-buttom{
+    width: 100%;
+    height: 33px;
+    background: url(../images/map_bottomimg.png)no-repeat center;
+}
+.list_content{
+    width: 1100px;
+    margin: 0 auto;
+}
+.company-1:hover{
+    margin-top: -5px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 3px 3px lightgrey;
+}
+.company-1:hover .company-img{
+    left: 80px;
+    transition: .5s;
+}
+
+
+

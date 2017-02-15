@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      body{
+          text-align: center;
+      }
+    </style>
+
+</head>
+<body>
+<script>
+    for (i=1;i<10;i++){
+        if(i<=5){
+        for(j=0;j<i;j++){
+            document.write("○")
+        }
+        }
+        if(i>5){
+            for(j=0;j<(10-i);j++){
+                document.write("○")
+            }
+        }
+        document.write("<br />")
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../JQ/jquery-1.8.3.min.js"></script>
+    <script>
+        $(function(){
+//            $.getJSON("http://localhost/ajax17/links/link.php?callback=?",function(data){
+//               $("div").html(data)
+//            })
+     $(document).click(function(){
+         $.ajax("http://localhost/ajax17/links/link.php",{
+             dataType:"jsonp",
+             jsonp:"callback",
+             success:function(data){
+                 alert(data)
+             }
+         })
+     })
+
+
+        })
+    </script>
+</head>
+<body>
+<div></div>
+</body>
+</html>

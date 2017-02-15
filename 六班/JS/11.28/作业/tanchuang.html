@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input{
+            width: 80px;
+            height: 30px;
+            background-color: blue;
+            color: white;
+            border: none;
+        }
+     .div1{
+         width: 500px;
+         height: 300px;
+         border: 1px solid blue;
+         position: absolute;
+         top: 50%;
+         margin-top: -150px;
+         left: 50%;
+         margin-left: -250px;
+         display: none;
+
+     }
+    .div2{
+        width: 500px;
+        height: 40px;
+        background-color: blue;
+        color: white;
+        line-height: 40px;
+        box-sizing: border-box;
+        text-indent: 10px;
+        margin-bottom: 8px;
+    }
+    span{
+        margin-left: 430px;
+        cursor: pointer;
+    }
+        p{
+            margin-left: 10px;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var oBtn=document.getElementById('btn');
+            var oDiv=document.getElementById('div1');
+            var oDiv2=document.getElementById('div2');
+            var oSpan=document.getElementById('span1');
+           oBtn.onclick=function(){
+              /* oDiv.style.left=50+"%";
+               oDiv.style.top=50+"%";*/
+               oDiv.removeAttribute('style');
+               oDiv.style.display="block";
+           };
+            oSpan.onclick=function(){
+                oDiv.style.display="none";
+            };
+           oDiv2.onmousedown=function(ev){
+               var oEvent=window.event||ev;
+               var x=oEvent.clientX-oDiv.offsetLeft;
+               var y=oEvent.clientY-oDiv.offsetTop;
+            document.onmousemove=function(ev){
+                var oEvent=window.event||ev;
+                oDiv.style.left=oEvent.clientX-x+250+"px";
+                oDiv.style.top=oEvent.clientY-y+150+"px";
+            };
+             document.onmouseup=function(){
+                 document.onmousemove=undefined;
+                 document.onmouseup=undefined
+             }
+           }
+        }
+    </script>
+</head>
+<body>
+<input type="button" value="弹窗" id="btn">
+<div id="div1" class="div1">
+    <div class="div2" id="div2">弹窗 <span id="span1">&times;</span></div>
+    <p>这是一个弹窗</p>
+</div>
+</body>
+</html>

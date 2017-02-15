@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+      var year=parseInt(prompt("输入年份"));
+      var mouth=parseInt(prompt("输入月份"));
+      var day=parseInt(prompt("输入日"));
+     /* var a;
+        if(year%4==0&&year%100!=0||year%400==0){
+            a=1
+        }
+        else{
+            a=0
+        }
+       var b=0;
+            switch(mouth-1){
+                case 11:b+=30;
+                case 10:b+=31;
+                case 9:b+=30;
+                case 8:b+=31;
+                case 7:b+=30;
+                case 6:b+=30;
+                case 5:b+=31;
+                case 4:b+=30;
+                case 3:b+=31;
+                case 2:b+=28+a;
+                case 1:b+=31;break;
+                default:
+                  alert("输入错误");break;
+        }
+             if(day>31){
+                 alert("输入错误")
+             }
+             else{
+                 b+=day;*/
+      var arr=[31,28,31,30,31,30,31,31,30,31,30];
+      var dayOfYear=0;
+      varn=0;
+      if(year%4==0&&year%100!=0){
+           arr[1]=29;
+             }
+      else if(year%400==0){
+          arr[1]=29;
+      }
+      for(i=0;i<mouth-1;i++){
+          dayOfYear +=arr[i];
+      }
+      dayOfYear+=day;
+      document.write(year+"年"+mouth+"月"+day+"日是该年的第"+dayOfYear+"天")
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+</head>
+<body>
+
+</body>
+</html>
